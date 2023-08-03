@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullpage</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index2.css">
+    <script>
+        $(document).ready(function(){
+            for(var i = 0; i < $('[data-event="fullpage"]').length; i++){
+                $('ol').append('<li>' + (i + 1) + 'page </li>')
+            }
+
+            $('ol li').eq(0).addClass('active');
+
+            $('[data-event="fullpage"]').on('mousewheel DOMMouseScroll',function(e){
+                var delta = e.originalEvent.wheelDelta;    // 마우스 스크롤 방향 감지 이벤트
+                if(delta > 0){
+                    if(!($(this).prev().offset() == undefined)){
+                        $('html').stop().animate({scrollTop : $(this).prev().offset().top},1000);
+                        $('ol li').removeClass('active');
+                        $('ol li').eq($(this).prev().index()).addClass('active');
+                    }
+                }else{
+                    if(!($(this).next().offset() == undefined)){
+                        $('html').stop().animate({scrollTop : $(this).next().offset().top},1000);
+                        $('ol li').removeClass('active');
+                        $('ol li').eq($(this).next().index()).addClass('active');
+                    }
+                }
+
+
+                $('ol li').click(function(){
+                    $('ol li').removeClass('active');
+                    $(this).addClass('active');
+                    $('html').stop().animate({scrollTop : $('[data-event="fullpage"]').eq($(this).index()).offset().top},1000);
+                });
+            });
+
+
+            $('[data-event="fullpage"]').on('touchstart', function(){
+                console.log('1');
+            });
+            $('[data-event="fullpage"]').on('touchend', function(){
+                console.log('2');
+            });
+        });
+    </script>
+    <style>
+        *{margin: 0;padding: 0;}
+        header,section,footer{
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 130px;
+        }
+
+        header{background-color: blanchedalmond;}
+        footer{background-color: cadetblue;}
+        section:nth-of-type(2) {background-color: blueviolet;}
+        body {overflow: hidden;}
+        ol {list-style: none; position: fixed; right: 10px; top: 50%;}
+        ol li {text-indent: -9999px; width: 10px; height: 10px; border-radius: 100%; background-color: darkgray;}
+        ol li:not(:last-child) {margin-bottom: 10px;}
+        ol li.active{background-color: orange;}
+    </style>
+</head>
+<body>
+    <div>
+        <header data-event="fullpage" class="header_page">
+            <div>
+                <div class="header_head">
+                    <div class="header_circle" ></div>
+                    <h2>PORTFOLIO</h2>
+                    <h3>2022-05-01</h3>
+                    <div class="header_line"></div>
+    
+                    <div class="my_mail">gkstjd2001@gmail.com</div>
+                    <div class="my_number">010-2190-4594</div>
+                    <div class="my_text">Hello my world !!</div>
+                </div>
+        </header>
+
+
+        <section data-event="fullpage" class="my_advantage">
+                 <div class="advantage_circle"></div>
+                    <div class="my_photo">
+                        <img src="./img/KakaoTalk_20230525_194744444.jpg" alt="">
+                    </div>
+        </section>
+
+
+        <section data-event="fullpage">section</section>
+        <section data-event="fullpage">section</section>
+        <footer data-event="fullpage">footer</footer>
+    </div>
+    <ol>
+        <!-- <li class="active">1 page</li>
+        <li>2 page</li>
+        <li>3 page</li>
+        <li>4 page</li>
+        <li>5 page</li> -->
+    </ol>
+</body>
+</html>

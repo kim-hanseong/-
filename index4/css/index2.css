@@ -1,0 +1,43 @@
+*{padding: 0; margin: 0; box-sizing: border-box; list-style: none; color: white; text-decoration: none; }
+
+.header_page{background-color: rgb(229, 204, 229); position: relative; height: 100vh;}
+.header_head{background-color: white; width: 1800px; height: 1800px; border-radius: 50%; top: 50%; position: relative; text-align: center; animation: header_border 3s forwards; border: 1000px solid black; top: 400px;}
+@keyframes header_border{
+    10%{border: 1000px solid black}
+    to{border:1px solid black}
+}
+.header_circle{width: 100px; height: 100px; background-color: white; position: absolute; top: 150px; left: 65%; border-radius: 50%; border: 10px solid rgb(229, 204, 229); animation: moveRotate 3s infinite; overflow: hidden; }  
+.header_circle::after{content: ''; position: absolute; width: 50px; height: 50px; background-color: #1b2735; border-radius: 50%; animation: moveRotate 3s infinite;}
+@keyframes moveRotate {
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+}
+
+
+
+.header_head > h2{color: black; font-size: 100px; margin-top: 200px; font-weight: 700;}
+.header_head > h3{color: black; font-size: 30px;  font-weight: 700;}
+
+.header_line{position: absolute; height: 150px; width: 2px; background-color: black; left: 50%; top: 600px; overflow: hidden;}
+.header_line:after{position: absolute; content: ''; width: 100px; height: 30px; background-color: #fff; animation: downline 1.5s infinite; top: 0;}
+@keyframes downline{
+    from{top: 0;}
+    to{top: 300px;}
+}
+
+
+.my_mail{color: black; position: absolute; top: 900px; left: 100px; animation: textShow 5s forwards; opacity: 0; transition: .5s; font-size: 20px;}
+.my_number{color: black; position: absolute; top: 900px; right: 100px; animation: textShow 5s forwards; opacity: 0; animation-delay: 1s; transition: .5s; font-size: 20px;}
+.my_text{color: black; position: absolute; top: 900px; left: 50%; transform: translate(-50%,0); animation: textShow 5s forwards; opacity: 0; animation-delay: 2s; transition: .5s; font-size: 20px;}
+@keyframes textShow{
+    from{opacity: 0;}
+    90%{opacity: 0;}
+    to{ opacity: 1;}
+
+}
+
+.my_mail:hover{scale: 1.2;}
+.my_number:hover{scale: 1.2;}
+.my_text:hover{scale: 1.2;}
+
+/*  */

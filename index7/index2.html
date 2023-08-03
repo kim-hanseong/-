@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./about.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/vendor/modernizr.custom.min.js"></script> 
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;700;900&display=swap');
+    </style>
+</head>
+<script>
+     $(window).scroll(function(){
+         if($(this).scrollTop() > 1400){
+             $('.intro_page02 > section').addClass('active');
+             $('.intro_page02 > div').addClass('actives');
+         }
+    });
+
+</script>
+<body>
+    <header>
+        <div class="head_size">
+            <h1><a href="./aevan.html">HANKEA</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="./about.html">-ABOUT US</a></li>
+                    <li><a href="#">-BUSINESS</a></li>
+                    <li><a href="#">-FUNDING</a></li>
+                    <li><a href="#">-COMMUNITY</a></li>
+                    <li><a href="#">-INVESTMENT INQUIRY</a></li >
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h2>ABOUT Us</h2>
+
+    <div class="intro_page01">
+        <div>
+            <img src="https://t4.ftcdn.net/jpg/06/04/96/13/240_F_604961327_WgkHHz27BEydpqenYby5wyCXeh7QoDsu.jpg" width="100%" alt="">
+        </div>
+        <section>
+            <h2>HANKEA 는 무엇을 하나요?</h2>
+        </section>
+    </div>
+    <div class="intro_page02">
+        <section>
+            <h2>기대해볼만한 기업인가요?</h2>
+        </section>
+        <div>
+            <img src="https://t4.ftcdn.net/jpg/05/93/26/79/240_F_593267906_W8nEKRBUVNXazISRTiojSdmhoIuiFdsk.jpg" width="100%" alt="">
+        </div>
+    </div>
+    
+    <footer>
+        <b>페이지의 이미지는 "베이직 가구" 에서 가져왔습니다.</b>
+        <b>hankea</b>
+    </footer>
+</body>
+</html>

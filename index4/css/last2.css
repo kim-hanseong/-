@@ -1,0 +1,472 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+*{margin: 0;padding: 0; font-family: 'Nanum Gothic', sans-serif; }
+    header,section,footer{
+        height: 100vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body {overflow: hidden;}
+    ol {list-style: none; position: fixed; right: 10px; top: 50%;}
+    ol li {text-indent: -9999px; width: 10px; height: 10px; border-radius: 100%; background-color: darkgray;}
+    ol li:not(:last-child) {margin-bottom: 10px;}
+    ol li.active{background-color: orange;}
+
+
+    *{padding: 0; margin: 0; box-sizing: border-box; list-style: none; color: white; text-decoration: none; }
+
+
+/* header */
+.header_page{background-color: rgb(229, 204, 229); position: relative; height: 100vh; overflow: hidden;}
+.header_head{background-color: white; width: 1800px; height: 1800px; border-radius: 50%; top: 40%; position: relative; text-align: center; animation: header_border 3s forwards; border: 1000px solid black;}
+@keyframes header_border{
+    10%{border: 1000px solid black}
+    to{border:1px solid black}
+}
+.header_circle{width: 100px; height: 100px; background-color: white; position: absolute; top: 150px; left: 65%; border-radius: 50%; border: 10px solid rgb(229, 204, 229); animation: moveRotate 3s infinite; overflow: hidden; }  
+.header_circle::after{content: ''; position: absolute; width: 50px; height: 50px; background-color: #1b2735; border-radius: 50%; animation: moveRotate 3s infinite;}
+@keyframes moveRotate {
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+}
+
+
+
+.header_head > h2{color: black; font-size: 100px; margin-top: 200px; font-weight: 700;}
+.header_head > h3{color: black; font-size: 30px;  font-weight: 700;}
+
+.header_line{position: absolute; height: 150px; width: 2px; background-color: black; left: 50%; top: 500px; overflow: hidden;}
+.header_line:after{position: absolute; content: ''; width: 100px; height: 30px; background-color: #fff; animation: downline 1.5s infinite; top: 0;}
+@keyframes downline{
+    from{top: 0;}
+    to{top: 300px;}
+}
+
+
+.my_mail{color: black; position: absolute; top: 900px; left: 100px; animation: textShow 5s forwards; opacity: 0; transition: .5s; font-size: 30px;}
+.my_number{color: black; position: absolute; top: 900px; right: 100px; animation: textShow 5s forwards; opacity: 0; animation-delay: 1s; transition: .5s; font-size: 30px;}
+.my_text{color: black; position: absolute; top: 900px; left: 50%; transform: translate(-50%,0); animation: textShow 5s forwards; opacity: 0; animation-delay: 2s; transition: .5s; font-size: 30px;}
+@keyframes textShow{
+    from{opacity: 0;}
+    90%{opacity: 0;}
+    to{ opacity: 1;}
+
+}
+
+
+
+
+/* advantage */
+.advantage > p , b , h3{color: black;}
+.advantage{ background:white; position: relative;overflow: hidden; height: 100vh;}
+.advantage_circle{width: 2000px; height: 300px; background-color:rgb(229, 204, 229); opacity: .3; position: absolute; left: 0px; top: 0;}
+
+.advantage_text > h2{color: black;}
+.advantage_text > h2 > b{color: white; background-color: rgb(124, 175, 216); width: 200px;  font-family: 'Nanum Myeongjo', serif;}
+.advantage_text{position: absolute;  top: 100px;  font-size: 20px;  width: 600px; height: 100px; margin-left: 300px;}  
+
+.my_photo{position: absolute; left: 150px; bottom: 100px; width: 500px; height: 600px;}
+
+.first_intro_line{display: flex;}
+.work{color: black;}
+
+/* about me */
+.about_me{position: relative; top: 0; width: 600px; height: 400px; left: 350px;}
+.about_me::after{content: ''; width: 500px; height: 4px; background-color: rgb(124, 175, 216); position: absolute; transition: 1s; animation: lineWidht 2s forwards; top: 45px;}
+.about_me > h3{color: rgb(124, 175, 216); font-size:40px; font-family: 'Nanum Myeongjo', serif;}
+
+.my_experience{position: absolute; bottom: 100px; height: 500px; width: 600px; background-color: ba;} 
+
+
+.my_skill{ left: 380px; height:400px ; width: 600px;  position: relative; top: 0;}
+.my_skill::before{content: ''; width: 400px; height: 4px; background-color: rgb(124, 175, 216); position: absolute; top: 45px;  transition: 1s; animation: lineWidht 2s forwards;}
+@keyframes lineWidht{
+    from{width: 0;}
+    to{width: 400px;}
+}
+.my_skill > h3{color:rgb(124, 175, 216) ; font-size:40px; position: absolute; font-family: 'Nanum Myeongjo', serif;}
+.my_experience > h3{color: rgb(124, 175, 216); margin-top: 300px;}
+
+.my_name{font-size: 30px;}
+.my_name{position: absolute; top: 100px;}
+.birth_day{position: absolute; top: 150px; font-size: 30px;}
+.my_number2{position: absolute; top: 200px; font-size: 30px}
+.my_email{position: absolute; top: 250px; font-size: 30px}
+
+
+
+
+.about_me b:nth-of-type(1){color:rgb(124, 175, 216) ; padding: 10px;}
+
+.Certificate{position: relative; right: 220px; top: 150px; }
+.Certificate > h3{font-size: 40px; font-family: 'Nanum Myeongjo', serif; position: absolute; color:rgb(124, 175, 216);} 
+.Certificate:after{content: ''; border-bottom: 4px solid rgb(124, 175, 216); width: 400px; height: 4px; position: absolute; top: 40px; left: 0;}
+.cer_text{position: absolute; color: black; top: 80px; left: 0px; width: 600px;}
+.cer_text > b{font-size: 20px;}
+
+/* my_skill */
+.html_intro{position: absolute; top: 50px; font-size: 150px}
+.css_intro{position: absolute; top: 150px; font-size: 150px}
+.js_intro{position: absolute; top: 110px; font-size: 150px; right: 400px;}
+
+
+
+
+
+
+
+
+
+/* first_content */
+.first_page{position: relative;}
+.first_back{background-color: rgb(63, 103, 66); height: 90%; width: 100%; position: absolute;}
+
+.first_Tv{position: absolute; left: -250px; top: -200px; 
+    background-image: url(../img/sunny-removebg-preview.png); width: 1200px; height: 800px;  background-repeat: no-repeat; background-size: cover; z-index: 999; }
+
+.first_img {position: absolute; top: 200px; left: 220px; z-index: 1;}
+
+.first_num{width: 100px; height: 100px; background-color:white; position: absolute; right: 600px; text-align: center; line-height: 100px; border-radius: 50%; top: 100px; transition: all.5s;}
+
+.first_num > h2{color: rgb(63, 103, 66); font-size: 30px;} 
+.first_page > h3 { position: absolute; top: 250px;  width: 300px; height: 100px; background-color: white; border-radius: 100px; text-align: center; line-height: 100px; color: rgb(63, 103, 66); right: 400px; transition:all .5s ; font-size: 30px;}
+
+.first_text{width: 400px; height: 400px; background-color: white; border-radius: 50px; position: absolute; right: 300px; top: 400px;}
+.first_text > b {color:rgb(63, 103, 66); position: absolute; top: 20px; left: 20px; font-size: 18px;}
+.first_text > p {color:rgb(63, 103, 66); padding: 20px; padding-top: 100px;}
+.first_text > p:nth-last-of-type(1) {color: rgb(63, 103, 66); padding: 20px; padding-top: 0px;}
+.first_text > p:nth-last-of-type(2) {color: rgb(63, 103, 66); padding: 20px; padding-top: 0px;}
+
+
+.first_img2{position: absolute; left: 240px; top: 130px;}
+
+
+.first_link{width: 200px; height: 50px; border-radius: 20px; background-color: black; text-align: center; line-height: 50px; position: absolute; bottom: 240px; left: 500px; transition: all.5s; z-index: 999;}
+.first_link:hover{background-color: white; color: black;}
+.first_link:hover a{color: black;}
+.first_link > a{width: 100%; height: 100%; display: block;}
+/* second_slide */
+/* .first_slide{display: none;} */
+.second_slide{display: none; }
+
+
+/* content_page */
+/* .content_page{background-color: rgb(220, 236, 253); overflow: hidden; position: relative;} */
+/* .content_circle{width: 1400px; height: 1400px; background-color: white; border-radius: 50%; position: relative; left: -35%; } */
+/* .content_circle > h2{color: black; position: absolute; left: 50%; font-size: 100px; top: 600px; font-family: 'Nanum Myeongjo', serif;} */
+
+/* .first_content{ width: 600px; height: 250px; background-color: white; position: absolute; right: 50px; border-radius: 100px; overflow: hidden; background: url(../img/bg_main_spot_slide01_robot_main\ 1.png) center no-repeat ; background-color: white;}
+.first_content > img{}
+.second_content{width: 600px; height: 250px; background-color: black; position: absolute; right: 50px; border-radius: 100px;  bottom: 10px;}
+.third_content{width: 600px; height: 250px; background-color: black; position: absolute; right: 50px; border-radius: 100px;  top: 10px;} */
+
+.content_page{background-color: beige;}
+
+
+
+
+/* second_page */
+.second_page{position: relative;}
+.second_back{background-color: rgb(123, 160, 196); height: 90%; width: 100%; position: absolute;}
+
+.second_Tv{position: absolute; left: -250px; top: -200px; 
+    background-image: url(../img/sunny-removebg-preview.png); width: 1200px; height: 800px;  background-repeat: no-repeat; background-size: cover; z-index: 999; }
+
+.second_img {position: absolute; top: 200px; left: 220px; z-index: 1;}
+
+.second_num{width: 100px; height: 100px; background-color:white; position: absolute; right: 600px; text-align: center; line-height: 100px; border-radius: 50%; top: 100px; transition: all.5s;}
+
+.second_num > h2{color: rgb(123, 160, 196); font-size: 30px;} 
+.second_page > h3 { position: absolute; top: 250px;  width: 300px; height: 100px; background-color: white; border-radius: 100px; text-align: center; line-height: 100px; color: rgb(123, 160, 196); right: 400px; transition:all .5s ; font-size: 30px;}
+
+.second_text{width: 400px; height: 400px; background-color: white; border-radius: 50px; position: absolute; right: 300px; top: 400px;}
+.second_text > b {color: rgb(123, 160, 196); position: absolute; top: 20px; left: 20px; font-size: 18px;}
+.second_text > p {color: rgb(123, 160, 196); padding: 20px; padding-top: 100px;}
+.second_text > p:nth-last-of-type(1) {color: rgb(123, 160, 196); padding: 20px; padding-top: 0px;}
+.second_text > p:nth-last-of-type(2) {color: rgb(123, 160, 196); padding: 20px; padding-top: 0px;}
+
+
+.second_img2{position: absolute; left: 240px; top: 130px;}
+
+
+.second_link{width: 200px; height: 50px; border-radius: 20px; background-color: black; text-align: center; line-height: 50px; position: absolute; bottom: 240px; left: 500px; transition: all.5s; z-index: 999;}
+.second_link:hover{background-color: white; color: black;}
+.second_link:hover a{color: black;}
+.second_link > a{width: 100%; height: 100%; display: block;}
+
+/* third page */
+
+
+.third_page{position: relative;}
+.third_back{background-color: rgb(118, 88, 109); height: 90%; width: 100%; position: absolute;}
+
+.third_Tv{position: absolute; left: -250px; top: -200px; 
+    background-image: url(../img/sunny-removebg-preview.png); width: 1200px; height: 800px;  background-repeat: no-repeat; background-size: cover; z-index: 999; }
+
+.third_img {position: absolute; top: 200px; left: 220px; z-index: 1;}
+
+.third_num{width: 100px; height: 100px; background-color:white; position: absolute; right: 600px; text-align: center; line-height: 100px; border-radius: 50%; top: 100px; transition: all.5s;}
+
+.third_num > h2{color: rgb(118, 88, 109); font-size: 35px;} 
+.third_page > h3 { position: absolute; top: 250px;  width: 300px; height: 100px; background-color: white; border-radius: 100px; text-align: center; line-height: 100px; color: rgb(118, 88, 109); right: 400px; transition:all .5s ; font-size: 30px;}
+
+.third_text{width: 400px; height: 400px; background-color: white; border-radius: 50px; position: absolute; right: 300px; top: 400px;}
+.third_text > b {color: rgb(118, 88, 109); position: absolute; top: 20px; left: 20px; font-size: 18px;}
+.third_text > p {color: rgb(118, 88, 109); padding: 20px; padding-top: 100px;}
+.third_text > p:nth-last-of-type(1) {color: rgb(118, 88, 109); padding: 20px; padding-top: 0px;}
+.third_text > p:nth-last-of-type(2) {color: rgb(118, 88, 109); padding: 20px; padding-top: 0px;}
+
+
+.third_img2{position: absolute; left: 240px; top: 120px;}
+
+
+.third_link{width: 200px; height: 50px; border-radius: 20px; background-color: black; text-align: center; line-height: 50px; position: absolute; bottom: 240px; left: 500px; transition: all.5s; z-index: 999;}
+.third_link:hover{background-color: white; color: black;}
+.third_link:hover a{color: black;}
+.third_link > a{width: 100%; height: 100%; display: block;}
+
+
+
+
+
+
+/* last */
+
+
+
+.last{
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      font-family: 'Anton', sans-serif;
+      justify-content: center;
+      align-items: center;
+      background-image: url(https://cdn.pixabay.com/photo/2017/02/09/09/11/starry-sky-2051448_1280.jpg);
+      background-position: center; background-repeat: no-repeat; background-size: cover; height: 100vh;
+    }
+    
+    .night {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: rotateZ(45deg);
+      animation: sky 200000ms linear infinite;
+    }
+
+    
+    @keyframes tail {
+      0% {
+        width: 0;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+    @keyframes shining {
+      0% {
+          width: 0;
+        }
+        50% {
+            width: 30px;
+        }
+        100% {
+            width: 0;
+        }
+    }
+    
+    @keyframes shooting {
+        0% {
+            transform: translateX(-400px) ;
+        }
+        50%{
+        }
+    100% {
+        transform: translateX(600px);
+    }
+
+}
+    @keyframes shooting1 {
+        0% {
+            transform: translateX(-400px) translateY(100px);
+        }
+        50%{
+        }
+    100% {
+        transform: translateX(300px) translateY(100px);
+    }
+}
+    @keyframes shooting2 {
+        0% {
+            transform: translateX(-400px) translateY(-100px);
+        }
+        50%{
+        }
+    100% {
+        transform: translateX(500px) translateY(-100px);
+    }
+}
+    @keyframes shooting3 {
+        0% {
+            transform: translateX(-600px) translateY(500px);
+        }
+        50%{
+        }
+    100% {
+        transform: translateX(100px) translateY(500px);
+    }
+}
+    @keyframes shooting4 {
+        0% {
+            transform: translateX(-600px) translateY(460px);
+        }
+        50%{
+        }
+    100% {
+        transform: translateX(100px) translateY(460px);
+    }
+}
+    @keyframes shooting5 {
+        0% {
+            transform: translateX(-300px) translateY(-160px);
+        }
+        50%{
+        }
+    100% {
+        transform: translateX(800px) translateY(-160px);
+    }
+}
+
+
+
+.shooting_star1 {
+    overflow: hidden;
+    rotate: 45deg;
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(250, 247, 251), rgba(0, 0, 255, 0));
+  animation: 
+    shooting ease-in-out 2s infinite,
+    tail ease-in-out 2s infinite,
+    sky ease-in-out 2s infinite;
+}
+ .shooting_star1::before {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(237, 239, 243), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;}
+ .shooting_star1::after {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(249, 250, 252), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;transform: translateX(50%) rotateZ(-45deg);}
+
+.shooting_star2 {
+    rotate: 45deg;
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(95, 145, 255, 1), rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation: 
+    shooting1 ease-in-out 1.5s infinite,
+    tail ease-in-out 1.5s infinite,
+    sky ease-in-out 1.5s infinite;
+}
+ .shooting_star2::before {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(237, 239, 243), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;}
+ .shooting_star2::after {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(249, 250, 252), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;transform: translateX(50%) rotateZ(-45deg);}
+
+.shooting_star3 {
+    rotate: 45deg;
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(95, 145, 255, 1), rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation: 
+    shooting1 ease-in-out 1.5s infinite,
+    tail ease-in-out 1.5s infinite,
+    sky ease-in-out 1.5s infinite;
+}
+ .shooting_star3::before {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(237, 239, 243), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;}
+ .shooting_star3::after {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(249, 250, 252), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;transform: translateX(50%) rotateZ(-45deg);}
+.shooting_star2 {
+    rotate: 45deg;
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(95, 145, 255, 1), rgba(51, 51, 240, 0));
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation: 
+    shooting1 ease-in-out 1.5s infinite,
+    tail ease-in-out 1.5s infinite,
+    sky ease-in-out 1.5s infinite;
+}
+ .shooting_star2::before {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(237, 239, 243), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;}
+ .shooting_star2::after {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(249, 250, 252), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;transform: translateX(50%) rotateZ(-45deg);}
+.shooting_star3 {
+    rotate: 45deg;
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, rgb(27, 27, 27), rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation: 
+    shooting2 ease-in-out 1.2s infinite,
+    tail ease-in-out 1.2s infinite,
+    sky ease-in-out 1.2s infinite;
+}
+ .shooting_star3::before {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(237, 239, 243), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;}
+ .shooting_star3::after {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(249, 250, 252), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;transform: translateX(50%) rotateZ(-45deg);}
+
+
+.shooting_star4 {
+    rotate: 45deg;
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, rgb(24, 23, 23), rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation: 
+    shooting3 ease-in-out 1.2s infinite,
+    tail ease-in-out 1.2s infinite,
+    sky ease-in-out 1.2s infinite;
+}
+ .shooting_star4::before {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(237, 239, 243), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;}
+ .shooting_star4::after {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(249, 250, 252), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;transform: translateX(50%) rotateZ(-45deg);}
+
+
+.shooting_star5 {
+    rotate: 45deg;
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, rgb(248, 245, 245), rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation: 
+    shooting4 ease-in-out 0.8s infinite,
+    tail ease-in-out 0.8s infinite,
+    sky ease-in-out 0.8s infinite;
+}
+ .shooting_star5::before {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(237, 239, 243), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;}
+ .shooting_star5::after {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(249, 250, 252), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;transform: translateX(50%) rotateZ(-45deg);}
+
+
+.shooting_star6 {
+    rotate: 45deg;
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, rgb(248, 245, 245), rgba(61, 61, 206, 0));
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation: 
+    shooting5 ease-in-out 0.8s infinite,
+    tail ease-in-out 0.8s infinite,
+    sky ease-in-out 0.8s infinite;
+}
+ .shooting_star6::before {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(237, 239, 243), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;}
+ .shooting_star6::after {content: '';position: absolute;top: calc(50% - 1px);right: 0;width: 30px;height: 2px;background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(249, 250, 252), rgba(0, 0, 255, 0));transform: translateX(50%) rotateZ(45deg);border-radius: 100%;animation: shining 2s ease-in-out infinite;transform: translateX(50%) rotateZ(-45deg);}
+
+
+ 
+ .END{font-size: 100px; color: white;  position: static;}
+.email{font-size: 100px; color: white;}
+        

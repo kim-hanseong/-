@@ -1,0 +1,55 @@
+*{padding: 0; margin: 0; text-decoration: none; list-style: none;}
+body{width: 100vw; margin: 0 auto; box-sizing: border-box; overflow-x: hidden; height: 400vh;}
+/* header page */
+.active{position: sticky; top: 0;}
+/* nav */
+header{width: 100vw; background-color: white;}
+header > div{width: 75vw; margin: 0 auto; display: flex;  padding: 10px; margin-bottom: 80px;  z-index: 9999; justify-content: space-between; padding-top: 20px;}
+/* nav */
+/* header > div > nav{max-width:50%; margin:  0 auto;} */
+header > div > nav > ul{display: flex; text-align: center; width: 30vw;justify-content: space-between;}
+header > div > nav > ul > li > a{color: black; font-weight: bolder; font-size: 1.3vw;}  
+.head_icons{display: flex;}
+.head_icons > li{padding:  0 10px;}
+.nav_index01{display: flex; border-radius: 50px; background-color: black; height: 50px; width: 200px; text-align: center; position: absolute; left: -100px; top: 50px; display: none;}
+.nav_index01 > li{padding-top: 15px; gap: 10px; font-size: 14px; margin-right: 5px; margin: 0 auto;}
+.nav_index01 > li > a{color: white; font-weight: bolder;}
+.mobile_icons{display: none;}
+/* head_title */
+.head_title{ max-width: 75vw; margin: 0 auto; margin-bottom: 50px; margin-bottom: 100px;}
+.head_title > h2{font-size: 50px; display: flex;}
+.head_title > p{font-size: 2rem; font-weight: 500;}
+.head_title > h2 > img{width: 70px;;}
+/* servie-choice-list */
+.service_page_tool{max-width: 75vw; margin:  0 auto;}
+.service_choice_list{display: flex; margin-bottom: 50px;}
+.service_choice_list > li{margin-right: 10px;}
+.service_choice_list > li > button{border-radius: 20px; background-color: rgb(241, 241, 241); font-size: 1rem; padding: 5px 15px; border: 1px solid rgb(241, 241, 241);}
+/* .service_choice_list > li > button:hover{background-color: black; color: white; transition: all.3s;} */
+/*  service_list */
+.service_list{display: flex; flex-wrap: wrap; justify-content: space-between;}
+.service_list > li{width: 400px;  height: 440px; overflow: hidden; transition: all.4s;  border-radius: 10px; box-shadow: 6px 6px 6px 6px rgba(3, 3, 3, 0.2);}
+#all_btn{background-color: black; color: white;}
+.sub_banner_head{width: 100%; height: 45%; display: block;}
+.sub_banner_head > h2{display: block; overflow: hidden; height: 64px; margin-top: 13px; padding: 0 24px; font-family: KakaoBig,Apple SD Gothic Neo,Malgun Gothic,맑은 고딕,sans-serif; font-size: 1.7rem; line-height: 32px; }
+/* flex_test */
+.flex_test{display: flex; padding: 20px 0 0 20px;}
+.flex_test > span{position: relative; margin:  3px 0 0 10px; background-color: rgb(222, 222, 222); border-radius: 10px; height: 30px; padding-left: 10px; padding-right: 10px; line-height: 30px; text-align: center; font-size: 0.8rem;}
+.flex_test > span::after{content: ''; position: absolute; background-color:  rgb(222, 222, 222); width: 10px; height: 10px;  top: 0; left: 0;}
+.flex_test > b{font-size: 0.8rem; padding: 5px 0 0 10px;}
+.flex_test > img {height: 40px;}
+.service_list > li{margin-bottom: 30px;}
+.service_list > li > p{color: gray; margin-left: 20px; padding-bottom: 10px; font-size: .8rem;}
+.service_list > li:nth-child(1) > .sub_banner_img{width: 100%; height: 55%; position: relative; background: url(https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2Fabcd3a11017900001.jpg) ; background-size: contain; background-repeat: no-repeat;}  
+.service_list > li:nth-child(2) > .sub_banner_img{width: 100%; height: 55%; position: relative; background: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/fcf3da10017a00001.png) ; background-size: contain; background-repeat: no-repeat;}  
+.service_list > li:nth-child(3) > .sub_banner_img{width: 100%; height: 55%; position: relative; background: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/f62cbd72017a00001.jpg) ; background-size: contain; background-repeat: no-repeat;}  
+.service_list > li:nth-child(4) > .sub_banner_img{width: 100%; height: 55%; position: relative; background: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/78d09478017900001.jpeg) ; background-size: contain; background-repeat: no-repeat;}  
+.service_list > li:nth-child(5) > .sub_banner_img{width: 100%; height: 55%; position: relative; background: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/accbf7de017a00001.png) ; background-size: contain; background-repeat: no-repeat;}  
+.service_list > li:nth-child(6) > .sub_banner_img{width: 100%; height: 55%; position: relative; background: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/7a339b98017900001.jpg) ; background-size: contain; background-repeat: no-repeat;}  
+.service_list > li:nth-child(7) > .sub_banner_img{width: 100%; height: 55%; position: relative; background: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/798cb262017900001.jpg) ; background-size: contain; background-repeat: no-repeat;}  
+.service_list > li:nth-child(8) > .sub_banner_img{width: 100%; height: 55%; position: relative; background: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/79b14009017900001.jpg) ; background-size: contain; background-repeat: no-repeat;}  
+.service_list > li:nth-child(9) > .sub_banner_img{width: 100%; height: 55%; position: relative; background: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/a8bdf743017900001.jpg) ; background-size: contain; background-repeat: no-repeat;}  
+.btn_active{background-color: black; color: white;}
+
+
+/* #kakao_btn{background-color: black; color: white;} */

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./aevan.css">
+    <script src="./js/vendor/modernizr.custom.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;700;900&display=swap');
+</style>
+    <title>Document</title>
+</head>
+    <script>
+        
+
+
+       $(document).ready(function(){
+    $(".head_slide").bxSlider({
+      pager:false,
+      prevText : '<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgICAgPGZpbHRlciB4PSItMTQlIiB5PSItMTQlIiB3aWR0aD0iMTI4JSIgaGVpZ2h0PSIxMjglIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz4KICAgICAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wOCAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGR5PSIxIiBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIyIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMyAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIyIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICA8ZmVNb3JwaG9sb2d5IHJhZGl1cz0iLjUiIG9wZXJhdG9yPSJkaWxhdGUiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dTcHJlYWRPdXRlcjMiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJzaGFkb3dTcHJlYWRPdXRlcjMiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIzIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMiAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIzIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMyIvPgogICAgICAgICAgICA8ZmVNZXJnZT4KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIxIi8+CiAgICAgICAgICAgICAgICA8ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJzaGFkb3dNYXRyaXhPdXRlcjMiLz4KICAgICAgICAgICAgPC9mZU1lcmdlPgogICAgICAgIDwvZmlsdGVyPgogICAgICAgIDxjaXJjbGUgaWQ9ImIiIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA1NSA1KSI+CiAgICAgICAgICAgIDx1c2UgZmlsbD0iIzAwMCIgZmlsdGVyPSJ1cmwoI2EpIiB4bGluazpocmVmPSIjYiIvPgogICAgICAgICAgICA8dXNlIGZpbGw9IiNGRkYiIHhsaW5rOmhyZWY9IiNiIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGQ9Ik0zMi43MTUgMzguNjk5YTEgMSAwIDAgMS0xLjMxOS4wOThsLS4wOTUtLjA4Mi04LTcuODE3YTEgMSAwIDAgMS0uMTA4LTEuMzA2bC4wOC0uMDk2IDcuNzIzLTguMTgyYTEgMSAwIDAgMSAxLjUzNSAxLjI3NmwtLjA4LjA5Ni03LjA0OSA3LjQ2OSA3LjI5NyA3LjEzYTEgMSAwIDAgMSAuMDk4IDEuMzE5bC0uMDgyLjA5NXoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">',
+      nextText : '<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgICAgPGZpbHRlciB4PSItMTQlIiB5PSItMTQlIiB3aWR0aD0iMTI4JSIgaGVpZ2h0PSIxMjglIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz4KICAgICAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wOCAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGR5PSIxIiBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIyIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMyAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIyIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICA8ZmVNb3JwaG9sb2d5IHJhZGl1cz0iLjUiIG9wZXJhdG9yPSJkaWxhdGUiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dTcHJlYWRPdXRlcjMiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJzaGFkb3dTcHJlYWRPdXRlcjMiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIzIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMiAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIzIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMyIvPgogICAgICAgICAgICA8ZmVNZXJnZT4KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIxIi8+CiAgICAgICAgICAgICAgICA8ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJzaGFkb3dNYXRyaXhPdXRlcjMiLz4KICAgICAgICAgICAgPC9mZU1lcmdlPgogICAgICAgIDwvZmlsdGVyPgogICAgICAgIDxjaXJjbGUgaWQ9ImIiIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA1NSA1KSI+CiAgICAgICAgICAgIDx1c2UgZmlsbD0iIzAwMCIgZmlsdGVyPSJ1cmwoI2EpIiB4bGluazpocmVmPSIjYiIvPgogICAgICAgICAgICA8dXNlIGZpbGw9IiNGRkYiIHhsaW5rOmhyZWY9IiNiIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGQ9Ik0zMi43MTUgMzguNjk5YTEgMSAwIDAgMS0xLjMxOS4wOThsLS4wOTUtLjA4Mi04LTcuODE3YTEgMSAwIDAgMS0uMTA4LTEuMzA2bC4wOC0uMDk2IDcuNzIzLTguMTgyYTEgMSAwIDAgMSAxLjUzNSAxLjI3NmwtLjA4LjA5Ni03LjA0OSA3LjQ2OSA3LjI5NyA3LjEzYTEgMSAwIDAgMSAuMDk4IDEuMzE5bC0uMDgyLjA5NXoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">',
+      auto : true,
+      pause : 5000,
+      speed : 1000,
+      controls:false,
+
+    });
+  });   
+
+  $(document).ready(function(){
+    $(".review_slide").bxSlider({
+      pager:false,
+      prevText : '<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgICAgPGZpbHRlciB4PSItMTQlIiB5PSItMTQlIiB3aWR0aD0iMTI4JSIgaGVpZ2h0PSIxMjglIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz4KICAgICAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wOCAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGR5PSIxIiBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIyIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMyAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIyIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICA8ZmVNb3JwaG9sb2d5IHJhZGl1cz0iLjUiIG9wZXJhdG9yPSJkaWxhdGUiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dTcHJlYWRPdXRlcjMiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJzaGFkb3dTcHJlYWRPdXRlcjMiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIzIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMiAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIzIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMyIvPgogICAgICAgICAgICA8ZmVNZXJnZT4KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIxIi8+CiAgICAgICAgICAgICAgICA8ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJzaGFkb3dNYXRyaXhPdXRlcjMiLz4KICAgICAgICAgICAgPC9mZU1lcmdlPgogICAgICAgIDwvZmlsdGVyPgogICAgICAgIDxjaXJjbGUgaWQ9ImIiIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA1NSA1KSI+CiAgICAgICAgICAgIDx1c2UgZmlsbD0iIzAwMCIgZmlsdGVyPSJ1cmwoI2EpIiB4bGluazpocmVmPSIjYiIvPgogICAgICAgICAgICA8dXNlIGZpbGw9IiNGRkYiIHhsaW5rOmhyZWY9IiNiIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGQ9Ik0zMi43MTUgMzguNjk5YTEgMSAwIDAgMS0xLjMxOS4wOThsLS4wOTUtLjA4Mi04LTcuODE3YTEgMSAwIDAgMS0uMTA4LTEuMzA2bC4wOC0uMDk2IDcuNzIzLTguMTgyYTEgMSAwIDAgMSAxLjUzNSAxLjI3NmwtLjA4LjA5Ni03LjA0OSA3LjQ2OSA3LjI5NyA3LjEzYTEgMSAwIDAgMSAuMDk4IDEuMzE5bC0uMDgyLjA5NXoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">',
+      nextText : '<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgICAgPGZpbHRlciB4PSItMTQlIiB5PSItMTQlIiB3aWR0aD0iMTI4JSIgaGVpZ2h0PSIxMjglIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz4KICAgICAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wOCAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGR5PSIxIiBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIyIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMyAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIyIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICA8ZmVNb3JwaG9sb2d5IHJhZGl1cz0iLjUiIG9wZXJhdG9yPSJkaWxhdGUiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dTcHJlYWRPdXRlcjMiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJzaGFkb3dTcHJlYWRPdXRlcjMiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIzIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMiAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIzIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMyIvPgogICAgICAgICAgICA8ZmVNZXJnZT4KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIxIi8+CiAgICAgICAgICAgICAgICA8ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJzaGFkb3dNYXRyaXhPdXRlcjMiLz4KICAgICAgICAgICAgPC9mZU1lcmdlPgogICAgICAgIDwvZmlsdGVyPgogICAgICAgIDxjaXJjbGUgaWQ9ImIiIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA1NSA1KSI+CiAgICAgICAgICAgIDx1c2UgZmlsbD0iIzAwMCIgZmlsdGVyPSJ1cmwoI2EpIiB4bGluazpocmVmPSIjYiIvPgogICAgICAgICAgICA8dXNlIGZpbGw9IiNGRkYiIHhsaW5rOmhyZWY9IiNiIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGQ9Ik0zMi43MTUgMzguNjk5YTEgMSAwIDAgMS0xLjMxOS4wOThsLS4wOTUtLjA4Mi04LTcuODE3YTEgMSAwIDAgMS0uMTA4LTEuMzA2bC4wOC0uMDk2IDcuNzIzLTguMTgyYTEgMSAwIDAgMSAxLjUzNSAxLjI3NmwtLjA4LjA5Ni03LjA0OSA3LjQ2OSA3LjI5NyA3LjEzYTEgMSAwIDAgMSAuMDk4IDEuMzE5bC0uMDgyLjA5NXoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">',
+      auto : true,
+      pause : 5000,
+      speed : 1000,
+      moveSlides: 1,
+      minSlides: 3,
+      maxSlides:3,
+      slideMargin: 10,
+      slideWidth: 1000,
+    });
+  });   
+
+  $(document).ready(function(){
+    $(".big_page").bxSlider({
+      pager:false,
+      auto : true,
+      slideWidth: 1000,
+      infiniteLoop: true,
+      hideControlOnEnd: true,
+      controls:false,
+    });
+  });   
+  $(document).ready(function(){
+    $(".small_page").bxSlider({
+      pager:false,
+      auto : true,
+      speed : 1000,
+      moveSlides: 1,
+      minSlides: 2,
+      maxSlides:2,
+      slideMargin: 10,
+      slideWidth: 1000,
+      autoStart: true,
+      autoHover: true,
+      infiniteLoop: true,
+      hideControlOnEnd: true,
+      prevText : '<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgICAgPGZpbHRlciB4PSItMTQlIiB5PSItMTQlIiB3aWR0aD0iMTI4JSIgaGVpZ2h0PSIxMjglIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz4KICAgICAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wOCAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGR5PSIxIiBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIyIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMyAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIyIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICA8ZmVNb3JwaG9sb2d5IHJhZGl1cz0iLjUiIG9wZXJhdG9yPSJkaWxhdGUiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dTcHJlYWRPdXRlcjMiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJzaGFkb3dTcHJlYWRPdXRlcjMiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIzIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMiAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIzIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMyIvPgogICAgICAgICAgICA8ZmVNZXJnZT4KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIxIi8+CiAgICAgICAgICAgICAgICA8ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJzaGFkb3dNYXRyaXhPdXRlcjMiLz4KICAgICAgICAgICAgPC9mZU1lcmdlPgogICAgICAgIDwvZmlsdGVyPgogICAgICAgIDxjaXJjbGUgaWQ9ImIiIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA1NSA1KSI+CiAgICAgICAgICAgIDx1c2UgZmlsbD0iIzAwMCIgZmlsdGVyPSJ1cmwoI2EpIiB4bGluazpocmVmPSIjYiIvPgogICAgICAgICAgICA8dXNlIGZpbGw9IiNGRkYiIHhsaW5rOmhyZWY9IiNiIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGQ9Ik0zMi43MTUgMzguNjk5YTEgMSAwIDAgMS0xLjMxOS4wOThsLS4wOTUtLjA4Mi04LTcuODE3YTEgMSAwIDAgMS0uMTA4LTEuMzA2bC4wOC0uMDk2IDcuNzIzLTguMTgyYTEgMSAwIDAgMSAxLjUzNSAxLjI3NmwtLjA4LjA5Ni03LjA0OSA3LjQ2OSA3LjI5NyA3LjEzYTEgMSAwIDAgMSAuMDk4IDEuMzE5bC0uMDgyLjA5NXoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">',
+      nextText : '<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgICAgPGZpbHRlciB4PSItMTQlIiB5PSItMTQlIiB3aWR0aD0iMTI4JSIgaGVpZ2h0PSIxMjglIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz4KICAgICAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wOCAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGR5PSIxIiBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIyIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMyAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIyIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICA8ZmVNb3JwaG9sb2d5IHJhZGl1cz0iLjUiIG9wZXJhdG9yPSJkaWxhdGUiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dTcHJlYWRPdXRlcjMiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJzaGFkb3dTcHJlYWRPdXRlcjMiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIzIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMiAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIzIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMyIvPgogICAgICAgICAgICA8ZmVNZXJnZT4KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIxIi8+CiAgICAgICAgICAgICAgICA8ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJzaGFkb3dNYXRyaXhPdXRlcjMiLz4KICAgICAgICAgICAgPC9mZU1lcmdlPgogICAgICAgIDwvZmlsdGVyPgogICAgICAgIDxjaXJjbGUgaWQ9ImIiIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA1NSA1KSI+CiAgICAgICAgICAgIDx1c2UgZmlsbD0iIzAwMCIgZmlsdGVyPSJ1cmwoI2EpIiB4bGluazpocmVmPSIjYiIvPgogICAgICAgICAgICA8dXNlIGZpbGw9IiNGRkYiIHhsaW5rOmhyZWY9IiNiIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGQ9Ik0zMi43MTUgMzguNjk5YTEgMSAwIDAgMS0xLjMxOS4wOThsLS4wOTUtLjA4Mi04LTcuODE3YTEgMSAwIDAgMS0uMTA4LTEuMzA2bC4wOC0uMDk2IDcuNzIzLTguMTgyYTEgMSAwIDAgMSAxLjUzNSAxLjI3NmwtLjA4LjA5Ni03LjA0OSA3LjQ2OSA3LjI5NyA3LjEzYTEgMSAwIDAgMSAuMDk4IDEuMzE5bC0uMDgyLjA5NXoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">',
+      controls:false,
+      onSliderLoad: function(currentIndex) {
+      $(".small_page > li").removeClass("active");
+      $(".small_page > li").eq(currentIndex).addClass("active");
+    }
+    });
+  });   
+
+
+  
+
+  $(function(){
+    $(".big_page").bxSlider() === $(".small_page").bxSlider()
+  })
+    </script>
+
+<body>
+    <header>
+        <div class="head_size">
+            <h1><a href="./aevan.html">HANKEA</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="./about.html">-ABOUT US</a></li>
+                    <li><a href="#">-BUSINESS</a></li>
+                    <li><a href="#">-FUNDING</a></li>
+                    <li><a href="#">-COMMUNITY</a></li>
+                    <li><a href="#">-INVESTMENT INQUIRY</a></li >
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <ul class="head_slide">
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg" width="100%" alt="아늑함과 편안함을 한케아에서">
+               <div>
+                 <p>저희 가구에 결함은 없습니다.
+                    <span>가구를 생각하는 HANKEA</span>
+                 </p>
+               </div>
+            </li>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_1280.jpg" width="100%" alt="디자인과 구도 또한 세련된 한케아">
+                <div>
+                    <p>인테리어 또한 전문적인. <br>
+                        HANKEA
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376_1280.jpg" width="100%" alt="미래지향적인 한케아">
+                <div>
+                    <p>미래지향적인 우린 <br>
+                        HANKEA
+                    </p>
+                </div>
+            </li>
+        </ul>
+    <section class="side_wrap">
+        <div class="side_wrap01">
+            <div>
+                <strong>안락함을 제공하는것이 저의 한케아의 목표<br>
+                        그로인한 노력은 끊임없이 하고있습니다.
+                </strong>
+            </div>
+        </div>
+        <div class="side_wrap02">
+            <div>
+                <strong>
+                    장인을 만난 목재는 빛나며<br>
+                    그 이상의 가치를 보입니다.
+                </strong>
+            </div>
+        </div>
+        <div class="side_wrap03">
+            <div>
+                <strong>
+                    우리는 가구를 만드는 사람들<br>
+                    HANKEA 입니다.
+                </strong>
+            </div>
+        </div>
+    </section>
+    <!-- 여기 고쳐야함 -->
+    <div class="shop_scroll">
+        <ul class="shop_scroll01">
+            <li>
+                <strong>BEST BED</strong>
+            </li>
+            <li>
+               <a href="#"><img src="http://www.basicgagu.com/shopimages/83kjh/0110010011053.jpg?1680678729" width="100%" alt=">[헤리티지월넛] A형 호텔침대/협탁 세트 SS/Q/K/SK/EK/LK/CSK/CK/CDK/CLK
+                월넛 | W2000 X D2200 X H1200 (mm)
+                60%6,130,000 KRW 2,450,000"></a>
+            </li>
+            <li>
+                <p>[헤리티지월넛] A형 호텔침대/협탁 세트 SS/Q/K/SK/EK/LK/CSK/CK/CDK/CLK
+                월넛 | W2000 X D2200 X H1200 (mm)
+                60%6,130,000 KRW 2,450,000</p>
+            </li>
+            <li>
+               <a href="#"><img src="http://www.basicgagu.com/shopimages/83kjh/0110010007673.jpg?1680678807" width="100%" alt="[60% 특가] [헤리티지월넛] R형 저상형침대 SS/Q/K/SK/EK/LK/CSK/CK/CDK
+                월넛 | W1200 X D2190 X H950 (mm)
+                60%5,780,000 KRW 2,310,000"></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [헤리티지월넛] R형 저상형침대 SS/Q/K/SK/EK/LK/CSK/CK/CDK
+                    월넛 | W1200 X D2190 X H950 (mm)
+                    60%5,780,000 KRW 2,310,000
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="http://www.basicgagu.com/shopimages/83kjh/0110040009163.jpg?1680678930" width="100%" alt="[60% 특가] [블랙러버] 다크 Y형 침대 다크러버 SS/Q/K/SK/EK/LK/CSK/CK/CDK/CLK
+                    블랙러버 | W1200 X D2100 X H1100 (mm)
+                    60%3,450,000 KRW 1,380,000"></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [블랙러버] 다크 Y형 침대 다크러버 SS/Q/K/SK/EK/LK/CSK/CK/CDK/CLK
+                    블랙러버 | W1200 X D2100 X H1100 (mm)
+                    60%3,450,000 KRW 1,380,000
+                </p>
+            </li>
+        </ul>
+        <ul class="shop_scroll02"> 
+            <li>
+                <strong>STOREGE CLOSET</strong>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110090000543.jpg?1675327572" width="100%" alt="[60% 특가] [까사] B형 연결장롱 세트
+                    블랙러버 | W3100 X D600 X H2050 (mm)
+                    60%8,250,000 KRW 3,300,000  "></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [까사] B형 연결장롱 세트
+                    블랙러버 | W3100 X D600 X H2050 (mm)
+                    60%8,250,000 KRW 3,300,000  
+                </p>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110100001793.jpg?1680827637" width="100%" alt="[60% 특가] [크림슨] F형 키가 높은 스트라이프 연결장롱 : 선반장
+                    멀바우 | W1000 X D630 X H2100 (mm)
+                    60%4,750,000 KRW 1,900,000"></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [크림슨] F형 키가 높은 스트라이프 연결장롱 : 선반장
+                    멀바우 | W1000 X D630 X H2100 (mm)
+                    60%4,750,000 KRW 1,900,000
+                </p>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110090005043.jpg?1683092467" width="100%" alt="[60% 특가] [까사] J형 속이 깊은 연결장롱 세트
+                    블랙러버 | W2860 X D700 X H2050 (mm)
+                    60%8,250,000 KRW 3,300,000"></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [까사] J형 속이 깊은 연결장롱 세트
+                    블랙러버 | W2860 X D700 X H2050 (mm)
+                    60%8,250,000 KRW 3,300,000
+                </p>
+            </li>
+        </ul>
+        <ul class="shop_scroll03">
+            <li>
+                <strong>BEST SOFA</strong>
+            </li>
+            <li>
+               <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110110007763.jpg?1680842773" width="100%" alt="[레또] 패브릭 4인용소파 오트밀
+                W3000 X D1700 X H950 (mm)
+                KRW 3,980,000"></a>
+            </li>
+            <li>
+                <p>
+                    [레또] 패브릭 4인용소파 오트밀
+                    W3000 X D1700 X H950 (mm)
+                    KRW 3,980,000
+                </p>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110110008373.jpg?1680842692" width="100%" alt="[퓨로] 패브릭 4인용소파 아이보리
+                    W3100 X D1900 X H900 (mm)
+                    KRW 2,700,000"></a>
+            </li>
+            <li>
+                <p>
+                    [퓨로] 패브릭 4인용소파 아이보리
+                    W3100 X D1900 X H900 (mm)
+                    KRW 2,700,000
+                </p>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110110008413.jpg?1651223869" width="100%" alt=" 패브릭 모듈 소파 DIY
+                    4가지 타입 모듈로 다양한 조합 가능
+                    KRW 670,000"></a>
+            </li>
+            <li>
+                <p>  
+                    패브릭 모듈 소파 DIY
+                    4가지 타입 모듈로 다양한 조합 가능
+                    KRW 670,000</p>
+            </li>
+        </ul>
+    </div>
+    <div class="second_shop_scroll">
+        <ul class="second_shop_scroll01">
+            <li>
+                <strong>Living room furniture</strong>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110090000413.jpg?1680843044" width="100%" alt=" [60% 특가] [까사] A형 책장 세트
+                    블랙러버 | W3000 X D280 X H1950(mm)
+                    60%9,500,000 KRW 3,800,000"></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [까사] A형 책장 세트
+                    블랙러버 | W3000 X D280 X H1950(mm)
+                    60%9,500,000 KRW 3,800,000
+                </p>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110090002653.jpg?1683011436" width="100%" alt="[60% 특가] [까사] D형 책장
+                    블랙러버 | W1750 X D280 X H900 (mm)
+                    60%2,380,000 KRW 950,000"></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [까사] D형 책장
+                    블랙러버 | W1750 X D280 X H900 (mm)
+                    60%2,380,000 KRW 950,000
+                </p>
+
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110120004383.jpg?1684282175" width="100%" alt=" [60% 특가] [하모니] A형 확장형 책장
+                    화이트러버 | W2340~3400 X D310 X H2070 (mm)
+                    60%3,380,000 KRW 1,350,000"></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [하모니] A형 확장형 책장
+                    화이트러버 | W2340~3400 X D310 X H2070 (mm)
+                    60%3,380,000 KRW 1,350,000
+                </p>
+            </li>
+        </ul>
+        <ul class="second_shop_scroll02"> 
+            <li>
+                <strong>BEST TABLE</strong>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110010006273.jpg?1680683084" width="100%" alt="  [60% 특가] [블랙러버] 다크 F형 슬라이드거실장 다크러버
+                    블랙러버 | W2200 X D400 X H650 (mm)
+                    60%5,130,000 KRW 2,050,000"></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [블랙러버] 다크 F형 슬라이드거실장 다크러버
+                    블랙러버 | W2200 X D400 X H650 (mm)
+                    60%5,130,000 KRW 2,050,000
+                </p>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110090002603.jpg?1675734192" width="100%" alt=" [60% 특가] [블랙러버] 다크 C형 슬라이드거실장 다크러버
+                    블랙러버 | W2000 X D400 X H590 (mm)
+                    60%3,980,000 KRW 1,590,000"></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [블랙러버] 다크 C형 슬라이드거실장 다크러버
+                    블랙러버 | W2000 X D400 X H590 (mm)
+                    60%3,980,000 KRW 1,590,000
+                </p>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110120001953.jpg?1671092418" width="100%" alt=" [60% 특가] [헤리티지월넛] D형 슬라이드거실장 세트
+                    월넛 | W2550 X D400 X H600 (mm)
+                    60%11,230,000 KRW 4,490,000"></a>
+            </li>
+            <li>
+                <p>
+                    [60% 특가] [헤리티지월넛] D형 슬라이드거실장 세트
+                    월넛 | W2550 X D400 X H600 (mm)
+                    60%11,230,000 KRW 4,490,000
+                </p>
+            </li>
+        </ul>
+        <ul class="second_shop_scroll03">
+            <li>
+                <strong>BEST CHAIR</strong>
+                <img src="" alt="">
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110020003003.jpg?1680841213" width="100%" alt="  [이분의일 식탁] [블랙러버] B형 의자
+                    블랙러버 | W460 X D480 X H800 (mm)
+                    50%690,000 KRW 345,000"></a>
+            </li>
+            <li>
+                <p>
+                    [이분의일 식탁] [블랙러버] B형 의자
+                    블랙러버 | W460 X D480 X H800 (mm)
+                    50%690,000 KRW 345,000
+                </p>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110190000513.jpg?1671157588" width="100%" alt=" [이분의일 식탁] [리겐브라운] 의자
+                    비취 | W550 X D530 X H760 (mm)
+                    50%500,000 KRW 250,000"></a>
+            </li>
+            <li>
+                <p>
+                    [이분의일 식탁] [리겐브라운] 의자
+                    비취 | W550 X D530 X H760 (mm)
+                    50%500,000 KRW 250,000
+                </p>
+            </li>
+            <li>
+                <a href=""><img src="http://www.basicgagu.com/shopimages/83kjh/0110010004043.jpg?1670545488" width="100%" alt=" [이분의일 식탁] [헤리티지월넛] AV형 의자 카멜
+                    월넛 | W540 X D580 X H810 (mm)
+                    50%1,180,000 KRW 590,000"></a>
+            </li>
+            <li>
+                <p>
+                    [이분의일 식탁] [헤리티지월넛] AV형 의자 카멜
+                    월넛 | W540 X D580 X H810 (mm)
+                    50%1,180,000 KRW 590,000
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <section class="main_slide">
+        <h2>
+            Design
+        </h2>
+        <ul class="big_page">
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2017/08/27/10/16/interior-2685522_1280.jpg" width="100%" alt="가구 인테리어01">
+            </li>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2017/08/27/10/16/interior-2685518_1280.jpg" width="100%" alt="가구 인테리어02">
+            </li>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2018/05/02/09/02/baby-boy-3368017_1280.jpg" width="100%" alt="가구 인테리어03">
+            </li>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2016/08/07/00/27/home-office-1575464_1280.jpg" width="100%" alt="가구 인테리어04">
+            </li>
+        </ul>
+        <div class="small_wrap">
+            <h2>HANKEA</h2>
+            <ul class="small_page">
+                <li>
+                     <img src="https://cdn.pixabay.com/photo/2017/08/27/10/16/interior-2685521_1280.jpg" height="100%" alt="작은 가구들01">
+                </li>
+                <li>
+                    <img src="https://cdn.pixabay.com/photo/2017/03/28/12/17/chairs-2181994_1280.jpg" height="100%" alt="작은 가구들02">
+                </li>
+                <li>
+                     <img src="https://cdn.pixabay.com/photo/2016/12/30/07/59/kitchen-1940174_1280.jpg" height="100%" alt="작은 가구들03">
+                </li>
+                <li>
+                     <img src="https://cdn.pixabay.com/photo/2017/06/13/22/42/kitchen-2400367_1280.jpg" height="100%" alt="작은 가구들04">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <b>페이지의 이미지는 "베이직 가구" 에서 가져왔습니다.</b>
+        <b>hankea</b>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+1. scroll event 만들 때 제목 부분은 다른 배경색으로 칠해주고 틀에 꽉 차지않게 부분 거리간격을 잘주기
+
+2. 헤더 아이콘들 넣어주기
+
+3.반응형 다 만들기
+
+4. 좀 더 감각적이게 만들어보기
+
+5. width 값 다 맞춰주기
+
+6. nav trigger 속성 맞추고 hover 되었을때 다른 li  들도 같은 효과
+
+7. active 가 메인이라고 치면 나머지 위치를 임의지정이면 
+
+8. em을 사용하려면 font-size 가 커져야 하는거 아닌가 ? 반응형이라면 
+
+9. absolute 를 주면 부모의 viewport 값을 안따라옴
+
+10. padding-bottom 값을 줘서 반응형을 만들때 em 값이 안따라와진다
+이거 padding-bottom 을 줄땐 전체의 크기가 아니라 padding 값으로 들어가기에
+%값이 들어가지않는다
+
+11..price_page{position: relative; width: 90vw; height: 70vh; margin: 0 auto; border-radius: 20px; box-shadow: 3px 3px 3px 3px rgba(3, 3, 3, 0.5); overflow: hidden;  background-color: rebeccapurple; margin-top: 100px; display: flex;}
+.price_page_text{background-color: #fff; width: 40%; height: 100%; left: 0; content: ''; padding: 40px; z-index: 99;}
+.price_page_text > h2{font-size: 3vw; font-family: 'Noto Sans KR', sans-serif; color: black;}
+.price_page_list{width: 60%; height: 620px; background-color: palegoldenrod;  z-index: 9999;}
+.price_page_list01{width: 70vw; height: 50%; margin: 0 auto;  background-color: dodgerblue}
+.price_page_list01 > ul{width: 60vw; height: 60vw;  display: flex; margin: 0 auto;}
+.price_page_list01 > ul > li{width: 26vw; height:26vw;  background-color: rebeccapurple; border-radius: 50%; margin-right: 10px; overflow: hidden;}
+.price_page_list02{width: 70vw; height: 50%; margin: 0 auto;  background-color:palegreen;}
+.price_page_list02 > ul{width: 60vw; height: 60vw;  display: flex; margin: 0 auto; margin-left: 200px;}
+.price_page_list02 > ul > li{width: 26vw; height:26vw;  background-color: rebeccapurple; border-radius: 50%; margin-right: 10px; overflow: hidden; margin:  0 auto;}
+
+#service_center .info_list ul .info02 .info_detail::before {
+    background-position: -60px 0;
+}
+
+#service_center .info_list ul .info04 .info_detail::before {
+    background-position: -120px 0;
+}

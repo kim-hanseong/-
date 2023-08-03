@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5fc59cb340.js" crossorigin="anonymous"></script>
+    <title>shop</title>
+    <link rel="stylesheet" href="../css/3_shop.css">
+    <script src="https://kit.fontawesome.com/5fc59cb340.js" crossorigin="anonymous"></script>
+    <script src="./js/vendor/modernizr.custom.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+<script src="./3_buberry.js"></script>
+<script>
+    
+
+$(function(){
+    var list = $('.header_list li');
+    var bar = $('.subMenu_bar');
+    var startBtm = bar.offset()
+var initialLeft = bar.offset().left;
+console.log(startBtm)
+
+list.not('.header_icons li').mouseover(function(){
+var listL = $(this).position().left;
+bar.css({ left: listL,  transition: 'left 0.3s' , transform: 'translateX(30px)'});
+
+}) 
+
+
+list.not('.header_icons li').eq(5).mouseover(function(){
+    var listL = $(this).position().left;
+    bar.css({ left: listL, width: '60px', transition: 'left 0.3s, width 0.3s', transform: 'translateX(30px)'});
+})
+list.eq(5).mouseout(function(){
+    var listL = $(this).position().left;
+
+    bar.css({ left: listL, width: '60px', transition: 'left 0.3s, width 0.3s', transform: 'translateX(30px)'});
+})
+list.not('.header_icons li').not(':eq(5)').mouseover(function(){
+    var listL = $(this).position().left;
+    bar.css({ left: listL, width: '30px', transition: 'left 0.3s, width 0.3s', transform: 'translateX(30px)'});
+})
+
+
+.mouseout(function(){
+var listL = $(this).position().left;
+bar.css({ left:listL},function(){
+
+    
+});
+});
+list.eq(1).trigger('mouseover')
+
+});
+
+
+var lastScrollTop = 0;
+$(window).scroll(function() {
+  var currentScrollTop = $(this).scrollTop();
+  if (currentScrollTop < lastScrollTop) {
+      // 스크롤이 위로 올라갈 때 실행할 코드
+      $('.header_nav_bar').addClass('paddingon');
+      $('.header_content').addClass('fixon');
+      $('.header_content').css({top:'0'})
+    } 
+    
+    
+    
+        else {
+        // 스크롤이 아래로 내려갈 때 실행할 코드
+        $('.header_nav_bar').removeClass('paddingon');
+        $('.header_content').removeClass('fixon');
+        $('.header_content').css({top:'-300px'})
+                
+    }
+    lastScrollTop = currentScrollTop;
+});
+$(function(){
+    $('.news_icon').click(function(){
+        $('.header_news').addClass('disnone');
+        if($('.header_news').hasClass('disnone')){
+            $('.header_nav_bar').removeClass('paddingon');
+            $('.header_nav_bar').addClass('paddingon1');
+            $('.header_content').addClass('fixon');
+            
+            
+        }
+        $(function(){
+            var lastScrollTop1 = 0;
+            $(window).scroll(function(){
+                var currentScrollTop1 = $(this).scrollTop();
+                var scrollAmount = currentScrollTop1 - lastScrollTop1;
+                if ($('.header_news').hasClass('disnone') && scrollAmount > 0){
+                    $('.header_nav_bar').css({top:'0'});
+                } else {
+                    $('.header_nav_bar').css({top:'100px'});
+                }
+                lastScrollTop1 = currentScrollTop1;
+            });
+        });
+        
+        
+    });
+});
+
+
+$(function(){
+    $('.header_list ul > li').not('.header_icons li').mouseover(function(
+        
+    ){
+        $('.header_list').css({height:'700px'});
+        $('.back_ground').css({display:'block'})
+    })
+    .mouseout(function(){
+        $('.header_list').css({height:'100px'} )
+        $('.header_content').css({position:'absoulte'});
+        $('.back_ground').css({display:'none'})
+        
+    })
+})
+
+// 스크롤이 올라갈때에만 fixed 를 추가
+$(function(){
+    // $('.header_nav_bar ul li').not(':eq(0)').mouseover(function(){
+    //     var navBar = $(this).position().left;
+    //     $('.bar_highlight').css({left:navBar ,transform:'translateX(-350px)' ,opacity:'1'})
+    // }).mouseout(function(){
+    //     var navBar = $(this).position().left;
+    //     $('.bar_highlight').css({left:navBar ,transform:'translateX(-350px)' ,opacity:'0'})
+    // });
+    $('.header_nav_bar ul li').not(0).hover(function (){
+        var navBar = $(this).position().left;
+        $('.bar_highlight').css({left: navBar})
+    })
+
+});
+// $(function(){
+//     var list = $('li');
+//     var bar = $('span');
+//     var startBtm = bar.offset()
+// var initialLeft = bar.position().left;
+// var initialWidth = bar.width();
+// console.log(startBtm)
+
+// list.mouseover(function(){
+// var listL = $(this).position().left;
+// bar.css({opacity:'1', width: '200px', left: listL, transform: 'translateX(0)', transition: 'width 0.3s, left 0.3s'});
+
+// })
+// .mouseout(function(){
+// var listL = $(this).position().left;
+// bar.css({width: '0', left:listL, transition: 'width 0.5s , left 0.5s'}, function(){
+//     bar.css({left: startBtm});
+// });
+// });
+// });
+</script>
+<style>
+    
+*{padding: 0; margin: 0; text-decoration: none; list-style: none; box-sizing: border-box; font-size: 12px;}
+/* header_content */
+body{height: 200vh; }
+.back_ground{width: 100%; height: 300vh; position: absolute; background-color: rgba(0,0, 0,0.6); z-index: 100;
+display: none;}
+
+header{height: 100px; width: 100%; position: relative;}
+
+.header_content {
+   top: 0;
+   width: 100%;
+   height: 100px;
+   z-index: 101;
+   position: absolute;
+   transition: all .5s;
+   margin-bottom: 300px;
+
+ }
+
+
+/* header_news  */
+.header_news{background-color: black;  color: white; max-width: 100%; position: relative; height: 43px;}
+.header_news ul{display: flex; }
+.header_news ul li{text-align: center; margin: 0 auto;}
+.news_icon{font-size: 20px; padding: 4px 60px 0 0; cursor: pointer; font-weight: 700;}
+
+
+
+.header_list{height: 100px; margin-bottom: 180px;  background-color: white; z-index: 101; background-color: white; transition: all.5s; display: flex;}
+.header_down{height: 300px; transition: all.5s;}
+nav{ display: flex; height: 50px; position: absolute;}
+.header_list nav{display: flex; padding: 8px 0 0 20px; max-width: 100%; height: 20px;}
+.header_list nav h2{font-size: 20px;}
+.shopping1:hover .header_list{height: 300px;}
+.nav_list > h2{margin-right: 120px; font-size: 60px;}
+
+/* header_nav */
+.header_nav{display: flex; max-width: 300px; font-size: 2rem; margin-bottom: 120px; position: relative;  z-index: 99;}
+.header_nav > li{line-height: 60px; position: relative;  white-space: nowrap; }
+.header_nav > li a{padding-left: 30px;}
+.header_nav > li:last-child{padding: 200px;}
+.header_nav > li a{color: black; font-family: 'Nanum Gothic';  width: 100%; height: 100%;  }
+
+
+/* subMenu_bar */
+.subMenu_bar{display: block; width: 30px; height: 3px; background-color: black; position: absolute; top: 40px; left: 25px;}
+
+
+/* header_icons */
+.header_icons{display: flex; max-width: 100%; height: 20px; position: absolute; width: 100px; left: 1250px; gap: 2rem; padding-top: 10px; }
+.header_icons ul{ font-size: 0px; gap: 2rem; margin-left: 700px;}
+.header_icons li a img{ color: black; font-size: 28px; padding-top: 10px; position: sticky;}
+
+
+
+/* header_nav_bar */
+.header_nav_bar{position:sticky; transition: all.4s;  top: 0; z-index: 98; margin-top: 280px; } 
+.header_nav_bar::before{display: block; background-color: white; height: 100px; content: ''; position: absolute; top: -100px; width: 100%; }
+/* .header_nav_bar::after{content: ''; margin-bottom: 130px; width: 100%; height: 100%; display: block; position: relative; top: 0;}  */
+
+.header_nav_bar ul{ display: flex; border-top:  solid rgba(0,0, 0,0.3); height: 60px;background-color: white; 
+ position: relative; border-bottom:  solid rgba(0,0, 0,0.3);}
+.header_nav_bar ul li{line-height: 60px;  position: relative;  font-size: 12px;
+    /* padding right로 바꿔야함 */ 
+    /* transition: all.5s; */
+    font-family: 'Nanum Gothic', sans-serif; font-weight: 700; white-space: nowrap; font: 700;}
+.header_nav_bar ul li:not(:first-child){padding-right: 60px;}    
+.header_nav_bar ul li:nth-child(1){padding-left: 25px; margin-right: 70px;}
+.header_nav_bar ul li:first-child{padding-left: 50px;}    
+.header_nav_bar ul li:first-child::after{content: ''; height: 20px; width: 2px; background-color: #ccc; position: absolute; top: 40%; right: -40px;}
+    
+.shopping1{position: relative; }
+.shopping1:hover::after{opacity: 1; }
+    
+.header_nav_bar2{width: 100%; height: 0; position:relative; margin-bottom: 10px; display: block; text-align: center;} 
+
+/* nav_bar bottom border */
+.header_nav_bar ul li:nth-child(1)::before{content: ''; border-bottom: 2px solid black; width: 0; height: 2px;  display: block; position: absolute; bottom: 0; transition: all.5s; transform: translate(0,0); }
+/* .header_nav_bar ul li:not(:first-child)::after{content: ''; border-bottom: 2px solid black; width: 0; height: 2px;  display: block; position: absolute; bottom: 0; transition: all.5s;} */
+/* .header_nav_bar ul li:last-child::after{content: ''; border-bottom: 2px solid black; width: 0; height: 2px;  display: block; position: absolute; bottom: 0; transition: all.5s;} */
+.header_nav_bar ul li:hover::before{width: 70px; }
+/* .header_nav_bar ul li:hover:not(:first-child):after{width: 50px;} */
+/* .header_nav_bar ul li:last-child:hover::after{width: 70px;} */
+
+
+.bar_highlight{position: absolute; width: 70px; background-color: black; height: 2px; bottom: 0;  transition: .3s; opacity: 0;}
+
+input{width: 1600px; position: absolute; right: 0px;; top: 100px; display: none;}
+
+
+/* jqurey */
+.fixon{position: sticky;}
+.fixon2{position: sticky;}
+.relon{position: absolute; top: -200px;}
+.paddingon{top: 150px; transition: all.5s;}
+.paddingon1{top: 100px; transition: all.5s;}
+/* 
+.subMenu{height: 650px; background-color: rebeccapurple;width: 1800px; position: absolute; z-index: 80;
+transition: all.5s; display: none;}
+ */
+.body_content_shop{ width: 100%; height: 800px;  position: relative; top: 150px;}
+.body_content_shop ul{display: flex; width: 100%; height: 600px;}
+.body_content_shop ul li{flex: 1;}
+
+.img1{   cursor: pointer; background-image: url(https://assets.burberry.com/is/image/Burberryltd/A4404E1A-F626-4172-960F-2F3797D280D6?$BBY_V2_SL_3x4$&wid=766&hei=1021); background-size: cover; height: 100%; background-position: center;position: relative; margin-bottom: 10px; }     
+.img2{   cursor: pointer; background-image: url(https://assets.burberry.com/is/image/Burberryltd/E3ABEC36-A1E3-4BA1-AA51-8E2619C169F7?$BBY_V2_SL_3x4$&wid=958&hei=1277); background-size: cover; height: 100%; background-position: center; position: relative;}  
+.img3{   cursor: pointer; background-image: url(https://assets.burberry.com/is/image/Burberryltd/E7507DDD-D2AD-41C6-ACD8-E49D3C63F12E?$BBY_V2_SL_3x4$&wid=766&hei=1021); background-size: cover; height: 100%; background-position: center; position: relative;}     
+.img4{   cursor: pointer; background-image: url(https://assets.burberry.com/is/image/Burberryltd/C5FF83C0-585A-438B-BAF8-A8F86A914AEA?$BBY_V2_SL_3x4$&wid=766&hei=1021); background-size: cover; height: 100%; background-position: center; position: relative;}     
+.img5{   cursor: pointer; background-image: url(https://assets.burberry.com/is/image/Burberryltd/EE936CC5-B686-4B0B-A2E8-D1610C5AF954?$BBY_V2_ML_3x4$&wid=958&hei=1276); background-size: cover; height: 100%; background-position: center; position: relative;}     
+.img6{   cursor: pointer; background-image: url(https://assets.burberry.com/is/image/Burberryltd/768E4EBB-20CA-4D32-A266-2D6E92AF5EDE?$BBY_V2_SL_3x4$&wid=766&hei=1020); background-size: cover; height: 100%; background-position: center; position: relative;}     
+
+
+.img1::after{background-size: cover; overflow: hidden; width: 100%; height: 100%; top: 0; left: 0; transition: all.5s; background-position: center; cursor: pointer; transition: all.5s; content: ''; position: absolute;  background-image: url(https://assets.burberry.com/is/image/Burberryltd/5852088A-D070-420A-8376-145C30FBBA8F?$BBY_V2_SL_3x4$&wid=766&hei=1021); opacity: 0;}
+.img2::after{background-size: cover; overflow: hidden; width: 100%; height: 100%; top: 0; left: 0; transition: all.5s; background-position: center; cursor: pointer; transition: all.5s; content: ''; position: absolute;  background-image: url(https://assets.burberry.com/is/image/Burberryltd/E41CE4A5-F4C4-4D45-A0CB-D9506DE26EEE?$BBY_V2_SL_3x4$&wid=766&hei=1021); opacity: 0;}
+.img3::after{background-size: cover; overflow: hidden; width: 100%; height: 100%; top: 0; left: 0; transition: all.5s; background-position: center; cursor: pointer; transition: all.5s; content: ''; position: absolute;  background-image: url(https://assets.burberry.com/is/image/Burberryltd/2EE97CC7-3D0A-47A7-8CA9-71DB57671281?$BBY_V2_SL_3x4$&wid=766&hei=1021); opacity: 0;}
+.img4::after{background-size: cover; overflow: hidden; width: 100%; height: 100%; top: 0; left: 0; transition: all.5s; background-position: center; cursor: pointer; transition: all.5s; content: ''; position: absolute;  background-image: url(https://assets.burberry.com/is/image/Burberryltd/85B5A34D-50C5-4271-911A-55A87025FBF2?$BBY_V2_SL_3x4$&wid=766&hei=1021); opacity: 0;}
+.img5::after{background-size: cover; overflow: hidden; width: 100%; height: 100%; top: 0; left: 0; transition: all.5s; background-position: center; cursor: pointer; transition: all.5s; content: ''; position: absolute;  background-image: url(https://assets.burberry.com/is/image/Burberryltd/66CCBA78-4217-4CDA-A2CC-4EB6B01EF609?$BBY_V2_SL_3x4$&wid=958&hei=1276); opacity: 0;}
+.img6::after{background-size: cover; overflow: hidden; width: 100%; height: 100%; top: 0; left: 0; transition: all.5s; background-position: center; cursor: pointer; transition: all.5s; content: ''; position: absolute;  background-image: url(https://assets.burberry.com/is/image/Burberryltd/EE800623-6217-47FA-BAEC-2C0C73BDF765?$BBY_V2_SL_3x4$&wid=958&hei=1276); opacity: 0;}
+
+.img1:hover::after{ opacity: 1; }
+.img2:hover::after{ opacity: 1; }
+.img3:hover::after{ opacity: 1; }
+.img4:hover::after{ opacity: 1; }
+.img5:hover::after{ opacity: 1; }
+.img6:hover::after{ opacity: 1; }
+
+.header_nav_bar ul li:hover .arrow_icons{transform: rotateZ(180deg);}
+.arrow_icons{ transition: all .5s; position: absolute; right: 30px;}
+.arrow_icons1{ transition: all .5s; position: absolute; right: -19px;}
+.arrow_icons:hover{transform: rotateZ(180deg);}
+.first_child:hover .arrow_icons1    {transform: rotateZ(180deg);}
+/* .header_nav_bar ul li:hover {border-bottom: 1px solid black;} */
+
+.img_text1{text-align: center;}
+
+.bar_border{width: 50px;}
+
+
+.disnone{display: none;}
+
+.color1{color: rebeccapurple;}
+.sticky1{position: sticky; top: 0; width: 100%; z-index: 999; transition: all.5s;}
+/* .sticky2{position: sticky; top: 200px; width: 100%; z-index: 999; transition: all.5s; margin-top: 300px;} */
+.abso1{position: absolute; width: 100%; height: 100%;}
+
+/* 1.화면이 전체가 같이 줄어들게 만드는 : 25% 퍼센트로 박으면 됨
+   2. */
+
+.t1{position: absolute; width: 0; height: 2px;  display: block; transition: all.5s; ; background-color: black; transform: translateX(0);}
+.t1_bottom{ width: 100px; height: 2px;  display: block; position: absolute; bottom: 10px; transition: all.5s; ; background-color: black; transform: translateX(0);}
+/* .header_nav_bar ul li:hover .t1{width: 60px;} */
+
+/* .t2{ width: 0; height: 2px;  display: block; position: absolute; bottom: 10px; transition: all.5s; ; background-color: black; transform: translateX(0);} */
+/* .header_nav_bar ul li:hover .t2{width: 50px;} */
+/* .header_nav_bar ul li:hover .t1{transform: translateX(90px);} */
+/* .header_nav_bar ul li:hover .t1{transform: translateX(180px);} */
+
+/* .t3{ width: 0; height: 2px;  display: block; position: absolute; bottom: 10px; transition: all.5s; ; background-color: black; transform: translateX(0);} */
+/* .header_nav_bar ul li:hover .t3{width: 70px;} */
+   /* .header_nav_bar ul li:hover .t1{ width: 200px;} */
+
+.mobile_shop_img{display: none;}
+.mobile_shop_img ul{display: flex;}
+
+
+
+
+@media screen and  (max-width: 1000px){
+   .header_nav_bar ul{height: 50px; top: -100px;}
+   .header_nav_bar ul li{line-height: 50px; }
+
+      .body_content_shop ul li:nth-child(0){width: 50%; }
+      .body_content_shop ul li:nth-child(1){width: 50%; }
+      .body_content_shop ul li:nth-child(2){display: none;}
+      .body_content_shop ul li:nth-child(3){display: none;}
+
+      
+.body_content_shop:nth-of-type(3) {
+   display: block;
+ }
+   }
+
+</style>
+</head>
+<body>
+    <div class="back_ground"></div>
+    <header class="header_content">
+        <section class="header_news">
+            <ul class="header_news_content">
+                <li>1</li>
+                <span class="news_icon"><i class="fa-sharp fa-light fa-x"></i></span>
+            </ul>
+        </section>
+        <section class="header_list">
+            <div class="subMenu"></div>
+            <nav class="nav_list">
+                <h2>BURBERRY</h2>
+                <ul class="header_nav">
+                    
+                        <li><a href="">선물</a>
+                        </li>
+                        <li><a href="">신상품</a> 
+                        </li>
+                        <li><a href="">여성</a> </li>
+                        <li><a href="">남성</a> </li>
+                        <li><a href="">아동</a> </li>
+                        <li><a href="">트렌치코트</a> </li>
+                        <li><a href="">가방</a> </li>
+                        <li><a href="">스토리</a> </li>
+                        <span class="subMenu_bar"></span>
+                        <ul class="header_icons">
+                            <li ><a href="" class="search_i"><img src="../img/search.png" width="20px" height="30px" alt=""></a>
+                                <input type="search">
+                            </li>
+                            <li class="shopping1"><a href=""><img src="../img/user.png" width="20px" height="30px" alt=""></a></li>
+                            <li><a href=""><img src="../img/parcel.png" width="20px" height="30px" alt=""></a></li>
+                        </ul>
+                </ul>
+                
+            </nav>
+        </section>
+    </header>
+    
+        <section class="header_nav_bar">
+            <ul>
+                <li class="first_child">정렬 기준<span class="arrow_icons1"><i class="fa-solid fa-chevron-down"></i></span></li>
+                <li>스타일<span class="arrow_icons"><i class="fa-solid fa-chevron-down"></i></span>
+                <li>색상<span class="arrow_icons"><i class="fa-solid fa-chevron-down"></i></span>
+                <li>의류 사이즈<span class="arrow_icons"><i class="fa-solid fa-chevron-down"></i></span>
+                <span class="bar_highlight"></span>
+                
+            </ul>
+        </section>
+        <span class="nav_bar_bttom"></span>
+    <section class="body_content_shop">
+        <ul>
+            <li>
+                <section class="shop img1">
+                    
+                </section>
+                <section class="img_text1">
+                    <b>모자</b><br>
+                    <b>130,000</b>
+                </section>
+            </li>
+            <li>
+                <section class="shop img2"></section>
+                <section class="img_text2"></section>
+            </li>
+            <li>
+                <section class="shop img3"></section>
+                <section class="img_text3"></section>
+            </li>
+            <li>
+                <section class="shop img4"></section>
+                <section class="img_text4"></section>
+                
+            </li>
+        </ul>
+    </section>
+    
+    <section class="body_content_shop">
+        <ul>
+            <li>
+                <section class="shop img5"></section>
+                <section class="img_text3"></section>
+            </li>
+            <li>
+                <section class="shop img6"></section>
+                <section class="img_text4"></section>
+            </li>
+            <li>
+                <section class="shop img1"></section>
+                <section class="img_text1"></section>
+            </li>
+            <li>
+                <section class="shop img2"></section>
+                <section class="img_text2"></section>
+                
+            </li>
+        </ul>
+    </section>
+    
+   
+        
+</body>
+</html>

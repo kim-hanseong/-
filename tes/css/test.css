@@ -1,0 +1,126 @@
+*{padding: 0; margin: 0; text-decoration: none; list-style: none; box-sizing: border-box;}
+body{height: 4000px; max-width: 1920px;}
+
+
+/* header */
+header{width: 1920px; height: 900px;   margin-bottom: 300px;}
+
+.header_tool{position: absolute; width: 1200px; display: flex; margin: 0 auto; padding-top: 50px;  z-index: 99; left: 350px;}
+
+h1 {color: #5499f2; left: 0;}
+h1 > b {color: white;}
+
+nav > ul > li::after{position: absolute; background-color: black; width: 100%; height: 30px; content: ''; top: 10px; left: 0; width: 0;} 
+nav > ul > li:hover + nav > ul > li::after{width: 100%;}
+.slide_wrap{width: 100%; height: 700px;  position: absolute; top: 00; z-index: 0; background-color: rebeccapurple;}
+
+.bx-prev{position: absolute; top: 330px; left: 100px; transform: translate(0,-50%);}
+.bx-next{position: absolute; top: 300px; right: 100px; transform: translate(0,-50%); rotate: 180deg;}
+
+.header_slide{background-image: url(/images/images/wpfLvTest_04-\(5\)_02.png); height: 700px; width: 1100px; margin:  0 auto;}
+
+
+
+nav > ul {display: flex; position: absolute; right: 0; bottom: 0; width: 800px; margin:  0 auto; }
+nav > ul > li {margin-right: 40px;}
+nav > ul > li >img {position: absolute; top: 10px;}
+
+nav > ul > li > a {color: white; margin-right: 10px;}
+
+
+nav > ul > li:nth-last-child(1):hover .head_search{display: block;}
+
+.head_search{position: absolute; top: 100px; right: 90px; display: none;}
+.head_search > input{height: 40px; padding-left: 10px; color: #333333;}
+.head_search > img{position: absolute; top: 15px; right: 20px;}
+
+.slide_wrap li{width: 1200px; margin:  0 auto; position: relative; top: 230px; color: white;}
+
+.header_text {width: 700px; margin-bottom: 50px;}
+.header_text > b {font-size: 20px;}
+.header_text > h2{font-size: 100px;}
+
+.header_btn{display: flex;}
+.header_btn > section {width: 180px; height: 50px; border: 3px solid white; text-align: center; line-height: 50px; margin-right: 20px;  transition: all.5s;}
+.header_btn > section:hover{background-color: #347fe1; color: white;}
+
+.header_list {width: 1200px; height: 300px; margin: 0 auto; ;  position: absolute;  right: 50%; bottom: -150px; transform: translateX(50%);}
+.header_list > ul {width: 100%; height: 100%; margin: 0 auto; display: flex;}
+.header_list > ul > li {flex: 1; background-color: white;  margin-right: 10px; border: 1px solid black; transition: all .4s;} 
+.header_list > ul > li:hover {background-color: #347fe1; color: white; }
+
+.header_list > ul > li > h3 {padding: 30px;} 
+.header_list > ul > li > p {padding: 30px;} 
+
+
+
+.header_list > ul > li > img {padding: 30px; padding-bottom: 0;}
+
+aside{height: 500px;  color: white; text-align: center; margin-bottom: 100px; position: relative;  background-color: #00132c;}
+aside > h2{padding-top: 150px; margin-bottom: 50px;}
+aside > h2 > p{padding-top: 30px; font-weight: lighter;}
+
+aside > .header_btn{position: absolute; left: 50%; transform: translateX(-50%);}
+
+
+/* main page */
+main{width: 1200px; height: 1600px; position: relative; margin: 0 auto; margin-bottom: 100px;}
+main > div {margin:  0 auto; text-align: center; margin-bottom: 50px;}
+main > div >h2 {font-size: 70px; font-weight: lighter;}
+
+main > ul {width: 1100px; height: 500px; margin: 0 auto; display: flex; margin-bottom: 200px;}
+main > ul > li{flex: 1;text-align: center;  position: relative; transition: all.4s;}
+main > ul > li:hover{scale: 1.1; z-index: 999;}
+main > ul > li:hover .main_table_head{background-color: #347fe1;}
+main > ul > li:hover .table_btn , .main_table_head > section{background-color: #347fe1;}
+main > ul > li:hover .main_table_head > section{background-color: #347fe1;}
+
+
+main > ul > li > div{margin-bottom: 50px;}
+
+.main_table_head{width: 100%; height: 180px; background-image: url(/images/images/wpfLvTest_04-\(3\)_42.png);}
+main > ul > li:nth-child(2) .main_table_head{background-image: url(/images/images/wpfLvTest_04-\(3\)_38.png);}
+main > ul > li:nth-child(3) .main_table_head{background-image: url(/images/images/wpfLvTest_04-\(3\)_40.png);}
+
+
+.main_table_head > p{font-size: 50px; color: white; padding-top: 40px;}
+
+.main_table_head > section{width: 180px; height: 70px; background-color: #333333; color: white; border-radius: 50px; position: absolute; line-height: 70px; left: 50%; transform: translateX(-50%); top: 150px; z-index: 9999;}
+.main_table_head >section >a { color: white;}
+
+.main_table_head::after{content: ''; position: absolute; width: 100%; height: 180px; background-color: rgba(0,0,0,0.8); left: 0; top: 0; }
+main > ul > li:hover .main_table_head::after{display: none;}
+
+.table_btn{width: 180px; height: 70px; background-color: #333333; line-height: 70px; text-align: center;  color: white; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
+
+
+article{width: 1200px; height: 1600px; position: relative; margin: 0 auto;}
+article > h2{font-size: 100px; font-weight: lighter; text-align: center;}
+
+article > ul {width: 1200px; height: 500px;  display: flex; position: relative; }
+article > ul > li {flex: 1; margin-right: 10px; border: 1px solid rgba(0,0,0,0.2); position: relative;}
+
+article > ul > li > div{width: 100%; height: 50px; display: flex; position: absolute; bottom: 0; line-height: 50px;}
+article > ul > li > div > section{border: 1px solid grey; flex: 1; text-align: center;  transition: all.4s;}
+article > ul > li > div > section:nth-last-of-type(1){color: #347fe1;}
+article > ul > li > div > section:hover{background-color: #347fe1; color: white;}
+
+article > ul > li > div > section img{position: absolute; top: 15px; left: 20px;}
+
+.article_text{width: 200px; height: 120px; margin: 0 auto; margin-top: 20px; font-size: 16px;}
+
+footer{height: 660px; width: 1200px; position: relative; margin: 0 auto;}
+footer > section{margin: 0 auto;  text-align: center; margin-bottom: 100px;} 
+footer > section > h2{font-size: 50px;}
+footer > ul{display:  flex; margin: 0;}
+
+
+.footer_icons {display: flex; bottom: 1000px; height: 120px; background-color: #00132c; color: white; width: 1920px; line-height: 120px;}
+
+.footer_icons ul {padding-top: 10px; margin: 0 auto;}
+
+.footer_icons > ul > li{flex: 1; text-align: center;} 
+
+.footer_icons > h3{flex: 1; font-size: 16px; margin-left: 100px; color: #536986;}
+.footer_icons > ul{display: flex; margin-right: 100px; flex: 1;}
+.footer_icons > b{  font-size: 16px; ; flex: 1; color: #536986;}

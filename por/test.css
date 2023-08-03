@@ -1,0 +1,10 @@
+*{padding: 0; margin: 0; list-style: none; text-decoration: none;}
+/* header */
+/* header_list */
+.header_list{display: flex; max-width: 85vw; background-color: rebeccapurple; margin: 0 auto; justify-content: space-between; height: 7vw;}
+.header_icons{display: flex;}
+/* logo */
+h1{justify-content: center; margin: 0 auto;}
+/* header_text */
+.header_text{display: flex; color: black;}
+.header_text > li > a{color: black;}

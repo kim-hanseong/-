@@ -1,0 +1,75 @@
+*{padding: 0; margin: 0; text-decoration: none; list-style: none;}
+body{width: 100vw; margin: 0 auto; box-sizing: border-box;}
+/* header page */
+.active{position: sticky; top: 0;}
+/* nav */
+header{width: 100vw; background-color: white; z-index: 9999; margin-bottom: 80px}
+header > div{display: flex;  padding: 10px; position: relative;   background-color: white; z-index: 9999;  white-space: nowrap; height: 50px; max-width: 75vw; margin: 0 auto;}
+header > div > nav{width: 60%; margin:  0 auto;}
+header > div > nav > ul{display: flex; text-align: center; padding-left: 100px;}
+header > div > nav > ul > li{padding: 20px 50px 0 10px;}
+header > div > nav > ul > li > a{color: black; font-weight: bolder; font-size: 1vw;}  
+header > div > ul{display: flex; padding: 20px 0 0 50px; position: relative;}
+header > div > ul > li{padding:  0 10px;}
+/* main-page */
+main{position: relative; max-width: 75vw; margin: 0 auto;}
+main > article{margin-bottom: 100px;}
+main > article > h2 > b{font-size: 3vw; position: absolute; top: 10px; }
+main > article > p{font-size: 2.3vw; font-weight: 500; }
+main > ul{display: flex; margin-bottom: 50px; font-weight: bolder; white-space: nowrap; }
+main > ul > li{font-size: 1vw; text-align: center; height: 30px;  padding: 10px 20px; border-radius: 50px; background-color: rgb(235, 235, 235); margin-right: 10px; line-height: 30px; cursor: pointer;}
+.main_page {width: 90vw; margin:  0 auto; position: relative;}
+.main_page > ul {width: 100%; margin:  0 auto;}
+.main_page > ul > li{width: 27%; padding-bottom: 35%; margin-bottom: 50px; border-radius: 10px; display: inline-block; position: relative; overflow: hidden; margin-top: 10px; box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1); transition: all.5s; top: 0; margin-right: 50px; z-index: -1;}
+.main_page > ul > li:hover{top: -20px; box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4); background-color: rebeccapurple;}
+.main_page > ul > li > div{position: absolute; top: 0; height: 240px; background-color: white; width: 100%; left: 0;}
+.main_page > ul > li > img{position: absolute; top: 230px; left: 0px;}
+.main_page > ul > li > div > section{width: 400px;  margin:  0 auto; margin-top: 10px;}
+.main_page > ul > li > div > section > b{background-color: rgb(235, 235, 235); width: 100px; height: 30px; position: absolute; top: 20px; line-height: 30px; text-align: center; font-weight: lighter; border-radius: 10px;}
+.main_page > ul > li > div > section > h2{font-size: 1.3rem;}
+.main_page > ul > li > div > span{display: flex; flex-direction: column;}
+footer{height: 500px;}
+/* mobile */
+.mobile_icons{display: none;}
+@media screen and (max-width:1400px) {
+     body{width: 80vw;}
+     header > div {max-width: 1000px; margin-left: 20px;}
+     .main_page {max-width: 1500px; margin:  0 auto 0 0; left: -150px;}
+     .main_page > ul { left: 0;}
+     .main_page > ul {max-width: 80%;}
+     .main_page > ul li {height: 380px;}
+     .main_page  > ul li > img{height: 70%; top: 40%; left: 0;}
+}    
+@media screen and (max-width:1000px) {
+     header > div {max-width: 700px; margin-left: 20px; position: relative;}
+     nav{display: none;}
+     header > div > ul {display: none;}
+     main > article > h2 > img{width: 50px;}
+     main > article > h2 > b{font-size: 1em;}
+     main > article > p{font-size: 1.5em; font-weight: 500; }
+     .main_page{width: 1000px; left: -100px;}
+     .main_page > ul >li{width: 40%;}
+     /* mobile */
+     .mobile_icons{display: flex; position: absolute; right: 0;}
+     main > ul{overflow: scroll;}
+}
+@media screen and  (max-width:765px) {
+     h1{left: 0;}
+     body{width: 565px; margin: 0 auto; position: relative;}
+     
+     header{max-width: 365px; margin:  0 auto;}
+     header > div{max-width: 565px; left: -40px;}
+
+     .main_page  > ul li > img{height: 61%; top: 40%; left: 0;}
+
+     .main_page{width: 380px; left: -150px; margin: 0 auto;}
+     .main_page > ul{margin: 0 auto;}
+     .main_page > ul li {width: 120%; left: 100px; height: 460px;}
+}
+
+@media(prefers-color-scheme:light){
+     body{background-color: white; color: black;}
+}
+@media(prefers-color-scheme:dark){
+     body{background-color: black; color: white;}
+}

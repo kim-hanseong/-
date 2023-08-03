@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Yanolja.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/Yanolja.js"></script>
+    <script src="https://kit.fontawesome.com/5fc59cb340.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+        $('.slide_wrap').bxSlider({
+    
+            prevText : '<img src="./img/이전버튼.png" alt="">',
+            nextText : '<img src="./img/다음버튼.png" alt="">',
+            wrapperClass : 'sliderwrap',
+            //  pagerCustom:'paging',
+            // pagerCustom: '#paging'
+            pager:true
+        });
+    
+    });
+    $(document).ready(function(){
+        if($('.sliderwrap .bx-pager div:nth-of-type(2)').hasClass('active')){
+            $('.sliderwrap .bx-pager div a').addClass('a_active')
+        }
+        else{
+            $('.sliderwrap .bx-pager div a').removeClass('a_active')
+        }
+            
+     });
+    $(document).ready(function() {
+        var slider = $('.study_wrap').bxSlider({
+          minSlides: 4,
+          maxSlides: 4,
+          moveSlides: 1,
+          slideWidth: 200,
+          slideMargin: 200,
+          prevText: '<i class="fa-solid fa-arrow-left"></i>',
+          nextText: '<i class="fa-solid fa-arrow-right"></i>',
+          auto: true,
+          pause:3000,
+          pager:false
+        });
+      
+        $(window).on('resize', function() {
+          var deviceWidth = $(window).width();
+          if (deviceWidth < 820) {
+            slider.reloadSlider({
+              minSlides: 3,
+              maxSlides: 3,
+              moveSlides: 1,
+              slideWidth: 100,
+              slideMargin: 300,
+              pager: false,
+              prevText: '<i class="fa-solid fa-arrow-left"></i>',
+              nextText: '<i class="fa-solid fa-arrow-right"></i>',
+              auto: true,
+              pause:3000,
+              controls:false
+            });
+          } else {
+            slider.reloadSlider({
+              minSlides: 4,
+              maxSlides: 4,
+              moveSlides: 1,
+              slideWidth: 200,
+              slideMargin: 200,
+              pager: false,
+              prevText: '<i class="fa-solid fa-arrow-left"></i>',
+              nextText: '<i class="fa-solid fa-arrow-right"></i>',
+              auto: true,
+              pause:3000
+              
+            });
+          }
+        }).trigger('resize');
+      });
+      
+    $(document).ready(function() {
+        var slider = $('.last_wrap').bxSlider({
+          minSlides: 5,
+          maxSlides: 5,
+          moveSlides: 1,
+          slideWidth: 200,
+          slideMargin: 300,
+          pager: false,
+          prevText: '<i class="fa-solid fa-arrow-left"></i>',
+          nextText: '<i class="fa-solid fa-arrow-right"></i>',
+          auto: true,
+          pause:3000
+        });
+      
+        $(window).on('resize', function() {
+          var deviceWidth = $(window).width();
+          if (deviceWidth < 820) {
+            slider.reloadSlider({
+              minSlides: 3,
+              maxSlides: 3,
+              moveSlides: 1,
+              slideWidth: 100,
+              slideMargin: 300,
+              pager: false,
+              prevText: '<i class="fa-solid fa-arrow-left"></i>',
+              nextText: '<i class="fa-solid fa-arrow-right"></i>',
+              auto: true,
+              pause:3000,
+              controls:false
+            });
+          } else {
+            slider.reloadSlider({
+              minSlides: 5,
+              maxSlides: 5,
+              moveSlides: 1,
+              slideWidth: 200,
+              slideMargin: 300,
+              pager: false,
+              prevText: '<i class="fa-solid fa-arrow-left"></i>',
+              nextText: '<i class="fa-solid fa-arrow-right"></i>',
+              auto: true,
+              pause:3000
+    
+            });
+          }
+        }).trigger('resize');
+      });
+      
+    </script>
+
+<style>
+    *{padding: 0; margin: 0; text-decoration: none; list-style: none; box-sizing: border-box; white-space: nowrap;}
+/* mobule */
+.mobile{display: none;}
+
+
+/* header page */
+.slide_wrap {width: 100%; height: auto; position: relative;}
+.bxslider {width: 100%;height: 500px;}
+
+.bx-prev , .bx-next{ position: absolute; top: 709px; left: 1431px;}
+.bx-next{position: absolute;top: 709px;left: 1501px;}
+/* .sliderwrap .bx-pager div{display: inline-block; padding: 10px;} */
+
+/* paging */
+/* .paging div{display: inline-block;} */
+/* .paging div a {width: 30px; height: 30px; border-radius: 50%; background-color: white; position: absolute; left: 50%; top: 50%;}  */
+.sliderwrap .bx-pager {position: absolute; left: 0; bottom: 0; font-size: 0;}
+
+
+.sliderwrap .bx-pager div a{width: 10px; height: 10px; border-radius: 50%; background-color: white; position: absolute; z-index: 10000; display: block; left: 430px; top: -150px;}
+.a_active{left: 600px;}
+
+
+/* .sliderwrap .bx-pager div:nth-child(1){ position: absolute; z-index: 10000; display: block; left: 30px;} */
+/* .sliderwrap .bx-pager div:nth-child(2){ position: absolute; z-index: 10000; display: block; left: 300px;} */
+
+.sliderwrap .bx-pager div .active{width: 55px; height: 10px; position: absolute; display: block; background-color: #00eda9; border-radius: 10px; top: -150px; left: 360px;}
+/* .sliderwrap .bx-pager div:nth-of-type(1) .active{width: 55px; height: 10px; position: absolute; display: block; background-color: #00eda9; border-radius: 10px; top: -150px; left: 360px;} */
+/* .sliderwrap .bx-pager div:nth-of-type(2) .active{width: 55px; height: 10px; position: absolute; display: block; background-color: #00eda9; border-radius: 10px; top: -150px; left: 440px;} */
+
+
+
+
+header{position: relative; max-width: 1920px;} 
+
+nav{width: 1360px; height: 55.82px; position: absolute; top: 15px; margin: 0 auto; left: 140px; right: 140px; z-index: 99; display: flex;}
+.nav_list{display: flex; margin: 0 auto; padding-top: 15px;}
+.nav_list li {margin-left: 30px;}
+.nav_list li a{font-size: 18px; color: white; }
+.nav_list li a:hover{color: #00e7ae;}   
+
+
+.slide_wrap{width: 1920px; position: relative;}
+
+
+.login_btn{position: absolute; width: 100px; height: 50px; background-color: transparent ; border: 3px dotted #00e7ae; border-radius: 50px; left: 1260px; }
+.login_btn a{ color: #00e7ae; position: absolute; left: 27px; line-height: 40px; font-size: 14px;}
+/* 
+nav{width: 1360px; height: 55.82px; display: flex;}
+.logo{position: absolute; top: 15px; left: 280px; background-color: black;}
+.nav_list{ display: flex; font-size: 16px; max-width: 440px; margin: 0 auto; } */
+.header_slide{width: 1920px;}
+
+/* first slide page */
+.first_head_slide{width: 100%; height: 850px; background-color: #3D46ff; position: relative;}
+
+.first_head_slide > h2{position: absolute; width: 680px; height: 182px; top: 276px; left: 360px;}
+.first_head_slide .first_text{position: absolute; width: 414px; height: 72px; left: 360px; top: 508px;}
+
+.first_head_slide .main_robot{position: absolute; width: 240px; height: 261px; left: 1290px; top: 305px; z-index: 99;}
+.first_head_slide .sub_robot{position: absolute; width: 125px; height: 135px; left: 1092px; top: 146px; z-index: 99;}
+.first_head_slide .text_nol{position: absolute; width: 356px; height: 886px; left: 1150px; top: -30px;}
+
+.first_head_slide .small_ball{position: absolute; width: 66px; height: 66px; top: 145px; left: 1535px;}
+.first_head_slide .middle_ball{position: absolute; width: 147px; height: 147px;top: 520px; left: 967px;}
+.first_head_slide .big_ball{position: absolute; width: 36px; height: 360px; top: 566px; left: 1507px; z-index: 98;}
+
+/*  second slide page */
+.second_head_slide{width: 100%; height: 850px; background-color: #5442e4;}
+.second_head_slide > h2{position: absolute; width: 603px; height: 260px; left: 358px; top: 155px;}
+
+.second_head_slide .apply_btn{position: absolute; width: 195px; height: 60px; left: 360px; top: 555px; }
+.second_head_slide .second_text{position: absolute; width: 432px; height: 82px; left: 361px; top: 441px;}
+.second_head_slide .second_robot{position: absolute; width: 585px; height: 855px; left: 1072px; top: 195px; z-index: 98;}
+/* 
+.active_pager{position: absolute; height: 10px; width: 36px; left: 360px; top: 760px; background-color: #00eda9; border-radius: 10px;}
+.not_pager{position: absolute; height: 10px; width: 10px; background-color: white; left: 404px; top: 760px; border-radius: 50%;}
+
+.active_pager2{position: absolute; height: 10px; width: 36px; left: 378px; top: 760px; background-color: #00eda9; border-radius: 10px;}
+.not_pager2{position: absolute; height: 10px; width: 10px; background-color: white; left: 360px; top: 760px; border-radius: 50%;} */
+
+
+
+/* height: 850px;  */
+/* main */
+main { position: relative; width: 1920px; height: 3660px; top: -45px; background: linear-gradient(#00e7ae , #fff 15% ); z-index:30;}
+.second_robot{position: absolute; width: 1050px; height: 3500px; left: 720px; top: 1px;}
+.second_back{position: absolute; width: 540px; height: 267px; left: 67px; top: 35px;}
+
+.small_ball2{position: absolute; width: 66px; height: 66px; left: 510px; top: 800px;}
+.middle_ball2{position: absolute; width: 182px; height: 182px; left: 1560px; top: 1000px;}
+.big_ball2{position: absolute; width: 360px; height: 360px; left: 120px; top: 1200px;}
+
+.about{position: absolute; left: 360px; top: 550px; cursor: pointer; }
+.about2{position: absolute; left: 870px; top: 1200px; cursor: pointer; width: 180px; height: 50px;}
+.about2 a{width: 100%; height: 100%;}
+.about3{position: absolute; left: 119px; top: 2400px; cursor: pointer; width: 180px; height: 50px;}
+.about4{position: absolute; left: 860px; top: 2900px; cursor: pointer; width: 180px; height: 50px;}
+
+/* text */
+.first_text > h2{position: absolute; font-size: 42px; ;left: 361px; top: 300px;}
+.first_text > p{position: absolute; font-size: 20px; ;left: 359px; top: 430px;}
+
+.second_text > h2{position: absolute; font-size: 70px; left: 711px; top: 905px; text-align: center;}
+.second_text > p{position: absolute; font-size: 20px; ;left: 50%; top: 1050px; color: #666; transform: translateX(-50%);}
+
+.main_box{position: absolute; width: 990px; height: 560px; left: 465px; top: 1400px; background-color: #b6baff;}
+
+.third > h2{position: absolute; width: 222px; height: 95px; left: 120px; top: 2150px; font-size: 40px;}
+.third > p{position: absolute; width: 322px; height: 95px; left: 120px; top: 2280px; font-size: 20px; color: #666;}
+
+.last_text > h3{position: absolute; left: 850px; top: 3560px; font-size: 42px; white-space: nowrap; z-index: 1000;}
+.last_text > p {position: absolute; left: 700px; top: 3660px; white-space: nowrap; z-index: 1000;}
+.last_text > p:nth-of-type(2){top: 3680px; left: 800px;}
+
+.last_slide{position: absolute; left: 120px; top: 3900px;}
+
+
+/* .last_slide_btn{position: relative; width: 100px; height: 50px; border: 3px solid #d9d9d9; border-radius: 50px; top: 100px; left: 500px;}  */
+
+.study_slide{position: absolute; left: 540px; top: 3000px; z-index: 100;}
+.study_wrap{position: absolute; width: 2000px; z-index: 100; }
+.study_wrap > div{font-size: 10px; }
+.study_slide .bx-prev{ position: absolute; top: 309px; left: 1084px; font-size: 30px; color: #d9d9d9;}
+.study_slide .bx-next{position: absolute;top: 309px;left: 1131px; font-size: 30px; color:  #d9d9d9; z-index: 100px;}
+.study_slide .bx-prev:hover , .study_slide .bx-next:hover{color: #00e7ae;}
+.study_tool{width: 100px; height: 50px; border: 3px solid #d9d9d9; border-radius: 50px; position: absolute; left: 100px; top: 509px;}
+
+
+.last_slide{position: absolute; z-index: 100;}
+.last_slide .bx-prev{font-size: 30px; position: absolute; top: 350px; color: #d9d9d9; left: 1514px; }
+.last_slide .bx-next{font-size: 30px; position: absolute; top: 350px; color: #d9d9d9; left: 1561px;}
+.last_slide .bx-prev:hover , .last_slide .bx-next:hover{color: #00e7ae;}
+
+
+/* last_slide h4 */
+.last_wrap li h4{color: #5450f4;}
+.last_wrap li div{color: #acacac; margin-top: 5x;}
+.last_wrap{position: absolute; z-index: 100px;}
+/* footer */
+footer{width: 1920px; height: 300px;position: relative; background-color: #f7f7f7;}
+.logo2{position: absolute; left: 360px; top: 60px;}
+
+@media screen and (max-width: 820px) {
+body{width: 820px;}
+main{width: 820px;}
+.head_wrap img:nth-last-of-type(1){position: absolute; top: 600px; left: 500px;}
+.head_wrap img:nth-last-of-type(2){position: absolute; top: 100px;}
+
+
+.slide_wrap{width: 220px;}
+.first_head_slide{width: 520px;}
+.head_wrap{width: 100%; height: 100%; background-color: dodgerblue;}
+.slide_wrap .bx-pager a{display: none;}
+
+
+
+
+
+.mobile{display: block; position: absolute;  z-index: 1000;}
+.second_text{display: none;}
+
+
+
+
+.last_text{display: none;}
+.last_text2{left: 300px; position: absolute; top: 3650px;}
+.last_text2 > h3{font-size: 42px;}
+.last_text2 > p{font-size: 20px; left: 20px;}
+
+header{position: relative; max-width: 820px;} 
+
+.nav_list{display: flex; margin: 0 auto; padding-top: 15px;}
+.nav_list li {margin-left: 30px;}
+.nav_list li a{font-size: 18px; color: white; }
+.nav_list li a:hover{color: #00e7ae;}   
+
+.slide_wrap{max-width: 820px;}
+.first_head_slide{width: 820px;}
+.header_slide{width: 820px;}
+.logo{display: none;}
+
+.third{top: -200px; position: absolute;}
+.about3{top: 2550px; position: absolute; left: 350px;}
+.about2{display: none;}
+.about4{display: none;}
+
+
+.main_box{left: 50px; height: 300px; width: 700px; top: 1300px;}
+.second_back{display: none;}
+
+
+
+.big_ball2{display: none;}
+.middle_ball2{display: none;}
+.small_ball2{display: none;}
+/* .nav{display: none;} */
+.nav_list{display: none;}
+.second_robot{left: 50px; top: 600px;}
+
+
+.study_slide{width: 1000px; left: 50px; }
+.last_slide{width: 1000px; left: 50px;}
+}
+</style>
+
+    
+</head>
+<body>
+    <!-- 소개 및 탐색 -->
+        <header>
+            <nav>
+                <h1 class="logo"><!-- h1 -->
+                    <a href=""><img src="./img/logo 3.png" alt=""></a>
+                </h1> 
+                <ul class="nav_list">
+                    <li><a href="">인공지능&데이터</a></li>
+                    <li><a href="">소프트웨어</a></li>
+                    <li><a href="">프로그램</a></li>
+                    <li><a href="">아카이브</a></li>
+                </ul>
+                <span class="login_btn">
+                    <a href="./login_page.html">로그인</a>
+                </span>
+            </nav>
+            <div class="header_slide">
+                <div class="mobile head_wrap">
+                    <img src="./img/h2타이틀.png" alt="두번째 타이틀">
+                    <img src="./img/bg_main_spot_slide01_robot_main 1.png" alt="웃고있는로봇">
+                </div>
+                <div class="slide_wrap">
+                    
+                    <div class="first_head_slide">
+                        <h2>
+                            <img src="./img/bg_main_spot_title 1.png" alt="play wi ai 로고" >
+                        </h2>
+                        <span class="first_text">
+                            <img src="./img/인공지능과 데이터의 시대. 아이들에게 필요한 미래 교육에 네이버의 경험과 기술을 담습니다..png" alt="인공지능 아이들에게 필요한 미래 교육에 네이버의 경험과 기술을 담습니다">
+                        </span>
+                        <span class="main_robot">
+                            <img src="./img/bg_main_spot_slide01_robot_main 1.png" alt="메인로봇">
+                        </span>
+                        <span class="sub_robot">
+                            <img src="./img/bg_main_spot_slide01_robot_sub 1.png" alt="작은로봇">
+                        </span>
+                        <span class="text_nol">
+                            <img src="./img/bg_main_spot_01 1.png" alt="'놀' 자글씨">
+                        </span>
+                        
+                        <span class="small_ball">
+                            <img src="./img/작은공.png" alt="작은공">
+                        </span>
+                        <span class="middle_ball">
+                            <img src="./img/중간공.png" alt="중간공">
+                        </span>
+                        <span class="big_ball">
+                            <img src="./img/큰공.png" alt="큰공">
+                        </span>
+
+                        <span class="active_pager"></span>
+                        <span class="not_pager"></span>
+
+                    </div>
+                    
+                    
+                    <div class="second_head_slide">
+                        <h2>
+                            <img src="./img/h2 타이틀.png" alt="소프트웨어야 놀자 ">
+                        </h2>
+                        <span class="second_text">
+                            <img src="./img/무더운 여름, 방학인데 집에서 뭐하지_ 오히려 좋아! 대학생 멘토와 함께하는 AI수업.png" alt="대학생 멘토와 함꼐하는 ai 수업">
+                        </span>
+                        <span class="second_robot">
+                            <img src="./img/Rectangle 60.png" alt="귀여운 로봇">
+                        </span>
+                        <span class="apply_btn">
+                        <a href="">  <img src="./img/신청하기.png" alt="신청하기 버튼"></a>
+                        </span>
+                        <span class="active_pager2"></span>
+                        <span class="not_pager2"></span>
+                    </div>
+                </div>
+                <ol id="paging">
+                    <li><a href="" data-slide-index="0"></a></li>
+                    <li><a href="" data-slide-index="1"></a></li>
+                </ol>
+            </div>
+        </header>
+        <!-- main-page  -->
+        <main>
+            <div class="second_robot">
+                <img src="./img/콘텐츠영역 큰 이미지.png" alt="">
+            </div>
+            <span class="second_back">
+                <img src="./img/배경 __.png" alt="배경페이지">
+            </span>
+            <span class="small_ball2">
+                <img src="./img/작은공.png" alt="작은공">
+            </span>
+            <span class="middle_ball2">
+                <img src="./img/중간공.png" alt="중간공">
+            </span>
+            <span class="big_ball2">
+                <img src="./img/큰공 (1).png" alt="큰공">
+            </span>
+
+            <div class="first_text">
+                <h2>
+                    왜 AI와 DATA를<br>
+                    교육 하는가?
+                </h2>
+                <p>
+                    인공지능과 데이터의 시대. <br>
+                    아이들에게 필요한 미래 교육에 <br>
+                    네이버의 경험과 기술을 담습니다.
+                </p>
+            </div>
+            <span class="about">
+                <a href=""><img src="./img/자세히보기1.png" alt="자세히보기 버튼"></a>
+            </span>
+
+            <div class="second_text">
+                <h2>
+                    Hello AI World
+                </h2>
+                <p>나의 삶과 세상에
+                많은 변화를 만들어가고 있는 인공지능 기술<br>
+                인공지능(AI)은 정확히 무엇일까요? </p>
+            </div>
+
+            <div class="mobile second_text">
+                <h2>Hello</h2><br>
+                <h2>AI World</h2>
+                <p>나의 삶과 세상에 많은 변화를
+                만들어가고 있는 인공지능 기술.
+                인공지능(AI)은 정확히 무엇일까요? </p>
+            </div>
+
+            <div class="about2">
+            <a href="">
+                <img src="./img/자세히보기1.png" alt="자세히보기 버튼">
+                </a>
+            </div>
+
+
+            <span class="about3">
+                <a href="">
+                    <img src="./img/자세히보기1.png" alt="자세히보기 버튼">
+                </a>
+            </span>
+
+            <span class="about4">
+                <a href="">
+                    <img src="./img/자세히보기1.png" alt="자세히보기 버튼">
+                </a>
+            </span>
+
+            <div class="main_box">
+
+            </div>
+
+            <!-- second slide -->
+            <div class="third">
+                <h2>소프트웨어 <br>
+                    교육의 시작
+                </h2>
+                <p>
+                    누구나 쉽고 편하게 소프트웨어를 <br>
+                    배우고 가르칠 수 있도록<br>
+                    다양한 교육 컨텐츠를 제공합니다.
+                </p>
+            </div>
+
+            
+        </main>
+        <div class="study_slide">
+            <ul class="study_wrap">
+                <li><img src="./img/Rectangle 47.png" alt="컴퓨터로 일하기"><h3>컴퓨터로 일하기</h3><div>컴퓨터는 우리 삶의 중요한 부분이 되었습니다.</div><span><img src="./img/ico_time 2.png" alt="컴퓨터 부분 이미지"><b>01:09</b></span></li>
+                <li><img src="./img/Rectangle 48.png" alt="컴퓨터의 진화"><h3>컴퓨터의 진화</h3><div>컴퓨터가 처음부터 빠르고 작은 것은 아니었답..</div><span><img src="./img/ico_time 2.png" alt="컴퓨터의 진화 이미지"><b>01:09</b></span></li>
+                <li><img src="./img/Rectangle 49.png" alt="인터넷이란?"><h3>인터넷이란?</h3><div>이 웹페이지를 어떻게 보고 있는거지? 인터넷..</div><span><img src="./img/ico_time 2.png" alt="웹페이지 인터넷 이미지"><b>01:09</b></span></li>
+                <li><img src="./img/Rectangle 47.png" alt=""><h3>컴퓨터로 일하기12</h3><div>컴퓨터는 우리 삶의 중요한 부분이 되었습니다.</div><span><img src="./img/ico_time 2.png" alt="컴퓨터의 삶 이미지"><b>01:09</b></span></li>
+            </ul>
+        </div>
+
+
+        <div class="last_text">
+            <h3>
+                뉴스&스토리
+            </h3>
+            <p>네이버와 커네트재단은 아이들이 자유롭게 더 큰 꿈을 꿀 수 있도록</p><br>
+            <p>다양한 소프트웨어 교육을 진행합니다.</p>
+        </div>
+        <div class="mobile last_text2">
+            <h3>
+                뉴스&스토리 
+            </h3><br>
+            <p>네이버와 커네트재단은 아이들이 자유롭게</p><br>
+            <p>더 큰 꿈을 꿀 수 있도록</p><br>
+            <p>다양한 소프트웨어 교육을 진행합니다.</p>
+        </div>
+
+
+        
+        <div class="last_slide">
+            <ul class="last_wrap">
+                <li><a href=""><img src="./img/스토리1.png" alt="대학생 멘토 이미지"></a><h4>스토리</h4><b>소프트웨어야 놀자 대학생 멘토 10월 V-day</b> <div>2021.11.01</div></li>
+                <li><a href=""><img src="./img/스토리2.png" alt="소프트웨어 후기 100% 이미지"></a></li>
+                <li><a href=""><img src="./img/스토리3.png" alt="대학생 멘토 8월 이미지"></a></li>
+                <li><a href=""><img src="./img/스토리4.png" alt="대학생 멘토 발표식"></a></li>
+                <li><a href=""><img src="./img/스토리1.png" alt="소프트웨어야 놀자 이미지"></a><h4>스토리</h4><b>소프트웨어야 놀자 대학생 멘토 10월 V-day</b></li>
+                <li><a href=""><img src="./img/스토리2.png" alt="소프트웨어야 놀자 이미지"></a></li>
+                <li><a href=""><img src="./img/스토리3.png" alt="소프트웨어야 놀자 이미지"></a></li>
+                <li><a href=""><img src="./img/스토리4.png" alt="소프트웨어야 놀자 이미지"></a></li>
+            </ul>
+        </div>
+
+        <span></span>
+
+        <div class="last_slide_btn">
+            <span class="last_prev_btn">
+            </span>
+            <span class="last_next_btn">
+            </span>
+        </div>
+
+        <footer>
+            <span class="logo2"><img src="./img/logo_footer 1.png" alt="로고"></span>
+            
+        </footer>
+
+    </body>
+    </html>

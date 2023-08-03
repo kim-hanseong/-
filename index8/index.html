@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./recod.css">
+    <script src="./js/vendor/modernizr.custom.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Noto+Sans+KR:wght@100;700;900&display=swap');
+    </style>
+    <script>
+        $(document).ready(function(){
+    $(".slide_wrap").bxSlider({
+      pager:false,
+      prevText : '<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgICAgPGZpbHRlciB4PSItMTQlIiB5PSItMTQlIiB3aWR0aD0iMTI4JSIgaGVpZ2h0PSIxMjglIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz4KICAgICAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wOCAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGR5PSIxIiBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIyIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMyAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIyIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICA8ZmVNb3JwaG9sb2d5IHJhZGl1cz0iLjUiIG9wZXJhdG9yPSJkaWxhdGUiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dTcHJlYWRPdXRlcjMiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJzaGFkb3dTcHJlYWRPdXRlcjMiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIzIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMiAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIzIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMyIvPgogICAgICAgICAgICA8ZmVNZXJnZT4KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIxIi8+CiAgICAgICAgICAgICAgICA8ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJzaGFkb3dNYXRyaXhPdXRlcjMiLz4KICAgICAgICAgICAgPC9mZU1lcmdlPgogICAgICAgIDwvZmlsdGVyPgogICAgICAgIDxjaXJjbGUgaWQ9ImIiIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA1NSA1KSI+CiAgICAgICAgICAgIDx1c2UgZmlsbD0iIzAwMCIgZmlsdGVyPSJ1cmwoI2EpIiB4bGluazpocmVmPSIjYiIvPgogICAgICAgICAgICA8dXNlIGZpbGw9IiNGRkYiIHhsaW5rOmhyZWY9IiNiIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGQ9Ik0zMi43MTUgMzguNjk5YTEgMSAwIDAgMS0xLjMxOS4wOThsLS4wOTUtLjA4Mi04LTcuODE3YTEgMSAwIDAgMS0uMTA4LTEuMzA2bC4wOC0uMDk2IDcuNzIzLTguMTgyYTEgMSAwIDAgMSAxLjUzNSAxLjI3NmwtLjA4LjA5Ni03LjA0OSA3LjQ2OSA3LjI5NyA3LjEzYTEgMSAwIDAgMSAuMDk4IDEuMzE5bC0uMDgyLjA5NXoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">',
+      nextText : '<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgICAgPGZpbHRlciB4PSItMTQlIiB5PSItMTQlIiB3aWR0aD0iMTI4JSIgaGVpZ2h0PSIxMjglIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJhIj4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiLz4KICAgICAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wOCAwIiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGR5PSIxIiBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIyIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMyAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIyIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICA8ZmVNb3JwaG9sb2d5IHJhZGl1cz0iLjUiIG9wZXJhdG9yPSJkaWxhdGUiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dTcHJlYWRPdXRlcjMiLz4KICAgICAgICAgICAgPGZlT2Zmc2V0IGluPSJzaGFkb3dTcHJlYWRPdXRlcjMiIHJlc3VsdD0ic2hhZG93T2Zmc2V0T3V0ZXIzIi8+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wMiAwIiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIzIiByZXN1bHQ9InNoYWRvd01hdHJpeE91dGVyMyIvPgogICAgICAgICAgICA8ZmVNZXJnZT4KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIxIi8+CiAgICAgICAgICAgICAgICA8ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMiIvPgogICAgICAgICAgICAgICAgPGZlTWVyZ2VOb2RlIGluPSJzaGFkb3dNYXRyaXhPdXRlcjMiLz4KICAgICAgICAgICAgPC9mZU1lcmdlPgogICAgICAgIDwvZmlsdGVyPgogICAgICAgIDxjaXJjbGUgaWQ9ImIiIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA1NSA1KSI+CiAgICAgICAgICAgIDx1c2UgZmlsbD0iIzAwMCIgZmlsdGVyPSJ1cmwoI2EpIiB4bGluazpocmVmPSIjYiIvPgogICAgICAgICAgICA8dXNlIGZpbGw9IiNGRkYiIHhsaW5rOmhyZWY9IiNiIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGQ9Ik0zMi43MTUgMzguNjk5YTEgMSAwIDAgMS0xLjMxOS4wOThsLS4wOTUtLjA4Mi04LTcuODE3YTEgMSAwIDAgMS0uMTA4LTEuMzA2bC4wOC0uMDk2IDcuNzIzLTguMTgyYTEgMSAwIDAgMSAxLjUzNSAxLjI3NmwtLjA4LjA5Ni03LjA0OSA3LjQ2OSA3LjI5NyA3LjEzYTEgMSAwIDAgMSAuMDk4IDEuMzE5bC0uMDgyLjA5NXoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">',
+      auto : true,
+      pause : 5000,
+      speed : 1000,
+      controls:false,
+    });
+  });  
+     $(function(){
+        $('.price_page_list01  li:nth-child(1)').mousemove(function(){
+            $('.list_text_wrap > li:nth-child(1) > span').css({display:'block'})
+        }).mouseleave(function(){
+            $('.list_text_wrap > li:nth-child(1) > span').css({display:'none'})
+        })
+    
+     })
+     $(function(){
+        $('.price_page_list01  li:nth-child(2)').mousemove(function(){
+            $('.list_text_wrap > li:nth-child(2) > span').css({display:'block'})
+        }).mouseleave(function(){
+            $('.list_text_wrap > li:nth-child(2) > span').css({display:'none'})
+        })
+    
+     })
+     $(function(){
+        $('.price_page_list01  li:nth-child(3)').mousemove(function(){
+            $('.list_text_wrap > li:nth-child(3) > span').css({display:'block'})
+        }).mouseleave(function(){
+            $('.list_text_wrap > li:nth-child(3) > span').css({display:'none'})
+        })
+    
+     })
+     $(function(){
+        $('.price_page_list02  li:nth-child(1)').mousemove(function(){
+            $('.list_text_wrap > li:nth-child(4) > span').css({display:'block'})
+        }).mouseleave(function(){
+            $('.list_text_wrap > li:nth-child(4) > span').css({display:'none'})
+        })
+    
+     })
+     $(function(){
+        $('.price_page_list02  li:nth-child(2)').mousemove(function(){
+            $('.list_text_wrap > li:nth-child(5) > span').css({display:'block'})
+        }).mouseleave(function(){
+            $('.list_text_wrap > li:nth-child(5) > span').css({display:'none'})
+        })
+    
+     })
+    </script>
+</head>
+<body>
+    <!-- 헤더페이지 -->
+    <div class="header_page">
+        <!-- 헤더 베너 -->
+        <div class="head_banner"></div>
+        <header>
+            <!-- 로고 -->
+            <h1>
+               <a href="">HAN</a>
+            </h1>
+            <!-- 헤더 네브 리스트 -->
+            <nav>
+                <ul class="nav_list">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Bussniss</a></li>
+                    <li><a href="#">Funding</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">shop</a></li>
+                </ul>
+            </nav>
+            <!-- 헤더 네브 아이콘 -->
+            <ul class="header_icons">
+                <li><a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTM2IDM2SDBWMGgzNnoiLz4KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4LjcgNikiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjciPgogICAgICAgICAgICA8cGF0aCBkPSJNOS4zMDYgMjRTMCAxNi41NDQgMCA5LjMwNmE5LjMwNiA5LjMwNiAwIDAgMSAxOC42MTIgMEMxOC42MTIgMTYuNTQ0IDkuMzA2IDI0IDkuMzA2IDI0eiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICAgICAgICAgIDxjaXJjbGUgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgY3g9IjkuMjEyIiBjeT0iOS4xMjMiIHI9IjIuNzg0Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt="위치표시아이콘"></a></li>
+                <li><a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yOC45MjcgOC44OTNhNi40NiA2LjQ2IDAgMCAwLTkuMTM5IDBsLTEuODI5IDEuODI4LTEuODI3LTEuODI4YTYuNDYyIDYuNDYyIDAgMSAwLTkuMTQgOS4xMzhMOC44MiAxOS44Nmw4LjQzMiA4LjQzNGExIDEgMCAwIDAgMS40MTQgMGw4LjQzMy04LjQzNGgwbDEuODI4LTEuODI4YTYuNDYgNi40NiAwIDAgMCAwLTkuMTM4eiIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEuNyIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==" alt="좋아요 누른 상품 모음 아이콘"></a></li>
+                <li><a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTM2IDM2SDBWMGgzNnoiLz4KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1LjE2NCA2LjU0NykiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjciPgogICAgICAgICAgICA8cGF0aCBkPSJtMjUuNjggMy42Ni0yLjcyIDExLjU3SDcuMzdMNC42NiAzLjY2eiIvPgogICAgICAgICAgICA8Y2lyY2xlIGN4PSIyMC41MiIgY3k9IjIwLjc4IiByPSIyLjE0Ii8+CiAgICAgICAgICAgIDxjaXJjbGUgY3g9IjkuODEiIGN5PSIyMC43OCIgcj0iMi4xNCIvPgogICAgICAgICAgICA8cGF0aCBkPSJNMCAwaDMuOGwxLjc2IDcuNSIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==" alt="장바구니&찜목록"></a></li>
+            </ul>
+        </header>
+    </div>
+    <!-- 헤더 슬라이드 -->
+    <div class="slide_wrap_tool">
+        <ul class="slide_wrap">
+            <li>
+                <a href="#"><img src="https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg" width="100%" height=""  alt=""></a>
+                <div class="slide_page01">
+                    <h2>여행</h2>
+                    <p>어디로갈까 ?</p>
+                    <div class="slide_banner">
+                        <h3>Let's go</h3>
+                        <h3>Let's go</h3>
+                        <span></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href=""><img src="https://cdn.pixabay.com/photo/2015/07/05/13/44/beach-832346_1280.jpg" width="100%"  alt=""></a>
+                <div class="slide_page02">
+                    <h2>역시 여름엔</h2>
+                    <p>워터파크지</p>
+                </div>
+            </li>
+            <li>
+                <a href=""><img src="https://cdn.pixabay.com/photo/2020/02/16/07/55/beach-4852830_1280.jpg" width="100%"   alt=""></a>
+                <div class="slide_page03">
+                    <h2>어디든지 가는</h2>
+                    <p>HAN</p>
+                </div>
+            </li>
+            <li>
+                <a href=""><img src="https://cdn.pixabay.com/photo/2020/02/02/13/23/lagoon-4812995_1280.jpg" width="100%"  alt=""></a>
+                <div class="slide_page03">
+                    <h2>어디든지 가는</h2>
+                    <p>HAN</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 추천 인기상품  -->
+    <div class="best_product">
+        <h2>추천 인기상품 BSET</h2>
+        <ul>
+            <li>
+                <span>
+                    <img src="https://t3.ftcdn.net/jpg/02/65/23/70/240_F_265237090_Muthvb72m2POYFjyx7F5UCQLh9JdBtKN.jpg" height="100%" alt="일본 여행사진">
+                </span>
+                <h2>일본 관광 패키지</h2>
+            </li>
+            <li>
+                <span>
+                    <img src="https://t4.ftcdn.net/jpg/05/75/94/53/240_F_575945357_QLET7szkD5mN08S19zUUqKKNaT4ibiP7.jpg" height="100%" alt="하와이 여행사진">
+                </span>
+                <h2>하와이 관광 패키지</h2>
+            </li>
+            <li>
+                <span>
+                    <img src="https://cdn.pixabay.com/photo/2020/12/17/00/43/skyscrapers-5838029_1280.jpg" width="100%" height="100%" alt="홍콩 여행사진">
+                </span>
+                <h2>방콕 관광 패키지</h2>
+            </li>
+        </ul>
+    </div>
+    <!-- 여행관광 리스트 -->
+    <div class="price_page">
+        <div class="price_page_text">
+            <h2>최저가 패키지 <br>가격비교</h2>
+            <p>어디로 떠나고 싶으세요?</p>
+            <div class="list_text">
+                <ul class="list_text_wrap">
+                    <li><span>Japen</span></li>
+                    <li><span>Hong Kong</span></li>
+                    <li><span>Europe</span></li>
+                    <li><span>Rome</span></li>
+                    <li><span>Hawaii</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="price_page_list">
+            <div class="price_page_list01">
+                <ul>
+                    <li>
+                        <img src="https://cdn.pixabay.com/photo/2019/07/13/16/44/woman-4335235_1280.jpg" height="100%"  alt="일본 풍경사진">
+                    </li>
+                    <li>
+                        <img src="https://cdn.pixabay.com/photo/2017/05/07/06/14/hong-kong-2291752_1280.jpg" height="100%" alt="홍콩 풍경 사진">
+                    </li>
+                    <li>
+                        <img src="https://cdn.pixabay.com/photo/2014/08/12/00/01/santorini-416135_1280.jpg" width="100%" alt="유럽 여행 사진">
+                    </li>
+                </ul>
+            </div>
+            <div  class="price_page_list02">
+                <ul>
+                    <li>
+                        <img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_1280.jpg" width="100%" alt="로마 여행 사진">
+                    </li>
+                    <li>
+                        <img src="https://t4.ftcdn.net/jpg/02/25/98/29/240_F_225982943_eZYwYAoACnfhZnoi1rv54JCv2lZd3EtX.jpg" width="100%" alt="하와이 여행 사진">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 서비스 안내 구간 -->
+    <div class="service_center_tool">
+            <div class="customer_information">
+                <h2>상담문의</h2>
+                <ul>
+                    <li>
+                        <h3>해외/국내 여행 상담</h3>
+                    </li>
+                    <li>
+                        <h3>해외/국내 항공 상담</h3>
+                    </li>
+                    <li>
+                        <h3>부산/대구출발 여행상담</h3>
+                    </li>
+                    <li>
+                        <h3>기업행사/출장문의</h3>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    <footer>
+        <p>마무리입니다.</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,265 @@
+*{padding: 0; margin: 0; text-decoration: none; list-style: none;}
+body{max-width: 1400px; margin: 0 auto; box-sizing: border-box;height: 650vh; position: relative;}
+/* header page */
+header{display: flex;  padding: 10px; position: relative; margin-bottom: 80px; top: 0; width: 100%; background-color: white; z-index: 9999;}
+.fixon{position: sticky; top: 0;}
+/* nav */
+.active{position: sticky; top: 0;}
+header > nav{max-width: 600px; margin:  0 auto; position: sticky;}
+header > nav > ul{display: flex; text-align: center;}
+header > nav > ul > li{padding: 20px 30px 0 10px; white-space: nowrap; position: relative;} 
+header > nav > ul > li > a{color: black; font-weight: bolder; font-size: 1.3vw;}  
+header > ul{display: flex; position: absolute; right: 0px; top: 20px;}
+header > ul > li{padding:  0 10px;}
+nav > ul > li > ul{display: flex; border-radius: 50px; background-color: black; height: 50px; width: 200px; text-align: center; position: absolute; left: -100px; top: 50px; display: none;}
+nav > ul > li > ul > li{padding-top: 15px; gap: 10px; font-size: 14px; margin-right: 5px; margin: 0 auto;}
+nav > ul > li > ul > li > a{color: white; font-weight: bolder;}
+/* main-page */
+main{position: relative;}
+main > article{margin-bottom: 100px;}
+main > article > h2 > b{font-size: 50px; position: absolute; top: 10px;}
+main > div {width: 1400px; margin: 0 auto; display: flex; margin-bottom: 50px;}
+main > div > section{flex: 1; border-radius: 10px; margin-right: 20px;}
+/* big banner */
+.big_banner{width: 500px; height: 650px; overflow: hidden; box-shadow: 1px 3px 3px 3px rgba(3, 3, 3, 0.2); transition: all.5s; position: sticky; top: 100px;}
+.big_banner:hover{margin-top: -10px; box-shadow: 6px 6px 6px 6px rgba(3, 3, 3, 0.2);}
+.big_banner > div {padding-left: 20px; height: 500px;}
+.big_banner > div > section > b{background-color: rgb(235, 235, 235); width: 100px; height: 30px; position: absolute; top: 10px; left: 70px; line-height: 30px; text-align: center; font-weight: lighter; border-radius: 10px;}
+.big_banner > div > section > h2{font-size: 2em;}
+.big_banner > img{position: absolute; top: 140px; left: 0px;}
+/* small-page */
+.small_banner{width: 500px; height: 2030px; position: relative; }
+.small_banner > ul > li{ position: absolute;overflow: hidden; transition: all.4s; max-width: 300px;}
+.small_banner > ul > li:hover{margin-top: -10px; box-shadow: 6px 6px 6px 6px rgba(3, 3, 3, 0.2);}
+.small_banner > ul > li:nth-child(1){height: 400px;  box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; left: 50px;}
+.small_banner > ul > li:nth-child(2){height: 200px;  box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; right: 0;}
+.small_banner > ul > li:nth-child(3){height: 400px;  box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 430px; left: 50px;}
+.small_banner > ul > li:nth-child(4){height: 400px;  box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 230px; right: 0;}
+.small_banner > ul > li:nth-child(5){height: 400px;  box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 890px; left: 50px;}
+.small_banner > ul > li:nth-child(6){height: 400px;  box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 690px; right: 0;}
+.small_banner > ul > li:nth-child(7){height: 400px;  box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 1350px; left: 50px;}
+.small_banner > ul > li:nth-child(8){height: 400px;  box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 1150px; right: 0;}
+.small_banner > ul > li:nth-child(9){height: 200px;  box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 1830px; left: 50px;}
+.small_banner > ul > li:nth-child(10){ height: 200px; box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 1580px; right: 0; }
+.small_banner > ul > li:nth-child(11){ height: 200px; box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 1830px; right: 0; }
+.small_banner > ul > li > img{position: absolute; top: 180px; left: 0px;}
+.small_banner > ul > li:nth-child(2) > img{position: absolute; top: 10px; left: 0px; padding: 20px;}
+.small_banner > ul > li:nth-child(9) > img{position: absolute; top: 10px; left: 0px; padding: 20px;}
+.small_banner > ul > li:nth-child(10) > img{position: absolute; top: 10px; left: 0px; padding: 20px;}
+.small_banner > ul > li:nth-child(11) > img{position: absolute; top: 10px; left: 0px; padding: 20px;}
+.small_banner > ul > li > div > section{width: 400px;  margin:  0 auto; margin-top: 10px; padding:20px 0 0 20px;}
+.small_banner > ul > li > div > section > b{background-color: rgb(235, 235, 235); width: 100px; height: 30px; position: absolute;  line-height: 30px; text-align: center; font-weight: lighter; border-radius: 10px; top: 30px; left: 80px;}
+.small_banner > ul > li > div > section > h2{font-size: 20px; }
+.small_banner > ul > li > b{background-color: rgb(235, 235, 235); width: 100px; height: 30px; position: absolute; top: 30px; line-height: 30px; text-align: center; font-weight: lighter; border-radius: 10px; margin-left: 70px; left: 10px;}
+.small_banner > ul > li:nth-child(9) > h2{position: absolute; top: 80px; left: 20px; font-size: 50px;}
+.small_banner > ul > li > h2{position: absolute; top: 80px; left: 20px; font-size: 18px; }
+/* .active{position: fixed;} */
+
+/* aside */
+aside{max-width: 1400px; height: 540px; box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1); margin:  0 auto; border-radius: 10px; position: relative; text-align: center;}
+aside > h2{font-size: 40px;padding-top: 30px; margin-bottom: 50px;}
+aside > button{background-color: black; color: white; padding: 10px 20px; border-radius: 50px;}
+aside > img{position: absolute; left: 50%; transform: translate(-50%); bottom: 50px;}
+
+/* banner */
+main > section {max-width: 1400px;box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-bottom: 50px; position: relative;}
+main > aside {margin-bottom: 50px;}
+
+/* mmiddle banner    */
+main > section > b{font-size: 30px; line-height: 130px; padding-left: 60px;}
+main > section > ul{display: flex; position: absolute; top: 10px; right: 0;}
+main > section > ul > li:nth-of-type(1){width: 120px; height: 120px; background-image: url(https://www.kakaocorp.com/page/_nuxt/img/ico_sns.2acc182.png);  scale: .5;}
+main > section > ul > li:nth-of-type(2){width: 120px; height: 120px; background-image: url(https://www.kakaocorp.com/page/_nuxt/img/ico_sns.2acc182.png);  scale: .5; background-position: 120px 0;}
+main > section > ul > li:nth-of-type(3){width: 120px; height: 120px; background-image: url(https://www.kakaocorp.com/page/_nuxt/img/ico_sns.2acc182.png);  scale: .5; background-position: -125px 0;}
+main > section > ul > li:nth-of-type(4){width: 120px; height: 120px; background-image: url(https://www.kakaocorp.com/page/_nuxt/img/ico_sns.2acc182.png);  scale: .5; background-position: -255px 0;}
+main > section > ul > li:nth-of-type(5){width: 120px; height: 120px; background-image: url(https://www.kakaocorp.com/page/_nuxt/img/ico_sns.2acc182.png);  scale: .5; background-position: -385px 0;}
+
+/* banner page */
+.banner_page{width: 1400px; margin: 0 auto; display: flex; margin-bottom: 50px;}
+.banner_page > section{flex: 1; border-radius: 10px; margin-right: 20px;}
+.s_big_banner{ height: 650px; overflow: hidden; box-shadow: 1px 3px 3px 3px rgba(3, 3, 3, 0.2); transition: all.5s; position: sticky; top: 100px;}
+.s_big_banner:hover{margin-top: -10px; box-shadow: 6px 6px 6px 6px rgba(3, 3, 3, 0.2);}
+.s_big_banner > div {padding-left: 20px; height: 500px;}
+.s_big_banner > div > section > b{background-color: rgb(235, 235, 235); width: 100px; height: 30px; position: absolute; top: 20px; line-height: 30px; text-align: center; font-weight: lighter; border-radius: 10px;}
+.s_big_banner > div > section > h2{font-size: 30px; margin-top: 20px;}
+.s_big_banner > img{position: absolute; top: 160px; left: 0px;}
+
+.s_small_banner{width: 300px; height: 1580px; position: relative; }
+.s_small_banner > ul > li{ position: absolute;overflow: hidden; transition: all.4s; border-radius: 10px; box-shadow: 1px 3px 3px 3px rgba(3, 3, 3, 0.2);}
+.s_small_banner > ul > li:nth-child(1) > img{top: 10px; left: 10px;}
+.s_small_banner > ul > li:hover{margin-top: -10px; box-shadow: 6px 6px 6px 6px rgba(3, 3, 3, 0.2);}
+.s_small_banner > ul > li:nth-child(1){width: 300px; height: 200px; left: 0;}
+.s_small_banner > ul > li:nth-child(2){width: 300px; height: 400px; right: 50px;}
+.s_small_banner > ul > li:nth-child(3){width: 300px; height: 400px; left: 0; top: 260px;}
+.s_small_banner > ul > li:nth-child(4){width: 300px; height: 400px; right: 50px; top: 460px;}
+.s_small_banner > ul > li:nth-child(5){width: 300px; height: 400px; left: 0; top: 720px;}
+.s_small_banner > ul > li:nth-child(6){width: 300px; height: 400px; right: 50px; top: 920px;}
+.s_small_banner > ul > li:nth-child(7){width: 300px; height: 400px; left: 0; top: 1180px;}
+.s_small_banner > ul > li:nth-child(8){width: 300px; height: 200px; right: 50px; top: 1380px;}
+.s_small_banner > ul > li > img{position: absolute; bottom: 0;}
+/* only icon */
+.s_small_banner > ul > li:nth-child(8) > img{position: absolute; top: 10px; left: 0px; padding: 20px;}
+.s_small_banner > ul > li > div > section{width: 400px;  margin:  0 auto; margin-top: 10px; padding:20px 0 0 20px;}
+.s_small_banner > ul > li:nth-last-child(1) > b{background-color: rgb(235, 235, 235); width: 150px; height: 30px; position: absolute; top: 20px; line-height: 30px; text-align: center; font-weight: lighter; border-radius: 10px; margin-left: 80px; margin-top: 20px;}
+.s_small_banner > ul > li:nth-child(1) > b{background-color: rgb(235, 235, 235); width: 150px; height: 30px; position: absolute; top: 20px; line-height: 30px; text-align: center; font-weight: lighter; border-radius: 10px; margin-left: 80px; margin-top: 20px;}
+.s_small_banner > ul > li > div > section > h2{font-size: 20px; }
+.s_small_banner > ul > li > div > section > b{background-color: rgb(235, 235, 235); width: 100px; height: 30px; position: absolute;  line-height: 30px; text-align: center; font-weight: lighter; border-radius: 10px; top: 30px; left: 80px;}
+/* sub_page */
+.banner_sub_page{width: 1400px; margin: 0 auto; display: flex; margin-bottom: 50px;}
+.banner_sub_page > section{position: relative; flex: 1;}
+.banner_sub_page > section > h2{font-size: 32px; width: 500px; margin:  50px auto 0 50px; }
+.banner_sub_page > section:nth-of-type(1){background-color: #fae100; height: 360px; width: 50%;}
+.banner_sub_page > section:nth-of-type(1) > img{position: absolute; right: 50px; bottom: 50px; }
+.banner_sub_page > section:nth-of-type(2){background-color: #3c64ff;; height: 360px; width: 50%;}
+.banner_sub_page > section:nth-of-type(2) > img{position: absolute; right: 50px; bottom: 50px;}
+/* main_last_page */
+main > button {width: 300px; height: 60px; border-radius: 50px; position: absolute;  left: 50%; transform: translate(-50%,0); margin-bottom: 100px;}
+/* footer */
+.mobile_img{display: none;}
+.mobile_icons{display: none;}
+/* mobile */
+@media screen and (max-width:1400px) {
+header{max-width: 1000px; margin:  0 auto; margin-bottom: 100px;}
+.head_banner > section{ border-radius: 10px; margin-right: -40px;}
+.head_banner > section:nth-of-type(1){flex: 2; border-radius: 10px; margin-right: 20px;}
+
+.small_banner{height: 3800px; position: relative; }
+.small_banner > ul > li{padding: 0; left: 0; width: 100vw;}
+.small_banner > ul > li:nth-child(1){right: 0; top: 0; left: 0;}
+.small_banner > ul > li:nth-child(2){right: 0px; top: 420px;}
+.small_banner > ul > li:nth-child(3){top: 640px; left: 0;}
+.small_banner > ul > li:nth-child(4){top: 1060px; left: 0; }
+.small_banner > ul > li:nth-child(5){right: 0; top: 1480px; left: 0; }
+.small_banner > ul > li:nth-child(6){right: 0; top: 1900px; left: 0; }
+.small_banner > ul > li:nth-child(7){right: 0; top: 2320px; left: 0; }
+.small_banner > ul > li:nth-child(8){right: 0; top: 2740px; left: 0; }
+.small_banner > ul > li:nth-child(9){right: 0; top: 3160px; left: 0; }
+.small_banner > ul > li:nth-child(10){top: 3380px;}
+.small_banner > ul > li:nth-child(11){top: 3600px;}
+main > article{max-width: 1000px; margin:  0 auto; margin-bottom: 100px;}
+main > article > h2 > img{width:80px;}
+main > article > h2 > b{font-size: 1em;}
+main > div {width: 1000px; margin: 0 auto; display: flex; margin-bottom: 50px;}
+/* .head_banner{flex: 2; border-radius: 10px; margin-right: 20px;} */
+aside{max-width: 1000px;}
+main > section {max-width: 1000px; height: 130px;box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1); border-radius: 10px; margin: 0 auto; margin-bottom: 60px;}
+main > section > ul > li{position: absolute;}
+main > section > ul > li:nth-of-type(1){right: 300px;}
+main > section > ul > li:nth-of-type(2){ right: 220px;}
+main > section > ul > li:nth-of-type(3){right: 140px;}
+main > section > ul > li:nth-of-type(4){right: 60px;}
+main > section > ul > li:nth-of-type(5){right: -20px;}
+.banner_page{width: 1000px; margin: 0 auto; display: flex; margin-bottom: 50px;}
+.s_small_banner{height: 2940px; }
+.banner_page > section:nth-last-of-type(1){flex: 2.1;}
+.s_small_banner > ul > li:nth-child(1){left: 0; top: 0;}
+.s_small_banner > ul > li:nth-child(2){left: 0; top: 220px;}
+.s_small_banner > ul > li:nth-child(3){left: 0; top: 640px;}
+.s_small_banner > ul > li:nth-child(4){left: 0;top: 1060px;}
+.s_small_banner > ul > li:nth-child(5){left: 0; top: 1480px;}
+.s_small_banner > ul > li:nth-child(6){left: 0;top: 1900px;}
+.s_small_banner > ul > li:nth-child(7){left: 0; top: 2320px;}
+.s_small_banner > ul > li:nth-child(8){left: 0;top: 2740px;}
+.banner_sub_page{width: 1030px; margin: 0 auto; display: flex; margin-bottom: 50px; position: relative; padding-left: 10px;}
+.banner_sub_page > section > h2{font-size: 1.5em; width: 400px; margin:  50px auto 0 50px; }
+    /* .banner_sub_page > section:nth-of-type(1){background-color: #fae100; height: 360px; width: 40%;}
+.banner_sub_page > section:nth-of-type(2){background-color: #3c64ff;; height: 360px; width: 0%;}
+ */
+}
+@media screen and (max-width:1000px) {
+header{max-width: 680px; margin:  0 auto;}
+.mobile_icons{display: flex; position: absolute; right: 50px;}
+nav{display: none;}
+header > ul {display: none;}
+.head_banner{display: block; max-width: 680px; margin:  0 auto; position: relative; height: 3000px;}
+.big_banner{position: relative; max-width: 680px;}
+.head_banner > section:nth-of-type(1){width: 700px; border-radius: 10px; margin-right: 20px;}
+main{max-width: 680px; margin: 0 auto;}
+main > article {max-width: 100vw;}
+.small_banner > ul > li:nth-child(1){ left: 0; top: 200px;}
+.small_banner > ul > li:nth-child(2){top: 200PX; left: 380px;}
+.small_banner > ul > li:nth-child(3){ top: 420px; left: 380px;}
+.small_banner > ul > li:nth-child(4){ top: 620px; right: 0;}
+.small_banner > ul > li:nth-child(5){ top: 840px; left: 380px;}
+.small_banner > ul > li:nth-child(6){ top: 1040px; right: 0;}
+.small_banner > ul > li:nth-child(7){ top: 1260px; left: 380px;}
+.small_banner > ul > li:nth-child(8){ top: 1460px; right: 0;}
+.small_banner > ul > li:nth-child(9){ top: 1680px; left: 380px;}
+.small_banner > ul > li:nth-child(10){width: 300px; height: 200px; box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 1900px; right: 0; }
+.small_banner > ul > li:nth-child(11){width: 300px; height: 200px; box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.1);; border-radius: 10px; top: 1900px; left: 380px; }
+.banner_page{display: block; position: relative; max-width: 680px}
+/* 여기 부분 absolute 로만 되는가 ? */
+.s_big_banner{position: absolute; top: 0;}
+.s_small_banner > ul > li:hover{margin-top: -10px; box-shadow: 6px 6px 6px 6px rgba(3, 3, 3, 0.2);}
+.s_small_banner > ul > li:nth-child(1){width: 300px; height: 200px; left: 0; top: 680px;}
+.s_small_banner > ul > li:nth-child(2){width: 300px; height: 400px; left: 380px; top: 680px;}
+.s_small_banner > ul > li:nth-child(3){width: 300px; height: 400px; left: 0; top: 900px;}
+.s_small_banner > ul > li:nth-child(4){width: 300px; height: 400px; left: 380px;top: 1100px;}
+.s_small_banner > ul > li:nth-child(5){width: 300px; height: 400px; left: 0; top: 1320px;}
+.s_small_banner > ul > li:nth-child(6){width: 300px; height: 400px; left: 380px;top: 1520px;}
+.s_small_banner > ul > li:nth-child(7){width: 300px; height: 400px; left: 0; top: 1740px;}
+.s_small_banner > ul > li:nth-child(8){width: 300px; height: 200px; left: 380px;top: 1940px;}
+.s_small_banner{height: 2200px;}
+.banner_page > section{width: 680px; border-radius: 10px;  flex: 1; margin: 0 auto;}
+
+
+main > section { height: 230px;}
+main > section > ul{top: 100px; right: 180px;}
+
+.mobile_img{display: block;}
+aside > img{display: none;}
+
+.banner_sub_page{display: block; ;}
+.banner_sub_page > section{max-width: 680px;}
+
+.banner_sub_page > section:nth-of-type(1) {width: 680px;}
+.banner_sub_page > section:nth-of-type(2) {width: 680px;}
+
+}
+
+@media screen and (max-width:565px) {
+    .head_banner{max-width: 100vw;}
+    .big_banner{position: relative; max-width: 100vw; margin: 0 auto;}
+    .small_banner > ul > li:nth-child(1){ left: 0; top: 120px;}
+    .small_banner > ul > li:nth-child(2){top: 420PX; left:0; display: none;}
+    .small_banner > ul > li:nth-child(3){ top: 800px; left: 0}
+    .small_banner > ul > li:nth-child(4){ top: 1480px; right: 0;}
+    .small_banner > ul > li:nth-child(5){display: none;}
+    .small_banner > ul > li:nth-child(6){display: none;}
+    .small_banner > ul > li:nth-child(7){display: none;}
+    .small_banner > ul > li:nth-child(8){display: none;}
+    .small_banner > ul > li:nth-child(9){display: none;}
+    .small_banner > ul > li:nth-child(10){display: none; }
+    .small_banner > ul > li:nth-child(11){display: none; }
+    
+    .small_banner > ul > li {width: 100vw; height: 520px;}
+    .small_banner{width: 545px;}
+
+    .head_banner{height: 2820px;}
+    aside{max-width: 545px; margin:0 auto; position: relative; left: 90px;}
+    main > section{left: 90px; text-align: center;}
+    main > section > b{white-space: nowrap; left: 0; font-size: 18px; padding: 0;}
+    main > section > ul{right: 80px;}
+
+    .banner_page{max-width: 545px; margin:  0 auto;}
+    .banner_page > section{width: 545px; margin:  0 auto;}
+    .s_big_banner{left: 80px;}
+
+.s_small_banner > ul > li:hover{margin-top: -10px; box-shadow: 6px 6px 6px 6px rgba(3, 3, 3, 0.2);}
+.s_small_banner > ul > li:nth-child(1){width: 300px; height: 200px; left: 0; top: 680px;}
+.s_small_banner > ul > li:nth-child(2){width: 300px; height: 400px; left: 00px; top: 680px;}
+.s_small_banner > ul > li:nth-child(3){width: 300px; height: 400px; left: 0; top: 900px;}
+.s_small_banner > ul > li:nth-child(4){width: 300px; height: 400px; left: 0px;top: 1100px;}
+.s_small_banner > ul > li:nth-child(5){width: 300px; height: 400px; left: 0; top: 1320px;}
+.s_small_banner > ul > li:nth-child(6){width: 300px; height: 400px; left: 0px;top: 1520px;}
+.s_small_banner > ul > li:nth-child(7){width: 300px; height: 400px; left: 0; top: 1740px;}
+.s_small_banner > ul > li:nth-child(8){width: 300px; height: 200px; left: 0px;top: 1940px;}
+.big_banner > div {max-width: 100%;}
+.head_banner > section:nth-of-type(1){max-width: 100%;}
+aside{max-width: 100vw; left: 0;} 
+main > section {max-width: 100vw; left: 0;}
+.s_big_banner{max-width: 100vw; left: 0;}
+.banner_sub_page > section:nth-of-type(1) {max-width: 100%; display: none;}
+.banner_sub_page > section:nth-of-type(2) {max-width: 100%; display: none;}
+.s_small_banner {display: none;}
+}

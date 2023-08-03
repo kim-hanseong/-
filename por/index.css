@@ -1,0 +1,130 @@
+*{margin: 0;padding: 0; ; box-sizing: border-box; list-style: none; font-family: 'Noto Sans KR', sans-serif;  }
+header,section,footer{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header{background-color: #ced7c7; font-size: 130px;}
+footer{background-color: #a4b499;}
+body {overflow: hidden;}
+ol {list-style: none; position: fixed; right: 10px; top: 50%; z-index: 9999;}
+ol li {text-indent: -9999px; width: 10px; height: 10px; border-radius: 100%; background-color: darkgray;}
+ol li:not(:last-child) {margin-bottom: 10px;}
+ol li.active{background-color: orange;}
+
+header{position: relative; overflow: hidden;}
+.header_tool{position: absolute; width: 2200px; height: 700px;  margin: 0 auto; border: 2px solid grey; opacity: .4; top: 100px;}
+.header_tool2{position: absolute; width: 2px; height: 1000px; background-color: grey; opacity: .4; left: 200px;}
+/* .header_tool3{position: absolute; width: 1800px; height: 2px; background-color: grey; opacity: .4; left: 200px; top: 700px;} */
+
+header > h2{font-family: 'EB Garamond', serif; position: absolute; font-size: 60px; color: #283121; top: 200px; left: 210px; animation: title 1s forwards; opacity: 0;}
+header > h2:nth-of-type(2){font-family: 'EB Garamond', serif; position: absolute; font-size: 120px; color: #283121; top: 250px; left: 210px; animation: title 2s forwards;  opacity: 0;}
+@keyframes title{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.header_text > p{font-size: 28px; font-family: 'Noto Sans KR', sans-serif; position: relative; left: -360px; top: 50px;}
+.header_text > b{width: 100px; height: 100px; background-color: #283121; }
+
+
+.my_content{position: absolute; bottom: 100px; left: 210px;}
+.my_content > a{margin-right: 30px; width: 200px; height: 100px; ; text-decoration: none; color: black;}
+.my_content > a > b{ font-size: 20px;}
+
+.my_content > a:nth-last-of-type(2) > img{position: absolute; top: 120px; left: 240px;}
+.my_content > a > img{position: absolute; top: 120px; left: 630px; animation: moveIcon 1.5s infinite; animation-direction: alternate;}
+@keyframes moveIcon{
+    0%{transform: rotate(15deg);}
+    50%{transform: rotate(0);}
+    100%{transform: rotate(-15deg)}
+
+}
+
+
+.my_content span > b{font-size: 20px; }
+
+/* .header_index p:nth-of-type(0) {font-size: 24px; position: absolute; right: 10px; top: 110px;} */
+.header_index >p:nth-of-type(1) {font-size: 24px; position: absolute; right: 10px; top: 110px; color: #283121;}
+.header_index >p:nth-of-type(2) {font-size: 24px; position: absolute; right: 10px; top: 160px; color: #283121;}
+.header_index >p:nth-of-type(3) {font-size: 24px; position: absolute; right: 10px; top: 210px; color: #283121;}
+.header_index >p:nth-of-type(4) {font-size: 24px; position: absolute; right: 10px; top: 260px; color: #283121;}
+.header_index >p:nth-of-type(5) {font-size: 24px; position: absolute; right: 10px; top: 310px; color: #283121;}
+.header_index >p:nth-of-type(6) {font-size: 24px; position: absolute; right: 10px; top: 360px; color: #283121;}
+.header_index >p:nth-of-type(7) {font-size: 24px; position: absolute; right: 10px; top: 410px; color: #283121;}
+
+.header_index > p > a{color:#283121;}
+
+
+/* my_intro */
+.my_intro{position: relative; background-color: #ced7c7; }
+.intro_title{position: absolute; top: 0; left: 0; font-size: 50px; padding: 50px; height: 100px;}
+
+    /* .my_intro > ul > li{margin-bottom: 50px;} */
+.my_intro > ul{height: 500px; width: 600px; margin-top: 100px; margin-left: 50px;}
+.my_intro > ul > li{font-size: 20px;}
+
+.my_intro > ul:nth-of-type(1) > li{margin-bottom: 300px;}
+/* project */
+
+
+
+/* my_advantage */
+.advantage_page{background-color: #ced7c7; position: relative; overflow: hidden;}
+.advantage_page > .advan_img{width: 1200px; height: 400px; position: absolute; background-color: #283121; background-image: url(./img/다운로드.png); background-position: center; background-repeat: no-repeat; top: 100px; }
+.advan_img > h2{color: white; font-family: 'Noto Sans KR', sans-serif; font-size: 60px; opacity: .9; top: 300px; position: absolute; padding-left: 30px;}
+
+.advan_stack{position: relative; width: 1200px; height: 300px;  top: 220px; font-size: 30px; left: 30px;}
+.head_icon{width: 15px; height: 15px; background-color: #283121; position: absolute; transform: rotate(45deg); left: -30px; top: 15px; border-radius: 50%;}
+.advan_stack li p {font-family: 'Noto Sans KR', sans-serif;}
+
+.advan_stack li:nth-child(1){top: 50px; position: absolute;z-index: 9999;}
+.advan_stack li:nth-child(2){top: 100px; position: absolute;}
+.advan_stack li:nth-child(3){top: 150px; position: absolute;}
+.advan_stack li:nth-child(4){top: 200px; position: absolute;}
+.advan_stack li:nth-child(5){top: 250px; position: absolute;}
+
+.advan_img > h2 > p{display: inline-block; position: relative;}
+
+.advan_img > h2 > p:nth-of-type(1){animation: jump 2s infinite alternate; animation-delay: 0s;}
+.advan_img > h2 > p:nth-of-type(2){animation: jump 2s infinite alternate; animation-delay: 0.2s;}
+.advan_img > h2 > p:nth-of-type(3){animation: jump 2s infinite alternate; animation-delay: 0.4s;}
+.advan_img > h2 > p:nth-of-type(4){animation: jump 2s infinite alternate; animation-delay: 0.6s;}
+.advan_img > h2 > p:nth-of-type(5){animation: jump 2s infinite alternate; animation-delay: 0.8s;}
+.advan_img > h2 > p:nth-of-type(6){animation: jump 2s infinite alternate; animation-delay: 1s;}
+.advan_img > h2 > p:nth-of-type(7){animation: jump 2s infinite alternate; animation-delay: 1.2s;}
+.advan_img > h2 > p:nth-of-type(8){animation: jump 2s infinite alternate; animation-delay: 1.4s;}
+.advan_img > h2 > p:nth-of-type(9){animation: jump 2s infinite alternate; animation-delay: 1.6s;}
+
+@keyframes jump{
+    from{bottom: 30px;}
+    to{bottom: 0;}
+}
+
+
+
+
+
+
+
+
+/* first_project */
+
+/* footer */
+footer{background-color: #2d441b; position: relative; overflow: hidden;}
+.footer_head{position: absolute; top: 100px; left: 100px;}
+.footer_head > h2{color: beige; font-size: 100px; font-family: 'EB Garamond', serif}
+
+.footer_main_text{position: absolute; top: 300px; left: 100px;}
+.footer_main_text p{font-size: 50px; font-family: 'Noto Sans KR', sans-serif; color: beige;}
+
+
+.footer_next_text{position: absolute; color: beige; bottom: 55px;}
+.footer_next_text img:nth-last-of-type(0){ position: absolute; left: 300px;}
+.footer_next_text span{padding: 30px;}
+
+
+.footer_back{width: 1600px; height: 1600px; background-color: #283121; border-radius: 50%; position: absolute; left: -200px; bottom: -300px;}

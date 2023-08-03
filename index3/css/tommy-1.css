@@ -1,0 +1,192 @@
+*{padding: 0; margin: 0; text-decoration: none; list-style: none; box-sizing: border-box; white-space: wrap;}
+/* header 부분 */
+body{height: 500vh;}
+
+header{height: 100vh;}
+/* header_widht_tool 전체 크기 조절 */
+.header_widht_tool{width: 1800px; margin: 0 auto;  position: relative; margin-bottom: 50px; background-color:rgb(2, 2, 69) ;}
+.tool_header{height: 75%; position: relative;}
+.tool_header_back{background-color: rgb(2, 2, 69); height: 100%; position: absolute; width: 100%; z-index: -1;}
+.stick1{position: sticky; top: 0;}
+
+/* Top_header_bar */
+.Top_header_bar {display: flex; position: relative; width: 1880px; height: 100px; top: 0; left: 50%; transform: translateX(-50%);}
+.Top_header_bar > div{ font-size: 16px; height: 50px; text-align: center; line-height: 50px; position: relative;}
+.Top_header_bar > div:nth-child(1){width: 50%; background-color: burlywood; }
+.Top_header_bar > div:nth-child(2){width: 50%; background-color: rgb(193, 111, 5);}
+.Top_header_bar > div a{color: white;}
+
+.Top_header_bar > span{position: absolute; right: 20px; line-height: 50px; color: black; cursor: pointer;}
+
+
+/* 각 개체들 가로정렬 */
+/* 부모 */
+header{margin-bottom: 100px;}
+.header_nav_bar{display: flex; font-size: 14px;  height: 70px; position: relative; white-space: nowrap; width: 1700px; margin: 0 auto;}
+.header_nav_bar > h2 a{color: white;}
+
+/* 자식 요소 들 */
+/* nav_home */
+.nav_home{display: flex;}
+.nav_home li:first-child{margin-right: 25px;}
+.nav_home li{padding-top: 50px;}
+.nav_home > li a{color: white;}
+
+/* Tommy logo */
+.header_nav_bar > h2{position: absolute;  text-align: center; width: 100%; top: 15px;}
+.header_nav_bar > h2 a{  text-align: center; }
+
+
+.nav_login{margin-left: auto; align-items: center; max-width: 300px;}
+.nav_login ul{display: flex; }
+.nav_login ul li{padding: 50px 10px 0 10px; position: relative; text-align: center; }
+.nav_login ul li:not(:first-child):after{content: ''; position: absolute; height: 10px; color: white; display: block; left: 0px; top: 55px; border-left: 1px solid #Fff; opacity: 0.5; }
+.nav_login ul li a{color: white; white-space: nowrap;}
+
+
+
+/* h2 도  flex 요소를 넣을 필요가 있을까 부모에 자체적으로 flex를 넣었는데 다른 요소들은 ul li 라서 넣었다 쳐도 h2
+는 굳이 더 넣을 필요가 있을까 */
+
+/* 두번째 list */
+.nav_choice{display: flex; max-width: 600px; margin:  0 auto; margin-bottom: 20px;  white-space: nowrap;  text-overflow: ellipsis; height: 30px;}
+.nav_choice a{color: white;}
+.nav_choice li{margin: 0 auto; gap: 2rem;padding: 10px;}
+
+/* header_slide  */
+
+.slide_wrap{ width: 1700px; background-color: pink; height: 600px; margin: 0 auto 200px auto; border-radius: 0 0 0 100px; overflow: hidden; position: relative; }
+.header_slide img{width: 100%; height: 100%;}
+.header_slide p{position: absolute; font-size: 20px; color: white; top: 200px; left: 150px;}
+.header_slide h2 {position: absolute; font-size: 40px; color: white; top: 250px; left: 150px;}
+.header_slide p:nth-last-of-type(1) {position: absolute; font-size: 16px; color: white; top: 350px; left: 150px;}
+.header_slide a {width: 90%; height: 100%; margin: 0 auto;}
+
+
+
+
+
+.slide_wrap .bx-prev{position: absolute; font-size: 100px; z-index: 30000px; top: 50%; left: 50px; transform: translate(-50%,-50%); color: #999; background: url(https://www.hfashionmall.com/hfm_pc/resources/images/btn_slide_nav.png) no-repeat 0,100; }
+.slide_wrap .bx-next{position: absolute; font-size: 100px; z-index: 30000px; top: 50%; right: 0px; transform: translate(-50%,-50%); color: #999; background-image: url(https://www.hfashionmall.com/hfm_pc/resources/images/btn_slide_nav.png);}
+
+/* stroy slide */
+/* pager or active custom 필요 */
+h2{text-align: center; position: relative; top: -50px;}
+.story_slide{width: 1600px; margin: 0 auto; border-radius: 50px 0 50px 0; height: 400px; overflow: hidden; position: relative;}
+
+.story_wrap li > h2 {position: absolute; color: black;  font-size: 40px; top: 160px; left: 50px;}
+.story_wrap li > p:nth-of-type(1) {position: absolute; color: black;  font-size: 14px; top: 140px;  left: 50px;}
+.story_wrap li > p:nth-of-type(2) {position: absolute; color: black;  font-size: 14px; top: 220px;  left: 50px;}
+
+
+.story_wrap img{height: 500px; width: 800px;}
+.story_slide .bx-prev{display: none; }
+.story_slide .bx-next{display: none; }
+
+/* sub_slide */
+.sub_slide_wrap{width: 1600px; margin: 0 auto; }
+.sub_slide li img{margin-right: 200px;}
+.sub_slide li > span:nth-of-type(1){position: absolute; top: 30px; left: 70px; }
+.sub_slide li > span:nth-of-type(2){position: absolute; top: 30px; left: 340px; }
+
+.sub_slide_wrap .bx-prev{color: black; position: absolute; bottom: 0; right: 150px; font-size: 40px; padding-left: 500px; padding-left: 0;}
+.sub_slide_wrap .bx-next{color: black; position: absolute; bottom: 0; right: 100px; font-size: 40px; padding-left: 500px; padding-left: 0}
+
+.sub_slide{width: 1700px; margin:0 auto; } 
+
+.travel_iteam > h2{font-size: 40px; text-align: center;}
+
+/* travel slide */
+.travel_head{margin-top: 300px;}
+
+.travel_iteam{position: relative; margin: 0px 0 200px 0;}
+.btn_active{ color: white;}
+.travel_btn{display: flex; max-width: 1000px; margin: 50px auto auto auto; padding: 10px; }
+.travel_btn > button{background-color: #f8f7f3; height: 44px; border-radius: 50px; color: #999; font-size: 16px;  padding: 0 34px; margin: 50px 10px 50px 10px; cursor: pointer;}
+.travel_slide_wrap{width: 1700px; margin: 0 auto;}
+.travel_slide_wrap{max-width: 1700px; margin: 0 auto; height: 500px; }
+.travel_slide_img li p{font-size: 14px;}
+
+.travel_slide_wrap .bx-prev{position: absolute; z-index: 99; font-size: 40px; top: -100px; right: 150px; color: black; padding: 10px;}
+.travel_slide_wrap .bx-next{position: absolute; z-index: 99; font-size: 40px; top: -100px; right: 100px; color: black; padding: 10px;}
+
+
+
+/* aside_slide */
+.aside_slide{position: relative;}
+.aside_wrap div{background-color: bisque; height: 200px;  position: relative; margin-bottom: 200px;}
+.aside_slide .bx-prev{color: #999; font-size: 70px; position: absolute; left: 100px; top: 50%; transform: translate(-50%,-50%); }
+.aside_slide .bx-next{color: #999; font-size: 70px; position: absolute; right: 100px; top: 50%; transform: translate(-50%,-50%);}
+
+.aside_wrap div:nth-of-type(2){background-color:rebeccapurple}
+.aside_wrap div:nth-last-of-type(2){background-color: yellowgreen;}
+
+
+/* .linen_item{border: 1px solid rebeccapurple;} */
+
+/* 전체크기를 정할 순 있지만 개당의 크기를 정할 순 없음 */
+.linen_item{width: 1620px; margin:0 auto; position: relative; transition: all.5s; top: 200px;;}
+.linen_slide{top: 300px; height: 1000px;}
+/* li는 크기를 정할 수 없는 위치 */
+.linen_slide li{width: 500px;   margin: 0 auto; transition: 0.5s;}  
+    
+.linen_item li img{scale: 1; left: 50%; overflow: visible;margin-bottom: 300px; ;}
+.active1{ scale: 1.3; z-index: 9999;}
+.linen_item > .bx-wrapper > .bx-viewport{height: 400px;} 
+.linen_item .bx-prev , .linen_item .bx-next{position: absolute; font-size: 100px; }
+.linen_item .bx-prev{left: -50px;  top: 60%; color: #ccc; transform: translate(0,-50%);}
+.linen_item .bx-next{right: -50px; top: 60%; color: #ccc; transform: translate(0,-50%);}
+
+
+.tall{background-image: url(https://www.hfashionmall.com/hfm_pc/resources/images/btn_slide_nav.png);}
+
+@media screen and  (max-width: 1400px)
+{
+.sub_slide_wrap .bx-prev{display: none;}
+.sub_slide_wrap .bx-next{display: none;}
+.travel_slide_wrap .bx-prev{display: none;}
+.travel_slide_wrap .bx-next{display: none;}
+}
+
+
+@media screen and (max-width: 768px) {
+    .header_nav_bar > h2 a {
+    font-size: 24px;
+    }
+    .nav_home li:first-child {
+    margin-right: 10px;
+    }
+    .nav_home li {
+    padding-top: 30px;
+    }
+    .nav_login ul li:not(:first-child):after {
+    top: 45px;
+    }
+    .nav_choice li {
+    gap: 1rem;
+    }
+    .travel_slide_wrap.bx-prev {
+    font-size: 20px;
+    top: 50px;
+    right: 50px;
+    }
+    .travel_slide_wrap.bx-next {
+    font-size: 20px;
+    top: 50px;
+    right: 10px;
+    }
+    .aside_slide.bx-prev {
+    font-size: 30px;
+    left: 50px;
+    }
+    .aside_slide.bx-next {
+    font-size: 30px;
+    right: 50px;
+    }
+    .linen_item.bx-prev {
+    left: 10px;
+    }
+    .linen_item.bx-next {
+    right: 10px;
+    }
+    }

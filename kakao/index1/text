@@ -1,0 +1,215 @@
+1. 줄어들때 absolute 라 곂쳐지기에 width 를 % 로 주는게 아니라 px로 고정값을 줘야함
+
+2. side_news 찍을때 li background 로 직으면 거리 조절이 조금 힘든데 이거 해결 방법 ? flex는 일단 써야할거같고
+
+3. li section 과 div 로 했는데 이거 img로 그냥 박아볼까 (생각)
+> p 태그 박을거면 img 로 만으로는 힘듦  
+
+5. 이거 banner > li 들에게 % 로 값을 주는게 아닌 px 로 고정값을 줘야함
+
+6. 만들기 전에 px 로 줘야하는지 어떻게 줘야하는지 판단 구별
+
+7.medias screen 1400px 일때 크기값 max-width 값을 어떻게 설정해야하는가 ?
+
+8. li 들 안에 있는 영역나눔은 div 로 해야함 span 은 어떤것도 담을 수 없는 작은것
+
+9. kakao 페이지 list 들은 background-image contain 로 넣어야함
+
+10. fixedindex : mainpage 도 바꿔야할듯  4-2 index로
+
+11. 4-2 index 이거 다 width 값이 다른데 br 말고 width 를 써야하는가 ?
+ <div class="banner_page">
+            <div class="wrap">
+                <ul class="s_small_banner_tool01">
+                    <li>
+                        <img src="https://www.kakaocorp.com/page/ico_customer.png" width="50" alt="확성기아이콘"><b>고객센터</b>
+                    </li>
+                    <li>
+                        <div>
+                            <section>
+                                <img data-v-a968263a="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png?type=thumb&amp;opt=C72x72.fwebp" width="36" height="36" alt="확성기아이콘" class="ico_cate"><b>보도자료</b>
+                                <h2>카카오, EGS 보고서 '2022 <br>카카오의 약속과 책임' 발간</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/69ea7fa6018800001.jpg?type=thumb&amp;opt=C630x472.fwebp"  alt="웹 이미지" class="thumb_img">
+                    </li>
+                    <li>
+                        <section>
+                            <img data-v-a968263a="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png?type=thumb&amp;opt=C72x72.fwebp" width="36" height="36" alt="확성기아이콘" class="ico_cate"><b>보도자료</b>
+                            <h2>美 와튼스쿨, 한국의 ICT <br>생태계 연구 위해 카카오...</h2>
+                        </section>
+                        <div>
+                            <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/5567a94a018800001.jpg?type=thumb&amp;opt=C630x472.fwebp"  alt="웹 이미지" class="thumb_img">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <section>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                    
+
+                        <div>
+                            <section>
+                                <img data-v-a968263a="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png?type=thumb&amp;opt=C72x72.fwebp" width="36" height="36" alt="확성기아이콘" class="ico_cate"><b>보도자료</b>
+                            </section>
+                        </div>
+                        
+                        <section>
+                            <img data-v-a968263a="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png?type=thumb&amp;opt=C72x72.fwebp" width="36" height="36" alt="확성기아이콘" class="ico_cate"><b>보도자료</b>
+                            <h2>카카오, 전국 100개<br>시장에서 '우리동네...</h2>
+
+                        </section>
+                        <div>
+                            <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/502b0272018800001.png?type=thumb&amp;opt=C630x472.fwebp"  alt="웹 이미지" class="thumb_img">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="s_small_banner_tool02">
+                    <li>
+                    
+                        <div>
+                            <section>
+                            </section>
+                        </div>
+                        
+                        
+                        <section>
+                            <img data-v-a968263a="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png?type=thumb&amp;opt=C72x72.fwebp" width="36" height="36" alt="확성기아이콘" class="ico_cate"><b>보도자료</b>
+                            <h2>카카오메이커스,<br>제주개발공사와 제주 바다...</h2>
+                        </section>
+                        <div>
+                            <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/6f110834018800001.jpg?type=thumb&amp;opt=C630x472.fwebp"  alt="웹 이미지" class="thumb_img">
+                        </div>
+                    </li>
+                    <li>
+                    
+                    
+                        <div>
+                            <section>
+                                <img data-v-a968263a="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png?type=thumb&amp;opt=C72x72.fwebp" width="36" height="36" alt="확성기아이콘" class="ico_cate"><b>보도자료</b>
+                                <h2>카카오,카카오톡 쇼핑하기<br>X 카카오쇼핑라이브...</h2>
+                            </section>
+                        </div>
+                        
+                        <section>
+                            <img data-v-a968263a="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png?type=thumb&amp;opt=C72x72.fwebp" width="36" height="36" alt="확성기아이콘" class="ico_cate"><b>보도자료</b>
+                            <h2>카카오,카카오톡 쇼핑하기<br>X 카카오쇼핑라이브...</h2>
+                        </section>
+                        <div>
+                            <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/64c00ae2018800001.png?type=thumb&amp;opt=C630x472.fwebp"  alt="웹 이미지" class="thumb_img">
+                        </div>
+
+                    </li>
+                    <li>
+                        <div>
+                            <section>
+                                <img data-v-a968263a="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6567b243017800001.png?type=thumb&amp;opt=C72x72.fwebp" width="36" height="36" alt="확성기아이콘" class="ico_cate"><b>파트너성장</b>
+                                <h2>카카오게임즈, 건강한 게임<br>생태계 조성과 인디게임...</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/socialimpact/5081f972018800001.jpg?type=thumb&amp;opt=C630x472.fwebp"  alt="웹 이미지" class="thumb_img">
+                    </li>
+                    <li>
+                        <img src="https://www.kakaocorp.com/page/ico_privacy.png" width="50" alt=""><b>카카오 프라이버시</b>
+                        <!-- <h2>데이터의 연결과 보호의 균형을<br>위한 카카오의 노력</h2> -->
+                    </li>
+                </ul>
+            </div>
+            <div class="dasdasdas">
+                <div class="s_big_banner">
+                    <section>
+                        <img data-v-a968263a="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png?type=thumb&amp;opt=C72x72.fwebp" width="36" height="36" alt="확성기 아이콘" class="ico_cate"><b>보도자료</b>
+                        <h2>카카오,새로운 다음(Daum)뉴스 댓글 서비스<br>'타임톡'베타 오픈</h2>
+                    </section>
+                    <div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/980c7a8a018800001.png?type=thumb&amp;opt=C630x472.fwebp"  alt="" class="thumb_img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+         <li class="kakao">
+                        <div>
+                            <section>
+                                <img src="https://www.kakaocorp.com/page/ico_tit_service.gif" height="50" alt="전구 아이콘"><b>카카오톡</b>
+                                <h2>사람과 세상을 향한<br> 모든 연결의 시작, 카카오톡</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/abcd3a11017900001.jpg?type=thumb&amp;opt=C630x472.fwebp" height="330" alt="" class="thumb_img">
+                    </li>
+                    <li class="enter">
+                        <div>
+                            <section>
+                                <img src="https://www.kakaocorp.com/page/ico_tit_service.gif" height="50" alt="전구 아이콘"><b>엔터테이먼트</b>
+                                <h2>세상에 없던 세상,<br>카카오웹툰</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/fcf3da10017a00001.png?type=thumb&amp;opt=C630x472.fwebp" height="330" alt="" class="thumb_img">
+                    </li>
+                    <li class="curmas">
+                        <div>
+                            <section>
+                                <img src="https://www.kakaocorp.com/page/ico_tit_service.gif" height="50" alt="전구 아이콘"><b>커마스</b>
+                                <h2>나를 표현하는 쇼핑, 지그재그</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/f62cbd72017a00001.jpg?type=thumb&amp;opt=C630x472.fwebp" height="330" alt="" class="thumb_img">
+                    </li>
+                    <li class="ai_block">
+                        <div>
+                            <section>
+                                <img src="https://www.kakaocorp.com/page/ico_tit_service.gif" height="50" alt="전구 아이콘"><b>Ai/블록체인</b>
+                                <h2>다양한 기술, 플랫폼, 서비스를<br>연결하는...</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/78d09478017900001.jpeg?type=thumb&amp;opt=C630x472.fwebp" height="330" alt="" class="thumb_img">
+                    </li>
+                    <li class="business">
+                        <div>
+                            <section>
+                                <img src="https://www.kakaocorp.com/page/ico_tit_service.gif" height="50" alt="전구 아이콘"><b>비즈니스</b>
+                                <h2>AI 기반 비즈니스 플랫폼,<br>카카오 i 커넥트</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/accbf7de017a00001.png?type=thumb&amp;opt=C630x472.fwebp" height="330" alt="" class="thumb_img">
+                    </li >
+                    <li class="life">
+                        <div>
+                            <section>
+                                <img src="https://www.kakaocorp.com/page/ico_tit_service.gif" height="50" alt="전구 아이콘"><b>라이프</b>
+                                <h2>정확하고 즐거운 <br> 운전 도우미, 카카오 내비</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/7a339b98017900001.jpg?type=thumb&amp;opt=C630x472.fwebp" height="330" alt="" class="thumb_img">
+                    </li>
+                    <li class="curmas">
+                        <div>
+                            <section>
+                                <img src="https://www.kakaocorp.com/page/ico_tit_service.gif" height="50" alt="전구 아이콘"><b>커마스</b>
+                                <h2>마음을 전하는 가장 쉬운 방법,<br>카카오 선물하기</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/798cb262017900001.jpg?type=thumb&amp;opt=C630x472.fwebp" height="330" alt="" class="thumb_img">
+                    </li>
+                    <li class="business">
+                        <div>
+                            <section>
+                                <img src="https://www.kakaocorp.com/page/ico_tit_service.gif" height="50" alt="전구 아이콘"><b>비즈니스</b>
+                                <h2>요즘 일하는 방식,<br>카카오워크</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/79b14009017900001.jpg?type=thumb&amp;opt=C630x472.fwebp" height="330" alt="" class="thumb_img">
+                    </li>
+                    <li class="life">
+                        <div>
+                            <section>
+                                <img src="https://www.kakaocorp.com/page/ico_tit_service.gif" height="50" alt="전구 아이콘"><b>라이프</b>
+                                <h2>말 한마디로 편리해지는 일상,<br>헤이카카오</h2>
+                            </section>
+                        </div>
+                        <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/a8bdf743017900001.jpg?type=thumb&amp;opt=C630x472.fwebp" height="330" alt="" class="thumb_img">
+                    </li>

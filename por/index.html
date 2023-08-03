@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://kit.fontawesome.com/5fc59cb340.js" crossorigin="anonymous"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100;700;900&family=Noto+Serif+KR:wght@900&family=Playfair:wght@300&display=swap');
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100;700;900&family=Noto+Serif+KR:wght@900&family=Playfair:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            for(var i = 0; i < $('[data-event="fullpage"]').length; i++){
+                $('ol').append('<li>' + (i + 1) + 'page </li>')
+            }
+
+            $('ol li').eq(0).addClass('active');
+
+            $('[data-event="fullpage"]').on('mousewheel DOMMouseScroll',function(e){
+                var delta = e.originalEvent.wheelDelta;   
+                    if(delta > 0){
+                    if(!($(this).prev().offset() == undefined)){
+                        $('html').stop().animate({scrollTop : $(this).prev().offset().top},1000);
+                        $('ol li').removeClass('active');
+                        $('ol li').eq($(this).prev().index()).addClass('active');
+                    }
+                }else{
+                    if(!($(this).next().offset() == undefined)){
+                        $('html').stop().animate({scrollTop : $(this).next().offset().top},1000);
+                        $('ol li').removeClass('active');
+                        $('ol li').eq($(this).next().index()).addClass('active');
+                    }
+                }
+
+
+                $('ol li').click(function(){
+                    $('ol li').removeClass('active');
+                    $(this).addClass('active');
+                    $('html').stop().animate({scrollTop : $('[data-event="fullpage"]').eq($(this).index()).offset().top},1000);
+                });
+            });
+            $('[data-event="fullpage"]').on('touchstart', function(){
+                console.log('1');
+            });
+            $('[data-event="fullpage"]').on('touchend', function(){
+                console.log('2');
+            });
+        });
+
+        $(function(){
+            $('.intro_content li > h2').css({opacity:'1' , color : 'black'})
+
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <header data-event="fullpage" id="header_page">
+            <div class="header_tool"></div>
+            <div class="header_tool2"></div>
+            <div class="header_tool3"></div>
+
+
+            <div></div>
+
+            <h2>Front-end</h2>
+            <h2>PORTFOLIO</h2>
+            <div class="header_text">   
+                <p>안녕하세요 프론트엔드라는 직무를 지원하게된</p>
+                <p><b>"도전을 성과로 만드는 지원자"</b> 김한성입니다.</p>
+            </div>
+
+            <div class="my_content">
+                <a href=""><img src="./img/free-icon-smartphone-call-15874.png" width="30px" height="30px" alt=""><b>PHONE :</b><b> 010-2190-4594</b></a>
+                <a href=""><img src="./img/free-icon-email-747314.png" width="30px" height="30px" alt=""><b>E-mail :</b><b> gkstjd20001@gmail.com</b></a>
+            </div>
+
+            <div class="header_index">
+                <p><a href="#header_page"> /Title</a></p>
+                <p><a href="#my_intro"> /Intro</a></p>
+                <p><a href="#second_project"> /_project</a></p>
+                <p><a href="#advantage_page"> /_Tech Stack</a></p>
+                <p><a href="#footer_page"> /End</a></p>
+            </div>
+        </header>
+
+
+
+
+
+        
+        <section data-event="fullpage" class="my_intro" id="my_intro">
+            
+
+            <div class="intro_title">
+                <p>"정상을 꿈꾸는 프론트엔드"</p>
+                <h2>Kim Hanseong <b>입니다.</b></h2>
+            </div>
+
+            <div class="photo">
+                <img src="./img/KakaoTalk_20230525_194744444.jpg" height="400" alt="">
+            </div>
+
+            <ul>
+                <li>
+                    <h2>About me</h2>
+                    <b>-Name : 김한성</b><br>
+                    <b>-Age : 24</b><br>
+                    <b>-Gender : 남자</b>
+                </li>
+                <li>
+                    <h2>CONTACTS</h2>
+                    <b>-PHONE :  010-2190-4594</b><br>
+                    <b>-E-mail : gkstjd20001@gmail.com</b>
+                </li>
+
+            </ul>
+            <ul>
+                
+                <li>
+                    <h2>MY-SKILL</h2>
+                    <b>-HTML</b><br>
+                    <p>시멘틱 구조에 관해 깊은 이해도를 가지고 있으며 여러 태그들을 사용해 구별이 쉽게 할 수 있습니다.</p>
+
+                    <b>-CSS</b>
+                    <p>반응형 웹구현이 가능하며 여러 레이아웃들을 곂치지않게 만드는것에 능하며 색다른 구현방법에 능합니다. </p>
+
+                    <b>-JS&JQ</b>
+                    <p>스크립트에 관하여 깊게 공부하였고 여러 고급진 웹 이벤트들을 구현 할  수 있습니다.</p>
+                </li>
+                <li>
+                    <h2>Certificate</h2>
+                    <b>-2020 : 운전면허 1종 취득</b><br>
+                    <b>-2021 : 카페 메니저 경력</b><br>
+                    <b>-2021~2023 : 육군병장만기전역</b>
+                </li>
+            </ul>
+
+        </section>
+
+
+
+
+          
+        <section data-event="fullpage" class="project" id="project">
+            <div>
+                <img src="./" alt="">
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <section data-event="fullpage" class="advantage_page" id="advantage_page">
+            <div class="intro_tool"></div>
+            <div class="advan_img">
+                <h2><p>T</p><p>e</p><p>c</p><p>h</p> <p>S</p><p>t</p><p>a</p><p>c</p><p>k</p></h2>
+            </div>
+
+            <ul class="advan_stack">
+                <li><div class="head_icon"></div><p>CSS를 이용해 디자인과 흡사하게 웹 구현화가 가능합니다.</p></li>
+                <li><div class="head_icon"></div><p>반응형 웹과 단계적으로 시멘틱 빌드업을 하며 여러 태그들을 다채롭게 사용합니다. </p></li>
+                <li><div class="head_icon"></div><p>JS 중 JQ 에 깊게 공부했으며 스크립트를 이용한 구현에 자신이 있습니다. </p></li>
+                <li><div class="head_icon"></div><p>항상 유지보수가 쉽게 코드를 구현하며 , 여러 문제에 해결방안을 잘 찾아냅니다.  </p></li>
+                <li><div class="head_icon"></div><p>평소 스터디 모임을 가져 협업과 소통이 원활합니다.  </p></li>
+            </ul>
+           
+        </section>
+
+
+
+
+        
+
+
+
+
+
+        <footer data-event="fullpage" id="footer_page">
+            <div class="footer_back"></div>
+            <div class="intro_tool"></div>
+            <div class="footer_head">
+                <h2>Thank you</h2>
+            </div>
+            <div class="footer_main_text">
+                <p>앞으로 꾸준함과 부지런함을 무기로</p><br>
+                <p>더 성장 하는 프론트엔드 김한성이 되겠습니다.</p><br>
+                <p>감사합니다!</p>
+            </div>
+            <div class="footer_next_text">
+                <span><b>PHONE :</b><b> 010-2190-4594</b> </span>
+                <span><b>E-mail :</b><b> gkstjd20001@gmail.com</b></span>
+            </div>
+        </footer>
+    </div>
+    <ol>
+        <!-- <li class="active">1 page</li>
+        <li>2 page</li>
+        <li>3 page</li>
+        <li>4 page</li>
+        <li>5 page</li> -->
+    </ol>
+    
+</body>
+</html>
