@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div><p id="para1">asd</p></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+     let p = document.getElementById("para1");
+    let p_prime = p.cloneNode(true);
+    document.body.appendChild(p_prime);
+    // script 문법은 한번 다 documents 를 읽고 실행하기에 밑에 배치하는게 맞음
+    // js 문법을 jq 와 혼용해서 사용하면 원하는 객체를 못 얻을 확률이 큼 js 작성이라면 js 로 지정
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<script>
+     $(document).ready(function() {
+  $('input[type="search"]').on('input', function() {
+    var search = $(this).val();
+    $.ajax({
+      method: "GET",
+      url: "https://dapi.kakao.com/v2/search/image",
+      data: {query: search},
+      headers:{Authorization: "KakaoAK e0407daa35ec0f411c944b9c12924f8e"}
+    })
+   .done(function (msg) {
+      console.log(msg)
+      console.log(msg.documents[0].title)
+      console.log(msg.documents[0].thumbnail)
+      $('p'). empty();
+      $('p').append('<img src="' + msg.documents[0].thumbnail_url + '" style="height: 500px; width: 600px;">');
+      $('p').append('<img src="' + msg.documents[0].image_url + '" style="height: 500px;">');
+    //   화질 높히는 방법
+    });
+  });
+});
+</script>
+<body>
+    <input type="search">
+    <p>d</p>
+</body>
+</html>

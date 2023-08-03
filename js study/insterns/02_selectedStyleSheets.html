@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectStyleSheets</title>
+    <!-- js 에서 css에 새로운 규칙을 추가하는 인스턴스 -->
+    <!-- stylesheets 는 css 에 완전한 규칙을 넣는것이 아닌 새로운 규칙을 추가하는것 -->
+</head>
+<body>
+    <a href="">dsa</a>
+</body>
+<script>
+    // Create an empty "constructed" stylesheet
+    const sheet = new CSSStyleSheet();
+    // Apply a rule to the sheet
+    sheet.replaceSync("a { color: red; }");
+    // 방식은 이렇게 완성되어있다 
+    // Apply the stylesheet to a document
+    document.adoptedStyleSheets = [sheet];
+</script>
+</html>

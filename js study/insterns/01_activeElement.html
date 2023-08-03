@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activeElement</title>
+    <!-- 포커스를 받은 element 를 근접하게 만들 수 있는 인스턴스 -->
+</head>
+<body>
+    <p>아래 두 영역에서 텍스트를 선택해보세요.</p>
+
+<form>
+  <textarea name="ta-example-one" id="ta-example-one" rows="7" cols="40">텍스트 영역 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea>
+  <textarea name="ta-example-two" id="ta-example-two" rows="7" cols="40">텍스트 영역 2. Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea>
+</form>
+
+<p>활성화된 요소 ID: <b id="output-element"></b></p>
+<p>선택한 텍스트: <b id="output-text"></b></p>
+    
+</body>
+<script>
+    function onMouseUp(e) {
+  const activeTextarea = document.activeElement;
+  const selection = activeTextarea.value.substring(
+    // value = 현재 활성화된 textarea 요소의 값을 나타냄
+    // substring = 해당 범위의 문자열을 추출
+    activeTextarea.selectionStart, activeTextarea.selectionEnd
+    // focus 되어있는 해당 객체만 active 시키려고 selection start , end 를 사용 하지않으면 해덩 객체가 아닌 영역 전체가 잡힘
+  );
+
+  const outputElement = document.getElementById('output-element');
+  const outputText = document.getElementById('output-text');
+  outputElement.innerHTML = activeTextarea.id;
+  // html 내부에 적는  
+  outputText.innerHTML = selection;
+}
+
+const textarea1 = document.getElementById('ta-example-one');
+const textarea2 = document.getElementById('ta-example-two');
+textarea1.addEventListener('mouseup', onMouseUp, false);
+textarea2.addEventListener('mouseup', onMouseUp, false);
+</script>
+</html>

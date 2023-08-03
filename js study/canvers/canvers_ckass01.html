@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<style>
+    canvas{background-color: rebeccapurple;}
+</style>
+<body>
+    <canvas class="myCanvas">
+        <p>Add suitable fallback here.</p>
+      </canvas>
+      <p>dasda</p>
+    
+</body>
+</html>
+<script>
+    const canvas = document.querySelector(".myCanvas");
+    const width = (canvas.width = window.innerWidth);
+    const height = (canvas.height = window.innerHeight);
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "rgb(0, 0, 0)";
+    ctx.fillRect(0, 0, width, height);
+    ctx.fillStyle = "rgb(255, 0, 0)";
+ctx.beginPath();
+ctx.moveTo(50, 50);
+// draw your path
+function degToRad(degrees) {
+  return (degrees * Math.PI) / 180;
+}
+ctx.fillStyle = "rgb(255, 0, 0)";
+ctx.beginPath();
+ctx.moveTo(50, 50);
+ctx.fill();
+ctx.lineTo(150, 50);
+const triHeight = 50 * Math.tan(degToRad(60));
+ctx.lineTo(100, 50 + triHeight);
+ctx.lineTo(50, 50);
+ctx.fill();
+</script>

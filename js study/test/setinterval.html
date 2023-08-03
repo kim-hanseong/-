@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>qweqwewqewqn</p>
+    <p>dasddasdasd</p>
+</body>
+<script>
+  let i = 0;
+setInterval(function() {
+  i += 1;
+  if (i < 10) {
+      console.log(i);
+}
+}, 100);
+    // i 를 전역변수로 지정하고 더해지는과정을 해야 1 씩 더해짐을 볼 수 있따
+
+    // setInterval(function(){
+    // for(let i = 0; i < 10; i++){
+    // console.log(i)
+    // }
+    // })
+    // 지역변수로 정하게 되면 ++ 이 전부 더해지는 결과과정값만 나오게 됨 
+
+    // setInterval 자체가 그냥 포함되어있는 함수 자체를 되풀이
+const cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+let info = "My cats are called ";
+const para = document.querySelector("p");
+// queryselector 로 지정한 p는 제일 상단의 p 만 지목
+for (let i = 0; i < cats.length; i++) {
+  info += cats[i] + ", ";
+}
+
+for (let i = 0; i < cats.length; i++) {
+  if (i === cats.length - 1) {
+    info += "and " + cats[i] + ".";
+  } else {
+    info += cats[i] + ", ";
+  }
+}
+
+para.textContent = info;
+</script>
+</html>

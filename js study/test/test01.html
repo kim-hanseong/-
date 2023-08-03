@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form name="selectForm">
+        <p>
+          <label for="musicTypes">Choose some music types, then click the button below:</label>
+          <select id="musicTypes" name="musicTypes" multiple="multiple">
+            <option selected="selected">R&B</option>
+            <option>Jazz</option>
+            <option>Blues</option>
+            <option>New Age</option>
+            <option>Classical</option>
+            <option>Opera</option>
+          </select>
+        </p>
+        <p><input id="btn" type="button" value="How many are selected?" /></p>
+      </form>
+</body>
+<script>
+    // var name = 'mewo';
+    // var name = 'mewo02';
+
+    // if(name === 'mewo'){
+    //     name += '!!'
+    // }else if(name === 'mewo02'){
+    //     name += '엄준식'
+    // }
+    // console.log(name)
+
+    // setInterval(function(){
+    //         for(let i = 0; i < 10; i++){
+    //     console.log(i)
+    // }
+
+    // })
+    // var step;
+// for (step = 0; step < 5; step++) {
+  // Runs 5 times, with values of step 0 through 4.
+//   console.log(step);
+
+function howMany(selectForm) {
+  var numberSelected = 0;
+  for (var i = 0; i < selectForm.options.length; i++) {
+    if (selectForm.options[i].selected) {
+      numberSelected++;
+    }
+  }
+  return numberSelected;
+}
+
+var btn = document.getElementById("btn");
+btn.addEventListener("click", function(){
+  alert('Number of options selected: ' + howMany(document.selectForm.musicTypes))
+});
+</script>
+</html>

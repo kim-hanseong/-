@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 포함되어 있는지 확인하는 js -->
+    <!-- 포함되어 있는지 확인이기에 bodu 요소와 같다면 false 반환 -->   
+    <div>myDiv</div>
+    <!-- <div id="myDiv">This is my div</div>
+    <script>
+      function isInPage(node) {
+        return node === document.body? false : document.body.contains(node);
+      }
+
+      const myDiv = document.getElementById("myDiv");
+      console.log(isInPage(myDiv)); // true
+    </script>
+     -->
+     <script>
+        function isInPage(node) {
+          return node === document.body? false : document.body.contains(node);
+        }
+  
+        const myDiv = document.createElement("div");
+        document.body.appendChild(myDiv);
+        console.log(isInPage(myDiv)); // false
+
+      </script>
+</body>
+</html>

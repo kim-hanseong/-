@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function myFunc(theObject) {
+  theObject.make = "Toyota";
+}
+
+const mycar = {
+  make: "Honda", 
+  model: "Accord", 
+  year: 1998
+};
+
+// `x`의 값은 "Honda"입니다.
+const x = mycar.make;
+
+// `make` 속성은 함수에 의해 `Toyota`로 변경됩니다.
+myFunc(mycar);
+
+// `y`의 값은 "Toyota"입니다.
+const y = mycar.make;
+console.log(mycar)
+</script>
+</html>
