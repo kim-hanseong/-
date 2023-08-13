@@ -1,0 +1,29 @@
+깐츄롤 k f 
+
+1. 플레이어가 엔터를 눌렀을때
+ > 옳은 대답인가 ? yes or no
+
+2. 이전 플레이어의 끝 말을 input에 저장 시켜놓는다.
+    (옳은 대답이라면)
+
+    const OnClick = () =>{
+        if(!word){
+            word = newWord;
+            $word.textContent = word;
+        }
+        else{
+            $word.textContent = newWord;
+        }
+    }
+    const onInput = (event) => {
+        newWord = event.target.value;
+    }
+    
+    $button.addEventListener('click' , OnClick);
+    $input.addEventListener('input' , onInput )
+
+    document.addEventListener('keydown' , (Onclick) =>{
+        if (event.key === 'Enter'){
+            console.log(word);
+        }
+    })

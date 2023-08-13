@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var person1 = {
+        name: "Chris",
+        greeting: function () {
+            alert("Hi! I'm " + this.name + ".");
+        },
+    };
+
+    var person2 = {
+        name: "Deepti",
+        greeting: function () {
+            alert("Hi! I'm " + this.name + ".");
+        },
+    };
+    //   this 현 객체에 관해서만 사용됨
+    // 첫번째는 chris 가 나올거고 두번째는 Deepti 가 나올것임
+    // this 는 호출할 때 결정됨 어떤게 this 가 될 지
+
+    //this의 값을 한 문맥에서 다른 문맥으로 넘기려면 call()이나 apply()를 사용
+    var obj = { a: "Custom" };
+
+    // 변수를 선언하고 변수에 프로퍼티로 전역 window를 할당
+    var a = "Global";
+
+    function whatsThis() {
+        return this.a; // 함수 호출 방식에 따라 값이 달라짐
+    }
+
+    whatsThis(); // this는 'Global'. 함수 내에서 설정되지 않았으므로 global/window 객체로 초기값을 설정한다.
+    whatsThis.call(obj); // this는 'Custom'. 함수 내에서 obj로 설정한다.
+    whatsThis.apply(obj); // this는 'Custom'. 함수 내에서 obj로 설정한다.
+    console.log(whatsThis.call(obj));
+    console.log(whatsThis.apply(obj));
+    // call , apply 는 객체를 받아옴으로써 선언을 무시하며 객체를 먼저 받아옴
+    console.log(whatsThis());
+    // 그래서 그냥 whatthis 는 전역인 global 이지만 call, apply 는 custom 을 호출
+
+    function bar() {
+        console.log(Object.prototype.toString.call(this));
+    }
+
+    bar.call(7); // [object Number]
+    bar.call("foo"); // [object String]
+    bar.call(undefined); // [object global]
+
+
+    function f() {
+        return this.a;
+    }
+    // bind 는 첫번째에만 bind 요소가 활성화 되고 후엔 선언을 해도 적용이 안됨
+    var g = f.bind({ a: "azerty" });
+    console.log(g()); // azerty
+
+    var h = g.bind({ a: "yoo" }); // bind는 한 번만 동작함!
+    console.log(h()); // azerty
+
+    var o = { a: 37, f: f, g: g, h: h };
+    console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty
+
+    var foo = () => this;
+    console.log(foo);
+    //*화살표 함수를 call(), bind(), apply()를 사용해 호출할 때 this의 값을 정해주더라도 무시합니다
+
+    function sum() {
+        return this.a + this.b + this.c;
+    }
+
+    var o = {
+        a: 1,
+        b: 2,
+        c: 3,
+        get average() {
+            return (this.a + this.b + this.c) / 3;
+        },
+    };
+
+    Object.defineProperty(o, "sum", {
+        // sum 이 o 의 하위객체로 포함이 됨
+        // Object.defineProperty(obj, prop, descriptor);
+        // obj:
+        // 속성을 정의할 객체.
+        // prop:
+        // 새로 정의하거나 수정하려는 속성의 이름 또는 Symbol.
+        // 
+        // descriptor:
+        // 새로 정의하거나 수정하려는 속성을 기술하는 객체.
+        get: sum,
+    });
+    // 모방할 객체를 찾아 this 에 할당하는 기능이다
+    // this 로 o 와 sum 을 넣으면 sum 에는 할당되어있는 값이 없기에
+    // 참조값인 o 를 참조하여 average 인 6이 나온다
+    console.log(o.average, o.sum); // 2, 6
+
+
+    var o1 = {}; // 새로운 객체 생성
+
+    // 값 속성 서술자와 defineProperty로
+    // 새로운 속성을 추가하는 예시
+    Object.defineProperty(o1, "a", {
+        value: 37,
+        writable: true,
+        enumerable: true,
+        configurable: true,
+    });
+    console.log(o1);
+    // Object.defineProperty 으로 값을 할당하면 o1 = value:20 보다 우선순위가 높아져 37 이 출력됨
+
+    var o = {};
+    Object.defineProperty(o, "a", {
+        value: 1,
+        enumerable: true,
+    });
+    Object.defineProperty(o, "b", {
+        value: 2,
+        enumerable: false,
+    });
+    Object.defineProperty(o, "c", {
+        value: 3,
+    }); // enumerable의 기본 값은 false
+    o.d = 4; // 할당을 통한 생성 시에는
+    // enumerable의 기본 값이 true
+    Object.defineProperty(o, Symbol.for("e"), {
+        value: 5,
+        enumerable: true,
+    });
+    Object.defineProperty(o, Symbol.for("f"), {
+        value: 6,
+        enumerable: false,
+    });
+
+    for (var i in o) {
+        console.log(i);
+    }
+    // 'a'와 'd' 기록
+
+    Object.keys(o); // ['a', 'd']
+
+    o.propertyIsEnumerable("a"); // true
+    o.propertyIsEnumerable("b"); // false
+    o.propertyIsEnumerable("c"); // false
+    o.propertyIsEnumerable("d"); // true
+    o.propertyIsEnumerable(Symbol.for("e")); // true
+    o.propertyIsEnumerable(Symbol.for("f")); // false
+
+    var p = { ...o };
+    p.a; // 1
+    p.b; // undefined
+    p.c; // undefined
+    p.d; // 4
+    p[Symbol.for("e")]; // 5
+    p[Symbol.for("f")]; // undefined
+
+    // 접근이 가능한지 안한지를 보여주는 
+
+    function Archiver() {
+        var temperature = null;
+        var archive = [];
+
+        Object.defineProperty(this, "temperature", {
+            get: function () {
+                console.log("get!");
+                return temperature;
+            },
+            set: function (value) {
+                temperature = value;
+                archive.push({ val: temperature });
+            },
+        });
+
+        this.getArchive = function () {
+            return archive;
+        };
+    }
+
+    var arc = new Archiver();
+    arc.temperature; // 'get!'
+    arc.temperature = 11;
+    arc.temperature = 13;
+    arc.getArchive(); // [{ val: 11 }, { val: 13 }]
+    console.log(arc.getArchive());
+
+    var pattern = {
+        get() {
+            return "무엇을 할당해도 항상 같은 값을 반환합니다";
+        },
+        set() {
+            this.myname = "내 이름";
+        },
+    };
+
+    function TestDefineSetAndGet() {
+        Object.defineProperty(this, "myproperty", pattern);
+    }
+
+    var instance = new TestDefineSetAndGet();
+    instance.myproperty = "test";
+    console.log(instance.myproperty);
+    // 무엇을 할당해도 항상 같은 값을 반환합니다
+
+    // console.log(instance.myname); // 내 이름
+
+    function myclass() { }
+
+    Object.defineProperty(myclass.prototype, "x", {
+        get() {
+            return this.stored_x;
+        },
+        set(x) {
+            this.stored_x = x;
+        },
+    });
+
+    var a = new myclass();
+    var b = new myclass();
+    a.x = 1;
+    console.log(b.x); // undefined
+    console.log(a.x); // undefined
+</script>
+
+</html>

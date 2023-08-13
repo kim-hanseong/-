@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>생성자 입력</title>
     <script src="https://code.jquery.com/jquery-3.7.0.js"
     integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </head>
@@ -11,12 +11,22 @@
     
 </body>
 <script>
-    function User(name, age){
-        this.name = name;
-        this.age = age;
-    }
-    
-    let User1 = new User('mike' , 35); 
-    console.log(User1)
+   let userlist = [
+    {name: "tom", age: 19},
+    {name: "Alice", age: 30},
+    {name: 'gobelin', age: 24},
+];
+
+let newuserlist = userlist.map((user, index) => {
+    return Object.assign({}, user, {
+        isAdult: user.age > 19,
+        //
+    });
+});
+
+
+
+    console.log(newuserlist)
+    console.log(userlist)
 </script>
 </html>

@@ -19,10 +19,9 @@
     })
    .done(function (msg) {
       console.log(msg)
-      console.log(msg.documents[0].title)
-      console.log(msg.documents[0].thumbnail)
       $('p'). empty();
       $('p').append('<img src="' + msg.documents[0].thumbnail + '" style="height: 500px; width: 600px;">');
+      $('div').append('<img src="' + msg.documents[1].thumbnail + '" style="height: 500px; width: 600px;">');
     //   화질 높히는 방법
     });
   });
@@ -31,5 +30,6 @@
 <body>
     <input type="search">
     <p>d</p>
+    <div>q</div>
 </body>
 </html>

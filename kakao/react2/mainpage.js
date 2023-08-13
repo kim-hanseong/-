@@ -16,9 +16,6 @@ $(window).scroll(function() {
       // 스크롤이 위로 올라갈 때 실행할 코드
       $('header').addClass('active');
     } 
-    
-    
-    
         else {
         // 스크롤이 아래로 내려갈 때 실행할 코드
         $('header').removeClass('active');

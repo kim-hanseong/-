@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/alert.css">
+</head>
+<body>
+    <div id="box_text">안녕하세요</div>
+    <button id="btn01" onclick="text('아이디 입력')"></button>
+    <button id="btn02" onclick="text('비밀번호 입력')"></button>
+</body>
+<script>
+    // function 구멍뚫기(e) {
+        // document.getElementById('box_text').style.display = e;
+    // }
+    
+    function text(e) {
+        document.getElementById('box_text').innerHTML = e
+    }
+
+    
+</script>
+</html>

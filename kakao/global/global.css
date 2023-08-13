@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    transition: all.5s;
+}
+
+header {
+    width: 100vw;
+    background-color: white;
+    z-index: 999;
+    margin-bottom: 80px;
+    position: sticky;
+    transition: all.5s;
+}
+
+header>div {
+    max-width: 77vw;
+    margin: 0 auto;
+    display: flex;
+    padding: 10px;
+    z-index: 9999;
+    justify-content: space-between;
+    padding-top: 20px;
+    gap: 30px;
+}
+
+/* 다크모드 */
+/* global 요소 */
+
+
+
+/* nav */
+.nav_list {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.nav_list>li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav_list>li>span {
+    font-weight: 600;
+}
+
+/* 여기 수정 */
+.nav_list>li>ul {
+    border-radius: 50px;
+    background-color: black;
+    height: 50px;
+    width: 30rem;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%, 0);
+    display: none;
+    box-sizing: border-box;
+}
+
+.nav_list>li>ul>li {
+    padding-top: 15px;
+    gap: 10px;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+.nav_list>li>ul>li>a {
+    color: white;
+    font-weight: bolder;
+}
+
+.head_icons {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* mobile 전용 css */
+
+
+.night_icons02 {
+    display: none;
+}
+
+.night_icons04 {
+    display: none;
+}
+
+.navBtn {
+    display: flex;
+}
+
+.nightclass1 {
+    display: none;
+}
+
+
+.nightclass2 {
+    display: block;
+}
+
+/* mobile mode */
+/* 모바일 메뉴 페이지 툴 */
+.mobile_page {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    transition: all.5s;
+    background-color: white;
+    display: none;
+}
+/* 모바일 메뉴가 생길때 스크롤 x 삭제 */
+.mobile_menu_scroll{
+    overflow-y: hidden;
+}
+
+/* 모바일 메뉴 메인페이지 슬라이드 */
+.mobileBtn_active {
+    right: 0;
+}
+
+/* 모바일 메뉴 메인페이지 */
+.mobile_page_tool {
+    max-width: 485px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* 햄버거 메뉴 */
+.mobile_icons {
+    display: flex;
+    display: none;
+}
+/* 아이콘 다크모드 */
+.icons_active {
+    filter: grayscale(100%);
+    filter: brightness(0) invert(1);
+}
+/* 닫기버튼 */
+#hide_menu_btn {
+    background-color: transparent;
+    border: none;
+    padding-right: 10px;
+}
+
+/* 모바일 메뉴 상단 */
+.mobile_head_line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding-top: 10px;
+}
+
+/* 모바일 메뉴 nav 들 */
+.mobile_page_body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 300px;
+}
+
+/* 모바일 메뉴 이미지 리스트들 */
+.mobile_page_body>li {}
+
+/* 모바일 메뉴 이미지 설명 */
+.mobile_page_body>li>strong {
+    font-size: 2rem;
+    padding-left: 20px;
+}
+
+/* 모바일 메뉴 하단 구성 */
+.mobile_footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 모바일 메뉴 하단 텍스트  */
+.mobile_several_text {
+    display: flex;
+    gap: 10px;
+}
+
+.mobile_several_text>li>a {
+    color: black;
+}
+
+/* 모바일 메뉴 하단 아이콘 */
+.mobile_several_icons {
+    display: flex;
+    gap: 20px;
+}
+
+/* 야간모드 클래스 */
+.night {
+    background-color: black;
+    color: white;
+}
+
+.mobile_page_body>li>ul {
+    /* display: none; */
+    position: flex;
+    display: none;
+}
+
+.nav_text_active {
+    color: gray;
+}
+
+.scroll_active{
+    border-bottom: 1px solid gray;
+    position: sticky;
+    transition: all.3s;    
+}
+.scroll_active_border{
+    border: none;
+}
+
+@media screen and (max-width:1030px) {
+    .head_icons {
+        display: none;
+    }
+
+    .mobile_icons {
+        display: flex;
+        gap: 20px;
+    }
+
+    .mobile_page {
+        display: block;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+  crossorigin="anonymous"></script>
+ <title>Document</title>
+</head>
+
+<body>
+ <p>참가인원 : <span id="people"></span> </p>
+ <div><span id="order">1</span>번째 참가자</div>
+ <div>제시어 : <span id="word"></span></div>
+ <input type="text">
+ <button>입력</button>
+</body>
+<script>
+
+const number = Number(prompt('몇명이 참가하나요?'));
+const people = document.querySelector('#people');
+const $button = document.querySelector('button');
+const $input = document.querySelector('input');
+const $word = document.querySelector('#word');
+let word;
+let newWord;
+people.innerHTML = number;
+
+if(number <= 1){
+    alert('플레이어가 부족합니다');   
+} else {
+    // 참가자가 1명 이상일 때 실행되는 코드
+}
+
+const OnClick = () => {
+  if (!word) {
+    word = newWord.word;
+    $word.textContent = word;
+    $input.value = newWord.arr[0];
+  } else {
+    $word.textContent = newWord;
+    $input.value = newWord.arr[0];
+  }
+};
+
+ const onInput = (event) => {
+  newWord = event.target.value;
+ };
+
+ $button.addEventListener('click', OnClick);
+ $input.addEventListener('input', onInput);
+
+ document.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+   OnClick();
+  }
+ });
+</script>
+
+</html>

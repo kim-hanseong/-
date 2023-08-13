@@ -23,6 +23,8 @@
       console.log(msg.documents[0].thumbnail)
       $('p'). empty();
       $('p').append('<img src="' + msg.documents[0].thumbnail + '" style="max-height: 500px; max-width: 600px;">');
+      $('p').append('<img src="' + msg.documents[1].thumbnail + '" style="max-height: 500px; max-width: 600px;">');
+      $('p').append('<img src="' + msg.documents[2].thumbnail + '" style="max-height: 500px; max-width: 600px;">');
     //   화질 높히는 방법
     });
   });
@@ -36,6 +38,7 @@
 <body>
     <input type="search">
     <p>das</p>
+    <div></div>
 
 </body>
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/alert.css">
+</head>
+
+<body>
+    <p class="index01">das</p>
+    <p class="index01">qwe</p>
+    <p class="index01">llki</p>
+</body>
+<script>
+    // const p = document.querySelectorall('.index01')
+    // p.addEventListener('click', p => {
+    //     console.log('yas');
+
+    // })
+    // forEach
+
+    // querySelectorAll
+    // 메소드를 사용하여 선택한 요소들에 대해서는 반드시
+    // 메소드를 사용하여 각 요소에 대해 이벤트를 등록해야 한다.
+    // 안그러면 오류남 ㅎㅎ ^ㅣ
+
+    const p = document.querySelectorAll('.index01')
+    p.forEach(item => {
+        if (item.classList.contains('index02')) {
+            item.addEventListener('click', () => {
+                console.log('yas');
+            })
+        }
+    })
+
+    // forEach :  각 배열에 있는거 하나씩 실행
+    // contain :  포함되어 있으면 실행
+</script>
+
+</html>

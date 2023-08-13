@@ -6,27 +6,16 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.0.js"
     integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/alert.css">
 </head>
 <body>
-    
 </body>
 <script>
-   let userlist = [
-    {name: "tom", age: 19},
-    {name: "Alice", age: 30},
-    {name: 'gobelin', age: 24},
-];
+    const arr = ['가','나','마','바','사','가','가']
+    console.log(arr
+    
+    )
 
-let newuserlist = userlist.map((user, index) => {
-    return Object.assign({}, user, {
-        isAdult: user.age > 19,
-        //
-    });
-});
-
-
-
-    console.log(newuserlist)
-    console.log(userlist)
+    
 </script>
 </html>

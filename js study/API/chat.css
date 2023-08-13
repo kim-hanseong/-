@@ -1,0 +1,8 @@
+body{background-color: aquamarine;}
+.chat_bot{background-color: white; position: fixed; width: 420px; left: 50%; top: 50%; transform: translate(-50%,-50%); border-radius: 20px; overflow: hidden;}
+.chat_bot > header{background-color: rebeccapurple; text-align: center; padding: 12px 0;}
+header  > h2{color: white;}
+.chatbox{height: 500px; }
+.chatbox > .chat{display: flex;}
+.chat > p {background-color: dodgerblue;  max-width: 75; text-align: center;}
+.chatbox > .outgoing{justify-content: flex-end; margin: 10px 0 0 0; }

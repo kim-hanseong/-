@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./chat.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="chat_bot">
+        <header>
+            <h2>chatBot</h2>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <p>hi there</p>
+            </li>
+            <li class="chat outgoing">
+                <p>sha256-P0OG9dxM7yDPqX1ox</p>
+            </li>
+        </ul>
+        <div class="chat_input">
+            <textarea placeholder="Enter a message"></textarea>
+            <span id="send-btn">send</span>
+        </div>
+    </div>
+    
+</body>
+<script>
+    const chatInput = document.querySelector('.chat_input textarea')
+    const sendBtn = document.querySelector('#send-btn')
+
+    const creatChatli = (message , className) =>{
+        
+    }
+    let userMessage;
+
+    const handleChat = () => {
+        userMessage = chatInput.value.trim();
+        console.log(userMessage)
+    }
+
+    chatInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        handleChat();
+    }
+});
+
+    sendBtn.addEventListener("click", handleChat)
+</script>
+</html>

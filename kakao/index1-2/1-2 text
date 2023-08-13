@@ -1,0 +1,63 @@
+1.  h2 strong mark  이거 세개는 하나씩 들어가야함
+
+2. kakao li img margin 값을 줄 때 img margin bottom 값으로 줘야 다 일정하게 들어감
+- kakao li img  logo 들이 같은 열에 정렬되어있지 않은 상황
+어떻게 해결할것인가 ? 
+
+- 1 어차피 직렬 이면 flex - cloum 주고  flex end 주고 margin -bottom ? 
+> position 으로 처리했다 
+
+
+3. btn 누르면 위로 올라가는거 하나랑 다크모드로 될때 이미지 바꾸는거 코드가 너무 너져분하다 
+
+nav li 요소 들 꾸미기는 성공했는데 ul 마다의 크기 조정을 텍스트에 맞춰 바꾸고싶은데
+방법이 뭘까 글자 텍스트랑 양이 달라서 각자 넣는게 나은가
+아나면 반응에 따라 길어지는걸 만드는게 맞는거 같은데 이거 생각을 조금
+box-sizing 해야함
+
+4. 지금 해야할게 아이콘 class 랑 id js 들 정리하는거랑
+밑 a태그에도 night 넣어주기랑
+
+
+5. 저거 아이콘에 넣는 display 들 if 문으로 싹다 집어 쳐넣고 
+click 이벤트를 이중으로 하는걸 하나로 줄일 수 있는 방법이 없을까
+
+6. 저거 헤더값이 sticky 라서 position 값이 이상하게 나오는거임 
+스크롤을 위로 올릴때 그니까 if 문에서 0 보다 클때인데 그건 위로 올릴때만 실행이 되는거니까
+offset 값은 0 에서 이동이 안되는거임
+그니까 sticky 를 제외한다 
+기존 header position 스크롤 하기 전을 변수에 저장시켜놓고
+stick 요소는 계속 집어넣어주며 그 기존 position 높이값과 같으면 그때 static 으로 바꿔주는게
+border 도 마찬가지로 ㅇㅇ 그니까 remove 가 아니라 trasition trasnlateY 값만 조정으로 해서 
+transition 도 먹히게 끔 
+
+    var current = 0;
+        function goToslide(index){
+            $section.animate({left: + -100*index*'%'})
+        }
+        
+        var $section = $('section');
+        var $header = $('header');
+        var list1 = $('header ul li a')
+        var pic1 = $('.pic1')
+        var slideCount = $section.length
+        timer = setInterval(function(){
+            var Nextslide = (current + 1) % slideCount;
+            goToslide(Nextslide);
+            },3500);
+        $(window).scroll(function(){
+            if($(this).scrollTop() > 0){
+                $header.addClass('stick');
+                list1.addClass('stick1')
+
+            }
+            else{
+                $header.removeClass('stick');
+                list1.removeClass('stick1')
+            }
+
+            var picSlide = pic1.offset().top - 500;
+            if($(this).scrollTop() > picSlide){
+                pic1.addClass('opa')
+                
+            }
